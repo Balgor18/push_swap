@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 11:46:36 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/05/19 15:40:54 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/05/19 18:49:37 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,15 @@
 
 typedef struct	s_swap
 {
-	int		a;
-	int		b;
+	int		*a;
+	int		*b;
 	int		len;
 }				t_swap;
+
+/*
+** Init
+*/
+void	init_struct(t_swap *s);
 
 // sa = move pos 1 et pos 2 de pile a SAUF SI POS < 1
 // sb = move pos 1 et pos 2 de pile b SAUF SI POS < 1
