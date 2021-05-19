@@ -6,13 +6,13 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/09 23:27:05 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/01/09 23:27:09 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/05/19 15:55:08 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_memcmp(const void *s1, const void *s2, size_t n)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	const unsigned char		*str1;
 	const unsigned char		*str2;

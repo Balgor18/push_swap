@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/09 15:34:19 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/01/09 22:47:27 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/05/19 16:02:26 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ char	*ft_itoa(int n)
 	while (tmp /= 10)
 		len++;
 	len += nega;
-	if ((str = (char*)malloc(sizeof(char) * len)) == NULL)
+	if ((str = (char *)malloc(sizeof(char) * len)) == NULL)
 		return (NULL);
 	str[--len] = '\0';
 	while (len--)

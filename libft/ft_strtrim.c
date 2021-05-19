@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/09 15:35:18 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/01/09 22:53:55 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/05/19 16:01:47 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size = ft_strlen((char *)s1);
 	while (size && ft_strchr(set, s1[size]))
 		size--;
-	s2 = ft_substr((char*)s1, 0, size + 1);
+	s2 = ft_substr((char *)s1, 0, size + 1);
 	return (s2);
 }

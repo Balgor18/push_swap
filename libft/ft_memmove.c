@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/09 22:52:43 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/01/09 22:53:42 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/05/19 15:57:21 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,10 +30,12 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 			len--;
 		}
 	else
+	{
 		while (i < len)
 		{
 			a[i] = b[i];
 			i++;
 		}
+	}
 	return (dst);
 }

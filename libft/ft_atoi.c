@@ -6,17 +6,17 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/09 15:32:53 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/01/09 22:45:24 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/05/19 15:48:37 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_atoi(char *c)
+int	ft_atoi(char *c)
 {
-	int i;
-	int sign;
-	int total;
+	int	i;
+	int	sign;
+	int	total;
 
 	total = 0;
 	i = 0;

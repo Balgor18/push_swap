@@ -6,13 +6,13 @@ CFLAGS=-Wall -Wextra -Werror
 
 RM=rm -f
 
-SRC =
+SRC = push_swap.c
 
 OBJ = $(SRC:.c=.o)
 
 $(NAME): libft $(OBJ)
 			@$(CC) $(CFLAGS) -o $@ $(OBJ) -Llibft -lft
-			./push_swap
+			./push_swap 2 1 3 6 5 8
 
 libft :
 		make -C libft/
@@ -23,6 +23,7 @@ libft :
 all: $(NAME)
 
 norme :
+		@make -C libft/ norme
 		norminette -R CheckForbiddenSourceHeader $(SRC)
 		norminette -R CheckDefine cub3D.h
 

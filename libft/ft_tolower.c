@@ -6,13 +6,13 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/09 15:35:14 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/01/09 15:35:15 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/05/19 16:01:59 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_tolower(int c)
+int	ft_tolower(int c)
 {
 	if ((c >= 'A' && c <= 'Z'))
 		return (c + 32);

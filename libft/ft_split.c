@@ -6,13 +6,13 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/09 23:03:57 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/01/13 14:53:05 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/05/19 15:58:49 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char				**ft_malloc_error(char **tab)
+static char	**ft_malloc_error(char **tab)
 {
 	unsigned int	i;
 
@@ -26,7 +26,7 @@ static char				**ft_malloc_error(char **tab)
 	return (NULL);
 }
 
-static unsigned int		ft_get_nb_strs(char const *s, char c)
+static unsigned int	ft_get_nb_strs(char const *s, char c)
 {
 	unsigned int	i;
 	unsigned int	nb_strs;
@@ -53,10 +53,10 @@ static unsigned int		ft_get_nb_strs(char const *s, char c)
 	return (nb_strs);
 }
 
-static void				ft_get_next_str(char **nstr, unsigned int *nstrlen,
+static void	ft_get_next_str(char **nstr, unsigned int *nstrlen,
 char c)
 {
-	unsigned int i;
+	unsigned int	i;
 
 	*nstr += *nstrlen;
 	*nstrlen = 0;
@@ -72,7 +72,7 @@ char c)
 	}
 }
 
-char					**ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
 	char			**tab;
 	char			*next_str;

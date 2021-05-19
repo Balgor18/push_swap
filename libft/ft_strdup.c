@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/09 22:52:21 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/01/09 22:52:24 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/05/19 15:58:02 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,8 @@ char	*ft_strdup(char *src)
 
 	i = 0;
 	len_src = ft_strlen(src);
-	if (!(dup = malloc(sizeof(char) * (len_src + 1))))
+	dup = malloc(sizeof(char) * (len_src + 1));
+	if (!dup)
 		return (0);
 	while (src[i])
 	{

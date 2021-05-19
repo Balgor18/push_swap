@@ -6,12 +6,22 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 11:46:36 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/05/19 12:16:07 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/05/19 15:40:54 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
+
+# include <stdio.h>
+# include "libft/libft.h"
+
+typedef struct	s_swap
+{
+	int		a;
+	int		b;
+	int		len;
+}				t_swap;
 
 // sa = move pos 1 et pos 2 de pile a SAUF SI POS < 1
 // sb = move pos 1 et pos 2 de pile b SAUF SI POS < 1

@@ -6,13 +6,15 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/09 15:33:02 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/01/09 22:47:05 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/05/19 15:47:04 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_isdigit(int c)
+int	ft_isdigit(int c)
 {
-	return ((c >= '0' && c <= '9') ? 1 : 0);
+	if (c >= '0' && c <= '9')
+		return (1);
+	return (0);
 }

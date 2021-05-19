@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/09 15:33:19 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/01/09 22:46:12 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/05/19 15:51:15 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,8 @@ void	*ft_calloc(size_t nmemb, size_t size)
 {
 	char	*tabl;
 
-	if (!(tabl = malloc(size * nmemb)))
+	tabl = malloc(size * nmemb);
+	if (!tabl)
 		return (NULL);
 	ft_memset(tabl, 0, nmemb * size);
 	return (tabl);

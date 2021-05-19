@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/09 23:25:24 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/01/09 23:25:25 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/05/19 15:57:42 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	char *str;
+	char	*str;
 
 	str = (char *)s;
 	while (*str != c)
