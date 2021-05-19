@@ -6,13 +6,13 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 12:26:50 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/05/19 12:34:07 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/05/19 12:34:56 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-void		push_swap(char *a)
+// delete the main
+void		push_swap(char **argv, int argc)
 {
 // use atoi
 // malloc the table for the int;
