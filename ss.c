@@ -1,22 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   init_struct.c                                      :+:      :+:    :+:   */
+/*   ss.c                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/19 17:19:39 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/05/20 15:00:55 by fcatinau         ###   ########.fr       */
+/*   Created: 2021/05/19 17:18:26 by fcatinau          #+#    #+#             */
+/*   Updated: 2021/05/20 16:01:47 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	init_struct(t_swap *s)
+void	ss(t_swap *s)
 {
-	s->len = 0;
-	s->a = 0;
-	s->b = 0;
-	s->count.len_a = 0;
-	s->count.len_b = 0;
+	sa(s);
+	sb(s);
+}
+
+void	sb(t_swap *s)
+{
+	int tmp;
+
+	tmp = s->b[0];
+	s->b[0] = s->b[1];
+	s->b[1] = tmp;
+	ft_putstr_fd("sb\n",1);
+}
+
+void	sa(t_swap *s)
+{
+	int tmp;
+
+	tmp = s->a[0];
+	s->a[0] = s->a[1];
+	s->a[1] = tmp;
+	ft_putstr_fd("sa\n",1);
 }

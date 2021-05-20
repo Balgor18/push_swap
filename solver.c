@@ -1,22 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   init_struct.c                                      :+:      :+:    :+:   */
+/*   solver.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/19 17:19:39 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/05/20 15:00:55 by fcatinau         ###   ########.fr       */
+/*   Created: 2021/05/20 15:12:42 by fcatinau          #+#    #+#             */
+/*   Updated: 2021/05/20 16:35:16 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	init_struct(t_swap *s)
+int	solver(t_swap *swap)
 {
-	s->len = 0;
-	s->a = 0;
-	s->b = 0;
-	s->count.len_a = 0;
-	s->count.len_b = 0;
+	int	ret;
+
+	verif_two_first(swap);
+	verif_swap_list(swap);
+	verif_top_and_bot(swap);
+	if (!verif_table_ok(swap))
+		ret = solver(swap);
+	return (1);
 }

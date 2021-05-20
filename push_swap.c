@@ -6,29 +6,32 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 12:26:50 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/05/19 19:08:57 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/05/20 15:12:34 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	verif_digit(char *s, int len, t_swap *swap)
+// TMP
+
+void	print_a(t_swap *s)
 {
-	while (len > 0)
+	int	i;
+
+	i = 0;
+	// print inside a
+	while(i < s->len)
 	{
-		if (!ft_isdigit(s[len - 1]) && s[len - 1] != ' ')
-			return (0);
-		if (ft_isdigit(s[len - 1]) && !ft_isdigit(s[len - 2]))
-			swap->len++;
-		len--;
+		printf("%d|%d \n", i, s->a[i]);
+		i++;
 	}
-	return (1);
 }
 
 int	prepare_A(t_swap *swap, char **s)
 {
 	int	i;
-	int j;
+	int	j;
+
 	//printf("%d < %d \n",i , swap->len);
 	j = 1;
 	i = 0;
@@ -37,19 +40,13 @@ int	prepare_A(t_swap *swap, char **s)
 		return(0);
 	while(i < swap->len)
 	{
-
-		//printf("%d %s \n", j, s[j]);
 		swap->a[i] = ft_atoi(s[j]);
 		i++;
 		j++;
 	}
+
 	return (1);
 }
-/*
-void	solver(t_swap *swap)
-{
-
-}*/
 
 int	main(int argc, char **argv)
 {
@@ -64,12 +61,14 @@ int	main(int argc, char **argv)
 			return (0);
 		}
 	}
-/*	if (!prepare_A(&swap, argv))
+	if (!prepare_A(&swap, argv))
 	{
 		ft_putstr_fd("Error\n", 1);
 		return (0);
-	}*/
-//	solver(&swap);
+	}
+	solver(&swap);
+//	ft_len_table(&swap);
+//
 	// use atoi
 	// malloc the table for the int;
 	// get the size of the table

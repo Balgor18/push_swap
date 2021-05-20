@@ -7,7 +7,10 @@ CFLAGS=-Wall -Wextra -Werror
 RM=rm -f
 
 SRC =	push_swap.c \
-		init_struct.c
+		init_struct.c\
+		ft_len_table.c\
+		solver.c\
+		verif.c
 
 OBJ = $(SRC:.c=.o)
 
