@@ -6,9 +6,13 @@ CFLAGS=-Wall -Wextra -Werror
 
 RM=rm -f
 
-SRC =	push_swap.c \
+SRC =	ft_len_table.c\
+		ft_ss.c\
+		ft_rr.c\
 		init_struct.c\
-		ft_len_table.c\
+		pa_pb.c\
+		push_swap.c\
+		rrr.c\
 		solver.c\
 		verif.c
 

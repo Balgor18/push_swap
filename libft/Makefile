@@ -6,7 +6,7 @@
 #    By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/01/09 15:35:09 by fcatinau          #+#    #+#              #
-#    Updated: 2021/05/19 15:47:35 by fcatinau         ###   ########.fr        #
+#    Updated: 2021/05/20 17:04:14 by fcatinau         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -58,4 +58,4 @@ bonus : $(OBJ_BONUS) $(OBJ)
 		ar rc $(NAME) $(OBJ) $(OBJ_BONUS)
 		ranlib $(NAME)
 
-.PHONY: clean clean
+.PHONY: clean

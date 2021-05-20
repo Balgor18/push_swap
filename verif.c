@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/20 14:47:47 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/05/20 16:44:04 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/05/20 17:15:43 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,12 +30,12 @@ void	verif_two_first(t_swap *s)
 	if (s->count.len_b > 0)
 	{
 		if ((s->a[0] > s->a[1]) && (s->b[0] > s->b[1]))
-			ss(s);
+			ft_ss(s);
 		else if (s->b[0] > s->b[1])
-			sb(s);
+			ft_sb(s);
 	}
 	if (s->a[0] > s->a[1])
-		sa(s);
+		ft_sa(s);
 	return;
 }
 
@@ -43,13 +43,13 @@ void	verif_top_and_bot(t_swap *s)
 {
 	if (s->count.len_b > 0)
 	{
-		if ((s->a[0] > s->a[len_a - 1]) && (s->b[0] > s->b[len_b - 1]))
-			rr(s);
-		else if (s->b[0] > s->b[len_b - 1])
-			rb(s);
+		if ((s->a[0] > s->a[s->count.len_a - 1]) && (s->b[0] > s->b[s->count.len_b - 1]))
+			ft_rr(s);
+		else if (s->b[0] > s->b[s->count.len_b - 1])
+			ft_rb(s);
 	}
-	if (s->a[0] > s->a[len_a - 1])
-		ra(s);
+	if (s->a[0] > s->a[s->count.len_a - 1])
+		ft_ra(s);
 }
 
 void	verif_swap_list(t_swap *s)
@@ -57,7 +57,8 @@ void	verif_swap_list(t_swap *s)
 	int	mid;
 	int	i;
 
-	mid = swap->len / 2; // si 0.5 va vers le plus bas ex : 7 / 2 = 3
+	i = 0;
+	mid = s->len / 2; // si 0.5 va vers le plus bas ex : 7 / 2 = 3
 	if (!verif_table_ok(s, mid))
 		return;
 

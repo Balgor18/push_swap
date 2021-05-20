@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rr.c                                               :+:      :+:    :+:   */
+/*   ft_rr.c                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/20 15:54:45 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/05/20 16:05:09 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/05/20 17:15:36 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.c"
 
-void	ra(t_swap *s)
+void	ft_ra(t_swap *s)
 {
 	printf("Avant \n");
 	print_a(s);
@@ -30,17 +30,18 @@ void	ra(t_swap *s)
 	s->a[i] = tmp;
 	printf("Apres \n");
 	print_a(s);
-	ft_putstr_fd("ra\n",1);
+	ft_putstr_fd("ft_ra\n",1);
 }
 
-// verif ra avant de copier pour rb
-void	rb(t_swap *s)
+// verif ft_ra avant de copier pour ft_rb
+void	ft_rb(t_swap *s)
 {
-	ft_putstr_fd("ra\n",1);
+	(void)s;
+	ft_putstr_fd("ft_ra\n",1);
 }
 
-void	rr(t_swap *s)
+void	ft_rr(t_swap *s)
 {
-	ra(s);
-	rb(s);
+	ft_ra(s);
+	ft_rb(s);
 }

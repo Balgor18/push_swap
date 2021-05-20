@@ -6,12 +6,13 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/20 15:03:09 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/05/20 15:10:25 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/05/20 17:10:48 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
+// si len marche pas je dois faire len b = a la moitie de len a
 void	ft_len_table(t_swap *s)
 {
 	ft_len(s->a, &s->count.len_a);

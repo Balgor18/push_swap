@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 12:26:50 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/05/20 15:12:34 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/05/20 17:10:00 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	print_a(t_swap *s)
 
 	i = 0;
 	// print inside a
-	while(i < s->len)
+	while(i < s->count.len_a)
 	{
 		printf("%d|%d \n", i, s->a[i]);
 		i++;
@@ -72,6 +72,7 @@ int	main(int argc, char **argv)
 	// use atoi
 	// malloc the table for the int;
 	// get the size of the table
+	print_a(&swap);
 	printf("Done \n");
 	return (0);
 }

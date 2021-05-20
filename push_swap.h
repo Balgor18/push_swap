@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 11:46:36 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/05/20 16:44:22 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/05/20 17:18:43 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,9 @@ typedef struct	s_swap
 	t_count	count;
 }				t_swap;
 
+// a degager
+void	print_a(t_swap *s);
+
 /*
 ** Init
 */
@@ -39,9 +42,11 @@ void	init_struct(t_swap *s);
 /*
 ** Verif
 */
-int	verif_two_first(t_swap *s);
-int	verif_digit(char *s, int len, t_swap *swap);
-int	verif_table_ok(t_swap *s);
+void	verif_two_first(t_swap *s);
+int		verif_digit(char *s, int len, t_swap *swap);
+int		verif_table_ok(t_swap *s, int len);
+void	verif_swap_list(t_swap *s);
+void	verif_top_and_bot(t_swap *s);
 
 /*
 ** Len
@@ -52,30 +57,30 @@ void	ft_len(int *list, int *a);
 /*
 ** Solver
 */
-int	solver(t_swap *swap);
+int		solver(t_swap *swap);
 
 /*
 ** Rotate
 */
-void	ra(t_swap *s);
-void	rb(t_swap *s);
-void	rr(t_swap *s);
+void	ft_ra(t_swap *s);
+void	ft_rb(t_swap *s);
+void	ft_rr(t_swap *s);
 
 /*
 ** Swap
 */
-void	sa(t_swap *s);
-void	sb(t_swap *s);
-void	ss(t_swap *s);
+void	ft_sa(t_swap *s);
+void	ft_sb(t_swap *s);
+void	ft_ss(t_swap *s);
 
 // pa = prends le 1er elem de b pour allez le mettre sur a SAUF SI B < 1
 // pb = prends le 1er elem de a pour allez le mettre sur b SAUF SI A < 1
 
 // --------------------------------------------------
 
-// ra = decale d'une postion vers le haut de tous les elements de la liste a + first passe last
-// rb = decale d'une postion vers le haut de tous les elements de la liste b + first passe last
-// rr = ra + rb;
+// ft_ra = decale d'une postion vers le haut de tous les elements de la liste a + first passe last
+// ft_rb = decale d'une postion vers le haut de tous les elements de la liste b + first passe last
+// ft_rr = ft_ra + ft_rb;
 
 // --------------------------------------------------
 

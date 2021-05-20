@@ -6,19 +6,23 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 17:18:26 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/05/20 16:01:47 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/05/20 17:13:56 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ss(t_swap *s)
+void	ft_sa(t_swap *s)
 {
-	sa(s);
-	sb(s);
+	int tmp;
+
+	tmp = s->a[0];
+	s->a[0] = s->a[1];
+	s->a[1] = tmp;
+	ft_putstr_fd("sa\n",1);
 }
 
-void	sb(t_swap *s)
+void	ft_sb(t_swap *s)
 {
 	int tmp;
 
@@ -28,12 +32,8 @@ void	sb(t_swap *s)
 	ft_putstr_fd("sb\n",1);
 }
 
-void	sa(t_swap *s)
+void	ft_ss(t_swap *s)
 {
-	int tmp;
-
-	tmp = s->a[0];
-	s->a[0] = s->a[1];
-	s->a[1] = tmp;
-	ft_putstr_fd("sa\n",1);
+	ft_sa(s);
+	ft_sb(s);
 }
