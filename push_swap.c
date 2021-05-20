@@ -6,33 +6,17 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 12:26:50 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/05/20 17:10:00 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/05/20 18:17:44 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-// TMP
-
-void	print_a(t_swap *s)
-{
-	int	i;
-
-	i = 0;
-	// print inside a
-	while(i < s->count.len_a)
-	{
-		printf("%d|%d \n", i, s->a[i]);
-		i++;
-	}
-}
 
 int	prepare_A(t_swap *swap, char **s)
 {
 	int	i;
 	int	j;
 
-	//printf("%d < %d \n",i , swap->len);
 	j = 1;
 	i = 0;
 	swap->a = malloc(sizeof(int *) * swap->len);
@@ -66,13 +50,10 @@ int	main(int argc, char **argv)
 		ft_putstr_fd("Error\n", 1);
 		return (0);
 	}
+//	print_a(&swap);
 	solver(&swap);
 //	ft_len_table(&swap);
-//
-	// use atoi
-	// malloc the table for the int;
-	// get the size of the table
-	print_a(&swap);
+	//print_a(&swap);
 	printf("Done \n");
 	return (0);
 }

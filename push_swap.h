@@ -6,14 +6,13 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 11:46:36 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/05/20 17:18:43 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/05/20 18:03:05 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
-# include <stdio.h>
 # include "libft/libft.h"
 
 typedef struct	s_count
@@ -32,6 +31,7 @@ typedef struct	s_swap
 
 // a degager
 void	print_a(t_swap *s);
+# include <stdio.h>
 
 /*
 ** Init
@@ -73,6 +73,7 @@ void	ft_sa(t_swap *s);
 void	ft_sb(t_swap *s);
 void	ft_ss(t_swap *s);
 
+#endif
 // pa = prends le 1er elem de b pour allez le mettre sur a SAUF SI B < 1
 // pb = prends le 1er elem de a pour allez le mettre sur b SAUF SI A < 1
 
@@ -87,5 +88,3 @@ void	ft_ss(t_swap *s);
 // rra = decale d'une position vers le bas tout les elements de la liste a, le dernier devient le premier;
 // rrb = decale d'une position vers le bas tout les elements de la liste b, le dernier devient le premier;
 // rrr = rra + rrb;
-
-#endif
