@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/20 14:47:47 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/05/20 18:28:39 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/05/21 16:50:21 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,8 +61,8 @@ void	verif_swap_list(t_swap *s)
 	i = 0;
 	mid = s->len / 2; // si 0.5 va vers le plus bas ex : 7 / 2 = 3
 	printf("return %d \n",verif_table_ok(s, mid));
-	if (!verif_table_ok(s, mid))
-		return;
+	if (verif_table_ok(s, mid))
+		pa(s, mid - 1);
 	//creer malloc b pour push b
 }
 
@@ -71,11 +71,11 @@ int	verif_table_ok(t_swap *s, int len)
 	int	i;
 
 	i = 0;
-	printf("Debut de bloucle \n");
+	//printf("Debut de bloucle \n");
 	while (i < len)
 	{
-		printf("%d < %d\n", i, len);
-		printf("%d |>| %d \n",s->a[i], s->a[i + 1]);
+		//printf("%d < %d\n", i, len);
+		//printf("%d |>| %d \n",s->a[i], s->a[i + 1]);
 		if (s->a[i] > s->a[i + 1])
 			return (0);
 		i++;

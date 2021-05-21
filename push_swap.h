@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 11:46:36 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/05/20 18:03:05 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/05/21 17:09:26 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,8 @@ typedef struct	s_swap
 }				t_swap;
 
 // a degager
-void	print_a(t_swap *s);
+void	ft_print(int *s, char c, int len);
+
 # include <stdio.h>
 
 /*
@@ -72,6 +73,12 @@ void	ft_rr(t_swap *s);
 void	ft_sa(t_swap *s);
 void	ft_sb(t_swap *s);
 void	ft_ss(t_swap *s);
+
+/*
+** Push list
+*/
+void	pa(t_swap *s, int len);
+void	pb(t_swap *s);
 
 #endif
 // pa = prends le 1er elem de b pour allez le mettre sur a SAUF SI B < 1

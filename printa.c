@@ -6,22 +6,26 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/20 17:31:14 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/05/20 18:17:36 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/05/21 17:18:19 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
 // TMP
-void	print_a(t_swap *s)
+
+void	ft_print(int *s, char c, int len)
 {
 	int	i;
 
 	i = 0;
-	// print inside a
-	while(i < s->len)
+	if (len == 0)
+		return ;
+	printf("------ %c ------\n",c);
+	while(i < len)
 	{
-		printf("%d|%d \n", i, s->a[i]);
+		printf("pos %d|%d \n", i, s[i]);
 		i++;
 	}
+	printf("---------------\n");
 }
