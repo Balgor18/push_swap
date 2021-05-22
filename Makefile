@@ -11,7 +11,8 @@ SRC =	printa.c ft_len_table.c\
 		ft_rrr.c\
 		ft_ss.c\
 		init_struct.c\
-		pa_pb.c\
+		pa.c\
+		pb.c\
 		push_swap.c\
 		solver.c\
 		verif.c
@@ -20,6 +21,7 @@ OBJ = $(SRC:.c=.o)
 
 $(NAME): libft $(OBJ)
 			@$(CC) $(CFLAGS) -o $@ $(OBJ) -Llibft -lft
+#-fsanitize=address
 			./push_swap 2 1 3 6 5 8
 #			./push_swap 2 one 3 6 5 8
 #			./push_swap "4 67 3 87 23"

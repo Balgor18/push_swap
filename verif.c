@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/20 14:47:47 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/05/21 16:50:21 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/05/22 17:16:25 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	verif_digit(char *s, int len, t_swap *swap)
 		if (!ft_isdigit(s[len - 1]) && s[len - 1] != ' ')
 			return (0);
 		if (ft_isdigit(s[len - 1]) && !ft_isdigit(s[len - 2]))
-			swap->len++;
+			swap->count.len_a++;
 		len--;
 	}
 	return (1);
@@ -59,10 +59,10 @@ void	verif_swap_list(t_swap *s)
 	int	i;
 
 	i = 0;
-	mid = s->len / 2; // si 0.5 va vers le plus bas ex : 7 / 2 = 3
-	printf("return %d \n",verif_table_ok(s, mid));
-	if (verif_table_ok(s, mid))
-		pa(s, mid - 1);
+	mid = s->count.len_a / 2; // si 0.5 va vers le plus bas ex : 7 / 2 = 3
+//	printf("return %d \n",verif_table_ok(s, mid));
+//	if (verif_table_ok(s, mid))
+	pa(s, mid - 1);
 	//creer malloc b pour push b
 }
 

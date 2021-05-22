@@ -1,31 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   printa.c                                           :+:      :+:    :+:   */
+/*   pb.c                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/20 17:31:14 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/05/22 15:42:07 by fcatinau         ###   ########.fr       */
+/*   Created: 2021/05/22 23:52:21 by fcatinau          #+#    #+#             */
+/*   Updated: 2021/05/22 23:52:31 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-// TMP
-
-void	ft_print(int *s, char c, int len)
+void	pb(t_swap *s)
 {
-	int	i;
-
-	i = 0;
-	if (len == 0)
-		return ;
-	printf("------ %c ------\n",c);
-	while(i < len)
-	{
-		printf("pos %d| val %d \n", i, s[i]);
-		i++;
-	}
-	printf("---------------\n");
+	s->a = malloc(sizeof(int *) * (s->count.len_a + 1));
+	if (!s->a)
+		return;
+	ft_len_table(s);
+	ft_putstr_fd("pb\n", 1);
 }

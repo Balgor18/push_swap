@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 12:26:50 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/05/20 18:17:44 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/05/22 15:13:12 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,10 @@ int	prepare_A(t_swap *swap, char **s)
 
 	j = 1;
 	i = 0;
-	swap->a = malloc(sizeof(int *) * swap->len);
+	swap->a = malloc(sizeof(int *) * swap->count.len_a);
 	if (!swap->a)
 		return(0);
-	while(i < swap->len)
+	while(i < swap->count.len_a)
 	{
 		swap->a[i] = ft_atoi(s[j]);
 		i++;

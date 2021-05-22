@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 11:46:36 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/05/21 17:09:26 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/05/22 23:53:15 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,15 @@
 # define PUSH_SWAP_H
 
 # include "libft/libft.h"
+
+typedef struct	s_copylist
+{
+	int			start;
+	int			stop;
+	int			*dest;
+	int			*src;
+	int			len;
+}				t_copylist;
 
 typedef struct	s_count
 {
@@ -38,6 +47,7 @@ void	ft_print(int *s, char c, int len);
 ** Init
 */
 void	init_struct(t_swap *s);
+void	init_struct_for_copy(int *src, t_copylist *c, int *dest, int len);
 
 
 /*
