@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 12:26:50 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/05/25 11:51:49 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/05/25 12:24:14 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ int	main(int argc, char **argv)
 	}
 	if (solver(&swap))
 	{
-		printf("Done \n");
+	//	printf("Done \n");
 		return (0);
 	}
 	return (0);

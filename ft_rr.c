@@ -14,30 +14,34 @@
 
 void	ft_ra(t_swap *s)
 {
-//	printf("Avant \n");
-//	print_a(s);
-//	printf("--------------------\n");
 	int	tmp;
 	int	i;
 
 	i = 0;
-	tmp = s->a[i];
+	tmp = s->a[0];
 	while (i < s->count.len_a)
 	{
 		s->a[i] = s->a[i + 1];
 		i++;
 	}
-	s->a[i] = tmp;
-//	printf("Apres \n");
-//	print_a(s);
+	s->a[i - 1] = tmp;
 	ft_putstr_fd("ft_ra\n",1);
 }
 
-// verif ft_ra avant de copier pour ft_rb
 void	ft_rb(t_swap *s)
 {
-	(void)s;
-	ft_putstr_fd("ft_ra\n",1);
+	int	tmp;
+	int	i;
+
+	i = 0;
+	tmp = s->b[0];
+	while (i < s->count.len_b)
+	{
+		s->b[i] = s->b[i + 1];
+		i++;
+	}
+	s->b[i - 1] = tmp;
+	ft_putstr_fd("ft_rb\n",1);
 }
 
 void	ft_rr(t_swap *s)

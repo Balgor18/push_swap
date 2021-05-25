@@ -6,8 +6,7 @@ CFLAGS=-Wall -Wextra -Werror
 
 RM=rm -f
 
-SRC =	printa.c ft_len_table.c\
-		ft_rr.c\
+SRC =	printa.c ft_rr.c\
 		ft_rrr.c\
 		ft_ss.c\
 		init_struct.c\

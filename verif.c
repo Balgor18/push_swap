@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/20 14:47:47 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/05/25 11:51:27 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/05/25 12:14:30 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,10 +58,8 @@ void	verif_swap_list(t_swap *s)
 	int	mid;
 
 	mid = s->count.len_a / 2;
-	//if (verif_table_ok(s, mid) && s->count.len_b == 0)
 	if (s->count.len_b == 0 && !verif_table_ok(s, s->count.len_a))
 		pa(s, mid - 1);
-	printf("je boucle \n");
 	if (verif_table_ok(s, s->count.len_a) && s->count.len_b > 0)
 		pb(s, s->count.len_b);
 }
