@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/20 14:47:47 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/05/24 12:50:46 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/05/25 11:51:27 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,27 +56,24 @@ void	verif_top_and_bot(t_swap *s)
 void	verif_swap_list(t_swap *s)
 {
 	int	mid;
-	int	i;
 
-	i = 0;
-	mid = s->count.len_a / 2; // si 0.5 va vers le plus bas ex : 7 / 2 = 3
-//	printf("return %d \n",verif_table_ok(s, mid));
-//	if (verif_table_ok(s, mid))
-	pa(s, mid - 1);
-	//creer malloc b pour push b
+	mid = s->count.len_a / 2;
+	//if (verif_table_ok(s, mid) && s->count.len_b == 0)
+	if (s->count.len_b == 0 && !verif_table_ok(s, s->count.len_a))
+		pa(s, mid - 1);
+	printf("je boucle \n");
+	if (verif_table_ok(s, s->count.len_a) && s->count.len_b > 0)
+		pb(s, s->count.len_b);
 }
 
 int	verif_table_ok(t_swap *s, int len)
 {
 	int	i;
 
-	i = 0;
-	//printf("Debut de bloucle \n");
+	i = 1;
 	while (i < len)
 	{
-		//printf("%d < %d\n", i, len);
-		//printf("%d |>| %d \n",s->a[i], s->a[i + 1]);
-		if (s->a[i] > s->a[i + 1])
+		if (s->a[i - 1] > s->a[i])
 			return (0);
 		i++;
 	}

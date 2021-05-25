@@ -36,7 +36,7 @@ libft :
 all: $(NAME)
 
 norme :
-		@make -C libft/ norme
+#		@make -C libft/ norme
 		norminette -R CheckForbiddenSourceHeader $(SRC)
 		norminette -R CheckDefine push_swap.h
 

@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/20 15:12:42 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/05/22 23:45:55 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/05/25 11:53:13 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 int	solver(t_swap *swap)
 {
-	//int	ret;
-
-//	printf("je rentre dans two_first \n");
 	verif_two_first(swap);
-
 	verif_swap_list(swap);
-//	verif_top_and_bot(swap);
-//	if (!verif_table_ok(swap, swap->len))
-//		solver(swap);
+	verif_top_and_bot(swap);
+	printf("je boucle 1\n");
+	printf("virf_table de tes mort \n");
+	printf("return %d \n", verif_table_ok(swap, swap->len));
+	return (0);
+	if (!verif_table_ok(swap, swap->len))
+		solver(swap);
 	return (1);
 }

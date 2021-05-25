@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/20 16:44:34 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/05/23 19:33:01 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/05/25 10:41:23 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,24 @@ void	init_list_a(t_swap *s)
 	free(tmp);
 }
 
+void	pa_bis(t_swap *s, t_copylist *list_b, int *tmp)
+{
+	tmp = malloc(sizeof(int *) * (s->count.len_b));
+	if (!tmp)
+		return;
+	init_struct_for_copy(s->b, list_b, tmp, s->count.len_b);
+	list_b->start = 0;
+	copy_list(list_b, 'A');
+	s->count.len_b++;
+	s->b = malloc(sizeof(int *) * (s->count.len_b));
+	if (!s->b)
+		return;
+	init_struct_for_copy(tmp, list_b, s->b, s->count.len_b);
+	list_b->start = 1;
+	copy_list(list_b, 'B');
+	free(tmp);
+}
+
 void	pa(t_swap *s, int len)
 {
 	int	*tmp;
@@ -63,22 +81,7 @@ void	pa(t_swap *s, int len)
 
 	tmp = NULL;
 	if (s->count.len_b > 0)
-	{
-		tmp = malloc(sizeof(int *) * (s->count.len_b));
-		if (!tmp)
-			return;
-		init_struct_for_copy(s->b, &list_b, tmp, s->count.len_b);
-		list_b.start = 0;
-		copy_list(&list_b, 'A');
-		s->count.len_b++;
-		s->b = malloc(sizeof(int *) * (s->count.len_b));
-		if (!s->b)
-			return;
-		init_struct_for_copy(tmp, &list_b, s->b, s->count.len_b);
-		list_b.start = 1;
-		copy_list(&list_b, 'B');
-		free(tmp);
-	}
+		pa_bis(s, &list_b, tmp);
 	else
 	{
 		s->count.len_b++;
@@ -88,8 +91,8 @@ void	pa(t_swap *s, int len)
 	}
 	s->b[0] = s->a[0];
 	init_list_a(s);
-	ft_print(s->a, 'A', s->count.len_a);
-	ft_print(s->b, 'B', s->count.len_b);
+//	ft_print(s->a, 'A', s->count.len_a);
+//	ft_print(s->b, 'B', s->count.len_b);
 	ft_putstr_fd("pa\n", 1);
 	if (len != 0)
 		pa(s, len - 1);

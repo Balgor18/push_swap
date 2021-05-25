@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 12:26:50 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/05/22 15:13:12 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/05/25 11:51:49 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,10 +50,10 @@ int	main(int argc, char **argv)
 		ft_putstr_fd("Error\n", 1);
 		return (0);
 	}
-//	print_a(&swap);
-	solver(&swap);
-//	ft_len_table(&swap);
-	//print_a(&swap);
-	printf("Done \n");
+	if (solver(&swap))
+	{
+		printf("Done \n");
+		return (0);
+	}
 	return (0);
 }

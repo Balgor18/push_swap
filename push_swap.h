@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 11:46:36 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/05/22 23:53:15 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/05/25 11:50:42 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,7 +88,9 @@ void	ft_ss(t_swap *s);
 ** Push list
 */
 void	pa(t_swap *s, int len);
-void	pb(t_swap *s);
+void	pb(t_swap *s, int len);
+
+void	copy_list(t_copylist *c, char ch);
 
 #endif
 // pa = prends le 1er elem de b pour allez le mettre sur a SAUF SI B < 1
