@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ss.c                                               :+:      :+:    :+:   */
+/*   ft_ss.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 17:18:26 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/05/20 17:13:56 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/05/25 15:17:58 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,22 @@
 
 void	ft_sa(t_swap *s)
 {
-	int tmp;
+	int	tmp;
 
 	tmp = s->a[0];
 	s->a[0] = s->a[1];
 	s->a[1] = tmp;
-	ft_putstr_fd("sa\n",1);
+	ft_putstr_fd("sa\n", 1);
 }
 
 void	ft_sb(t_swap *s)
 {
-	int tmp;
+	int	tmp;
 
 	tmp = s->b[0];
 	s->b[0] = s->b[1];
 	s->b[1] = tmp;
-	ft_putstr_fd("sb\n",1);
+	ft_putstr_fd("sb\n", 1);
 }
 
 void	ft_ss(t_swap *s)
