@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/20 14:47:47 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/05/22 17:16:25 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/05/24 12:50:46 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,9 @@ void	verif_two_first(t_swap *s)
 {
 	if (s->count.len_b > 0)
 	{
-		if ((s->a[0] > s->a[1]) && (s->b[0] > s->b[1]))
+		if ((s->a[0] > s->a[1]) && (s->b[0] < s->b[1]))
 			ft_ss(s);
-		else if (s->b[0] > s->b[1])
+		else if (s->b[0] < s->b[1])
 			ft_sb(s);
 	}
 	if (s->a[0] > s->a[1])
@@ -43,9 +43,9 @@ void	verif_top_and_bot(t_swap *s)
 {
 	if (s->count.len_b > 0)
 	{
-		if ((s->a[0] > s->a[s->count.len_a - 1]) && (s->b[0] > s->b[s->count.len_b - 1]))
+		if ((s->a[0] > s->a[s->count.len_a - 1]) && (s->b[0] < s->b[s->count.len_b - 1]))
 			ft_rr(s);
-		else if (s->b[0] > s->b[s->count.len_b - 1])
+		else if (s->b[0] < s->b[s->count.len_b - 1])
 			ft_rb(s);
 	}
 	if (s->a[0] > s->a[s->count.len_a - 1])

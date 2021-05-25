@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/20 16:44:34 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/05/22 23:59:50 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/05/23 19:33:01 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,8 +88,8 @@ void	pa(t_swap *s, int len)
 	}
 	s->b[0] = s->a[0];
 	init_list_a(s);
-	//ft_print(s->a, 'A', s->count.len_a);
-	//ft_print(s->b, 'B', s->count.len_b);
+	ft_print(s->a, 'A', s->count.len_a);
+	ft_print(s->b, 'B', s->count.len_b);
 	ft_putstr_fd("pa\n", 1);
 	if (len != 0)
 		pa(s, len - 1);
