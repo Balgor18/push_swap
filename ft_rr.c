@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/20 15:54:45 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/05/25 15:17:22 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/05/25 18:27:34 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	ft_ra(t_swap *s)
 		i++;
 	}
 	s->a[i - 1] = tmp;
-	ft_putstr_fd("ft_ra\n", 1);
+	ft_putstr_fd("ra\n", 1);
 }
 
 void	ft_rb(t_swap *s)
@@ -41,7 +41,7 @@ void	ft_rb(t_swap *s)
 		i++;
 	}
 	s->b[i - 1] = tmp;
-	ft_putstr_fd("ft_rb\n", 1);
+	ft_putstr_fd("rb\n", 1);
 }
 
 void	ft_rr(t_swap *s)

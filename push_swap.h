@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 11:46:36 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/05/25 15:58:43 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/05/25 16:18:51 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ typedef struct s_count
 
 typedef struct s_swap
 {
+	char	type;
 	int		*a;
 	int		*b;
 	int		len;

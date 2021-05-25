@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/20 16:44:34 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/05/25 15:19:47 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/05/25 18:11:53 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,6 +65,7 @@ void	pa_bis(t_swap *s, t_copylist *list_b, int *tmp)
 	list_b->start = 0;
 	copy_list(list_b, 'A');
 	s->count.len_b++;
+	free(s->b);
 	s->b = malloc(sizeof(int *) * (s->count.len_b));
 	if (!s->b)
 		return ;
@@ -92,6 +93,7 @@ void	pa(t_swap *s, int len)
 	s->b[0] = s->a[0];
 	init_list_a(s);
 	ft_putstr_fd("pa\n", 1);
-	if (len != 0)
+	if (len > 0)
 		pa(s, len - 1);
+	return ;
 }

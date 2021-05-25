@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/22 23:52:21 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/05/25 15:20:26 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/05/25 18:05:46 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,7 @@ void	pb(t_swap *s, int len)
 		pb_bis(s, &list_a, tmp);
 	else
 	{
+		free(s->a);
 		s->count.len_a++;
 		s->a = malloc(sizeof(int *) * (s->count.len_a));
 		if (!s->a)

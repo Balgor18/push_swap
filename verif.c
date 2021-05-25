@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/20 14:47:47 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/05/25 16:00:36 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/05/25 19:02:07 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,11 +46,18 @@ void	verif_top_and_bot(t_swap *s)
 		if ((s->a[0] > s->a[s->count.len_a - 1])
 			&& (s->b[0] < s->b[s->count.len_b - 1]))
 			ft_rr(s);
+		else if ((s->a[0] < s->a[s->count.len_a - 1])
+			&& (s->b[0] > s->b[s->count.len_b - 1]))
+			ft_rrr(s);
 		else if (s->b[0] < s->b[s->count.len_b - 1])
 			ft_rb(s);
+		else if (s->b[0] > s->b[s->count.len_b - 1])
+			ft_rrb(s);
 	}
 	if (s->a[0] > s->a[s->count.len_a - 1])
 		ft_ra(s);
+	else if (s->a[0] < s->a[s->count.len_a - 1])
+		ft_rra(s);
 	return ;
 }
 
@@ -59,8 +66,9 @@ void	verif_swap_list(t_swap *s)
 	int	mid;
 
 	mid = s->count.len_a / 2;
-	if (s->count.len_b == 0 && !verif_table_ok(s, s->count.len_a))
+	if (s->count.len_b == 0)// && !verif_table_ok(s, s->count.len_a))
 		pa(s, mid - 1);
+
 	if (verif_table_ok(s, s->count.len_a) && s->count.len_b > 0)
 		pb(s, s->count.len_b);
 }
