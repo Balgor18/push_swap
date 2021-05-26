@@ -15,9 +15,9 @@
 int	solver(t_swap *swap)
 {
 	static int i;
-	int j;
+//	int j;
 
-	j = 0;
+//	j = 0;
 	if (!i)
 		i = 0;
 //	printf("tour %d \n", i);

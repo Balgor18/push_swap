@@ -92,6 +92,7 @@ void	pa(t_swap *s, int len)
 	}
 	s->b[0] = s->a[0];
 	init_list_a(s);
+	free(tmp);
 	ft_putstr_fd("pa\n", 1);
 	if (len > 0)
 		pa(s, len - 1);
