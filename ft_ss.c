@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 17:18:26 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/05/25 18:52:28 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/05/26 10:14:18 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	ft_sa(t_swap *s)
 	ft_putstr_fd("sa\n", 1);
 }
 
-void	ft_sb(t_swap *s)
+void	ft_sb(t_swap *s) // ca va pas 
 {
 	int	tmp;
 
