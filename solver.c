@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/20 15:12:42 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/05/29 12:20:21 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/05/29 17:06:12 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ int	solver(t_swap *swap)
 
 //	ft_print(swap->a, 'A', swap->count.len_a);
 //	ft_print(swap->b, 'B', swap->count.len_b);
-	//printf("verif table ok %d \n", verif_table_ok(swap, swap->count.len_a));
+//	printf("verif table ok %d \n", verif_table_ok(swap, swap->count.len_a));
 	if (!verif_table_ok(swap, swap->count.len_a))
 		solver(swap);
 	free(swap->a);
