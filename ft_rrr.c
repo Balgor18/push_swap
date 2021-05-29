@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/21 14:02:04 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/05/26 10:14:25 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/05/29 17:27:04 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void	ft_rra(t_swap *s)
 	ft_putstr_fd("rra\n", 1);
 }
 
-void	ft_rrb(t_swap *s)// ca va pas
+void	ft_rrb(t_swap *s)
 {
 	int	tmp;
 	int	i;
@@ -46,7 +46,6 @@ void	ft_rrb(t_swap *s)// ca va pas
 
 void	ft_rrr(t_swap *s)
 {
-	//printf("Hello rrr\n");
 	ft_rra(s);
 	ft_rrb(s);
 }

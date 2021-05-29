@@ -6,20 +6,33 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 12:26:50 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/05/25 16:39:48 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/05/29 17:31:00 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	prepare_A(t_swap *swap, char **s)
+void	parse(t_swap *swap, char **s)
 {
 	int	i;
 	int	j;
+
+	i = 0;
+	j = 1;
+	while (i < swap->count.len_a)
+	{
+		swap->a[i] = ft_atoi(s[j]);
+		i++;
+		j++;
+	}
+}
+
+int	prepare_A(t_swap *swap, char **s)
+{
+	int	i;
 	int	pos;
 
 	pos = 0;
-	j = 1;
 	i = 0;
 	swap->a = malloc(sizeof(int *) * swap->count.len_a);
 	if (!swap->a)
@@ -37,14 +50,7 @@ int	prepare_A(t_swap *swap, char **s)
 		}
 	}
 	else
-	{
-		while (i < swap->count.len_a)
-		{
-			swap->a[i] = ft_atoi(s[j]);
-			i++;
-			j++;
-		}
-	}
+		parse(swap, s);
 	return (1);
 }
 
@@ -55,7 +61,7 @@ int	main(int argc, char **argv)
 
 	tmp = argc;
 	init_struct(&swap);
-	if(argc < 2)
+	if (argc < 2)
 		return (0);
 	while (--tmp >= 1)
 	{
