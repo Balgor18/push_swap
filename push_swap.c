@@ -80,5 +80,6 @@ int	main(int argc, char **argv)
 	}
 	if (solver(&swap))
 		return (0);
+	ft_print(swap.a, 'A', swap.count.len_a);
 	return (0);
 }
