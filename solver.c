@@ -6,12 +6,21 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/20 15:12:42 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/05/26 13:00:56 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/05/29 12:20:21 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
+void	resolve_len_two(t_swap *s)
+{
+	if (s->count.len_a == 2)
+		if (s->a[0] > s->a[1])
+			ft_sa(s);
+	if (s->count.len_b == 2)
+		if (s->b[0] < s->b[1])
+			ft_sb(s);
+}
 int	solver(t_swap *swap)
 {
 	static int i;
@@ -24,9 +33,15 @@ int	solver(t_swap *swap)
 	i++;
 //	while (j < 10000000)
 //		j++;
+	if (swap->count.len_a == 2 || swap->count.len_b == 2)
+	{
+		resolve_len_two(swap);
+		return (0);
+	}
 	verif_two_first(swap);
 	verif_swap_list(swap);
-	verif_top_and_bot(swap);
+	//verif_top_and_bot(swap);
+
 //	ft_print(swap->a, 'A', swap->count.len_a);
 //	ft_print(swap->b, 'B', swap->count.len_b);
 	//printf("verif table ok %d \n", verif_table_ok(swap, swap->count.len_a));
