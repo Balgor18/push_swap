@@ -6,7 +6,7 @@
 #    By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/01/09 15:35:09 by fcatinau          #+#    #+#              #
-#    Updated: 2021/05/20 17:04:14 by fcatinau         ###   ########.fr        #
+#    Updated: 2021/05/29 16:45:53 by fcatinau         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,7 +44,7 @@ all: $(NAME)
 
 norme :
 		norminette -R CheckForbiddenSourceHeader $(SRC)
-		norminette -R CheckDefine cub3D.h
+		norminette -R CheckDefine libft.h
 
 clean:
 		$(RM) $(OBJ) $(OBJ_BONUS)
