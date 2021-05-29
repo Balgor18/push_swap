@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/09 22:52:43 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/05/19 15:57:21 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/05/26 17:07:21 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,26 +14,24 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	size_t			i;
-	unsigned char	*a;
-	unsigned char	*b;
+	size_t	i;
 
+	i = 0;
 	if (!dst && !src)
 		return (NULL);
-	i = 0;
-	a = (unsigned char *)dst;
-	b = (unsigned char *)src;
-	if (a > b)
+	if (dst > src)
+	{
 		while (i < len)
 		{
-			a[len - 1] = b[len - 1];
+			((unsigned char *)dst)[len - 1] = ((unsigned char *)src)[len - 1];
 			len--;
 		}
+	}
 	else
 	{
 		while (i < len)
 		{
-			a[i] = b[i];
+			((unsigned char *)dst)[i] = ((unsigned char *)src)[i];
 			i++;
 		}
 	}
