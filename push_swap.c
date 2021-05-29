@@ -55,6 +55,8 @@ int	main(int argc, char **argv)
 
 	tmp = argc;
 	init_struct(&swap);
+	if(argc < 2)
+		return (0);
 	while (--tmp >= 1)
 	{
 		if (!verif_digit(argv[tmp], ft_strlen(argv[tmp]), &swap))
