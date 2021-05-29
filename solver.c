@@ -39,8 +39,10 @@ int	solver(t_swap *swap)
 		return (0);
 	}
 	verif_two_first(swap);
-	verif_swap_list(swap);
-	//verif_top_and_bot(swap);
+	if (!verif_table_ok(swap, swap->count.len_a))
+		verif_swap_list(swap);
+	//if (!verif_table_ok(swap, swap->count.len_a))
+	//	verif_top_and_bot(swap);
 	// ---------------------------
 	//ft_print(swap->a, 'A', swap->count.len_a);
 	//ft_print(swap->b, 'B', swap->count.len_b);
