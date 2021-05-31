@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/20 15:12:42 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/05/31 15:07:27 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/05/31 15:19:42 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,10 +40,10 @@ int	solver(t_swap *swap)
 	}
 	//printf("Je seg fault \n");
 	verif_two_first(swap);
-	//printf("Je seg fault 1\n");
-	verif_swap_list(swap);
-	//printf("Je seg fault 2\n");
-	//verif_top_and_bot(swap);
+	if (!verif_table_ok(swap, swap->count.len_a))
+		verif_swap_list(swap);
+	//if (!verif_table_ok(swap, swap->count.len_a))
+	//	verif_top_and_bot(swap);
 	// ---------------------------
 	//ft_print(swap->a, 'A', swap->count.len_a);
 	//ft_print(swap->b, 'B', swap->count.len_b);
