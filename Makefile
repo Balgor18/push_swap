@@ -21,6 +21,7 @@ OBJ = $(SRC:.c=.o)
 $(NAME): libft $(OBJ)
 			@$(CC) $(CFLAGS) -o $@ $(OBJ) -Llibft -lft
 # -fsanitize=address
+			./push_swap 4 3 10 11 9 2
 #			valgrind ./push_swap 2 1 3 6 5 8
 #			./push_swap 2 one 3 6 5 8
 #			./push_swap "4 67 3 87 23"
