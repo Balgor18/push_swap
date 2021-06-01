@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/20 15:12:42 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/05/31 15:19:42 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/05/31 22:13:35 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ void	resolve_len_two(t_swap *s)
 		if (s->b[0] < s->b[1])
 			ft_sb(s);
 }
+
 int	solver(t_swap *swap)
 {
 	static int i;

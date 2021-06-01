@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 12:26:50 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/05/29 17:31:00 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/06/01 15:35:17 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,33 @@ int	prepare_A(t_swap *swap, char **s)
 	return (1);
 }
 
+int	ft_same_int(int j, char **av)
+{
+	int	i;
+
+	i = 1;
+	while (av[j])
+	{
+		while (av[i])
+		{
+			printf("verif %s != %s || %d \n",av[j], av[i], ft_strcmp(av[i], av[j]));
+			if (ft_strcmp(av[i], av[j]) == 0 && i != j)
+				return (1);
+			i++;
+		}
+		j++;
+		i = 1;
+	}
+	return (0);
+}
+/*
+int	veirf_size_int(char *s)
+{
+	ft_strncmp(s, "2147483647", ft_strlen(s));
+	ft_strncmp(s, "-2147483648", ft_strlen(s));
+}
+*/
+
 int	main(int argc, char **argv)
 {
 	int		tmp;
@@ -63,9 +90,10 @@ int	main(int argc, char **argv)
 	init_struct(&swap);
 	if (argc < 2)
 		return (0);
+//	ft_same_int(1, argv);// dangers more than 25 line
 	while (--tmp >= 1)
 	{
-		if (!verif_digit(argv[tmp], ft_strlen(argv[tmp]), &swap))
+		if (!verif_digit(argv[tmp], ft_strlen(argv[tmp]), &swap) || ft_same_int(1, argv))// || verif_size_int(argv[tmp]))
 		{
 			ft_putstr_fd("Error\n", 1);
 			return (0);
@@ -78,8 +106,8 @@ int	main(int argc, char **argv)
 		ft_putstr_fd("Error\n", 1);
 		return (0);
 	}
-	if (solver(&swap))
-		return (0);
-	ft_print(swap.a, 'A', swap.count.len_a);
+	//if (solver(&swap))
+	//	return (0);
+	//ft_print(swap.a, 'A', swap.count.len_a);
 	return (0);
 }
