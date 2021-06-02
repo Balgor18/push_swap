@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 12:26:50 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/06/01 15:35:17 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/06/01 16:08:37 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,6 +73,7 @@ int	ft_same_int(int j, char **av)
 	}
 	return (0);
 }
+
 /*
 int	veirf_size_int(char *s)
 {
