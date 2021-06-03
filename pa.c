@@ -6,95 +6,24 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/20 16:44:34 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/05/25 18:11:53 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/06/03 15:10:59 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	copy_list(t_copylist *c, char ch)
+void	pa(t_swap *s)
 {
 	int	i;
 
-	i = 0;
-	if (ch == 'A')
-	{
-		while (c->start < c->len)
-		{
-			c->dest[i] = c->src[c->start];
-			c->start++;
-			i++;
-		}
-	}
-	else
-	{
-		while (c->start < c->len)
-		{
-			c->dest[c->start] = c->src[i];
-			c->start++;
-			i++;
-		}
-	}
-}
-
-void	init_list_a(t_swap *s)
-{
-	int			*tmp;
-	t_copylist	list_a;
-
-	tmp = NULL;
-	tmp = malloc(sizeof(int *) * s->count.len_a);
-	init_struct_for_copy(s->a, &list_a, tmp, s->count.len_a);
-	list_a.start = 1;
-	copy_list(&list_a, 'A');
-	s->count.len_a--;
-	free(s->a);
-	s->a = malloc(sizeof(int *) * s->count.len_a);
-	init_struct_for_copy(tmp, &list_a, s->a, s->count.len_a);
-	list_a.start = 0;
-	copy_list(&list_a, 'A');
-	free(tmp);
-}
-
-void	pa_bis(t_swap *s, t_copylist *list_b, int *tmp)
-{
-	tmp = malloc(sizeof(int *) * (s->count.len_b));
-	if (!tmp)
-		return ;
-	init_struct_for_copy(s->b, list_b, tmp, s->count.len_b);
-	list_b->start = 0;
-	copy_list(list_b, 'A');
+	i = s->count.len_b + 1;
+	while (--i > 0)
+		s->b[i] = s->b[i - 1];
 	s->count.len_b++;
-	free(s->b);
-	s->b = malloc(sizeof(int *) * (s->count.len_b));
-	if (!s->b)
-		return ;
-	init_struct_for_copy(tmp, list_b, s->b, s->count.len_b);
-	list_b->start = 1;
-	copy_list(list_b, 'B');
-	free(tmp);
-}
-
-void	pa(t_swap *s, int len)
-{
-	int			*tmp;
-	t_copylist	list_b;
-
-	tmp = NULL;
-	if (s->count.len_b > 0)
-		pa_bis(s, &list_b, tmp);
-	else
-	{
-		s->count.len_b++;
-		s->b = malloc(sizeof(int *) * (s->count.len_b));
-		if (!s->b)
-			return ;
-	}
 	s->b[0] = s->a[0];
-	init_list_a(s);
-	free(tmp);
+	i = -1;
+	s->count.len_a--;
+	while (++i < s->count.len_a)
+		s->a[i] = s->a[i + 1];
 	ft_putstr_fd("pa\n", 1);
-	if (len > 0)
-		pa(s, len - 1);
-	return ;
 }

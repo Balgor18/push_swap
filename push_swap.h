@@ -6,22 +6,13 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 11:46:36 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/05/25 16:18:51 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/06/03 16:44:21 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 # include "libft/libft.h"
-
-typedef struct s_copylist
-{
-	int			start;
-	int			stop;
-	int			*dest;
-	int			*src;
-	int			len;
-}				t_copylist;
 
 typedef struct s_count
 {
@@ -46,7 +37,6 @@ void	ft_print(int *s, char c, int len);
 ** Init
 */
 void	init_struct(t_swap *s);
-void	init_struct_for_copy(int *src, t_copylist *c, int *dest, int len);
 
 /*
 ** Verif
@@ -82,9 +72,9 @@ void	ft_ss(t_swap *s);
 /*
 ** Push list
 */
-void	pa(t_swap *s, int len);
-void	pb(t_swap *s, int len);
+void	pa(t_swap *s);
+void	pb(t_swap *s);
 
-void	copy_list(t_copylist *c, char ch);
+//void	copy_list(t_copylist *c, char ch);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 12:26:50 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/06/01 16:08:37 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/06/03 16:44:28 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ int	ft_same_int(int j, char **av)
 	{
 		while (av[i])
 		{
-			printf("verif %s != %s || %d \n",av[j], av[i], ft_strcmp(av[i], av[j]));
+			//printf("verif %s != %s || %d \n",av[j], av[i], ft_strcmp(av[i], av[j]));
 			if (ft_strcmp(av[i], av[j]) == 0 && i != j)
 				return (1);
 			i++;
