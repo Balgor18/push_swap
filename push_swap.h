@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 11:46:36 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/06/03 16:44:21 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/06/04 14:11:48 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,9 @@ void	verif_two_first(t_swap *s);
 int		verif_digit(char *s, int len, t_swap *swap);
 int		verif_table_ok(t_swap *s, int len);
 void	verif_swap_list(t_swap *s);
-void	verif_top_and_bot(t_swap *s);
+void	verif_for_rr(t_swap *s);
+void	verif_for_rrr(t_swap *s);
+int		verif_pb_is_need(t_swap *s);
 
 /*
 ** Solver

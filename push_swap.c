@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 12:26:50 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/06/04 11:49:33 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/06/04 15:13:45 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,8 +107,9 @@ int	main(int argc, char **argv)
 		ft_putstr_fd("Error\n", 1);
 		return (0);
 	}
-	if (solver(&swap))
-		return (0);
-	//ft_print(swap.a, 'A', swap.count.len_a);
+	solver(&swap);
+	ft_print(swap.a, 'A', swap.count.len_a);
+	free(swap.a);
+	free(swap.b);
 	return (0);
 }

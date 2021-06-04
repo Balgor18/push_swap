@@ -14,14 +14,18 @@ SRC =	printa.c ft_rr.c\
 		pb.c\
 		push_swap.c\
 		solver.c\
-		verif.c
+		verif.c\
+		verif2.c
 
 OBJ = $(SRC:.c=.o)
 
 $(NAME): libft $(OBJ)
 			@$(CC) $(CFLAGS) -o $@ $(OBJ) -Llibft -lft
 # -fsanitize=address
-			./push_swap 4 3 10 11 9 2
+			./push_swap 4 3 10
+			./push_swap 10 4 3
+			./push_swap 8 5 1 3 4
+#			./push_swap 4 3 10 11 9 2
 #			valgrind ./push_swap 2 1 3 6 5 8
 #			valgrind --leak-check=full --show-leak-kinds=all ./push_swap 2 1 3 6 5 8
 #			./push_swap 2 one 3 6 5 8
