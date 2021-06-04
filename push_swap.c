@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 12:26:50 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/06/03 16:44:28 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/06/04 11:49:33 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ int	prepare_A(t_swap *swap, char **s)
 	pos = 0;
 	i = 0;
 	swap->a = malloc(sizeof(int *) * swap->count.len_a);
+	swap->b = malloc(sizeof(int *) * swap->count.len_a);
 	if (!swap->a)
 		return (0);
 	if (swap->type == 'S')
@@ -63,7 +64,6 @@ int	ft_same_int(int j, char **av)
 	{
 		while (av[i])
 		{
-			//printf("verif %s != %s || %d \n",av[j], av[i], ft_strcmp(av[i], av[j]));
 			if (ft_strcmp(av[i], av[j]) == 0 && i != j)
 				return (1);
 			i++;
@@ -75,7 +75,7 @@ int	ft_same_int(int j, char **av)
 }
 
 /*
-int	veirf_size_int(char *s)
+int	verif_size_int(char *s)
 {
 	ft_strncmp(s, "2147483647", ft_strlen(s));
 	ft_strncmp(s, "-2147483648", ft_strlen(s));
@@ -107,8 +107,8 @@ int	main(int argc, char **argv)
 		ft_putstr_fd("Error\n", 1);
 		return (0);
 	}
-	//if (solver(&swap))
-	//	return (0);
+	if (solver(&swap))
+		return (0);
 	//ft_print(swap.a, 'A', swap.count.len_a);
 	return (0);
 }

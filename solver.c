@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/20 15:12:42 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/05/31 22:13:35 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/06/04 11:53:23 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,15 +25,11 @@ void	resolve_len_two(t_swap *s)
 int	solver(t_swap *swap)
 {
 	static int i;
-	int j;
 
-	j = 0;
 	if (!i)
 		i = 0;
 	printf("tour %d \n", i);
 	i++;
-	while (j < 10000000)
-		j++;
 	if (swap->count.len_a == 2 || swap->count.len_b == 2)
 	{
 		resolve_len_two(swap);
@@ -49,8 +45,11 @@ int	solver(t_swap *swap)
 	//ft_print(swap->a, 'A', swap->count.len_a);
 	//ft_print(swap->b, 'B', swap->count.len_b);
 	//printf("verif table ok %d \n", verif_table_ok(swap, swap->count.len_a));
-	if (!verif_table_ok(swap, swap->count.len_a))
-		solver(swap);
+	//if (!verif_table_ok(swap, swap->count.len_a))
+	//	solver(swap);
+	ft_print(swap->a, 'A', swap->count.len_a);
+	ft_print(swap->b, 'B', swap->count.len_b);
 	free(swap->a);
+	free(swap->b);
 	return (1);
 }
