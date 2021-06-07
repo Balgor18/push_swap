@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/04 14:07:15 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/06/07 11:33:19 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/06/07 17:30:07 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,16 +48,20 @@ int	verif_pa_is_need(t_swap *s)
 	int i;
 
 	i = 1;
+	//printf("for pa\n");
 	if (s->a[0] > s->b[0] && s->count.len_b > 0)
 		return (1);
-	/*while (i < s->count.len_b)
+	//ft_putstr_fd("boucle need pa \n", 1);
+	while (i < s->count.len_b)
 	{
-		if ((s->b[i - 1] > s->b[i]) && (s->b[i] < s->a[0]))
+		//printf("(%d < %d) && %d < %d \n", s->b[i - 1], s->b[i], s->b[i], s->a[0]);
+		if ((s->b[i - 1] < s->b[i]) && (s->b[i] < s->a[0]))
 			return (0);
 		i++;
-	}*/
+	}
 
-	/*if (s->count.len_a > 0)
+	/*printf("%d < %d || %d \n", s->a[0], s->b[0], verif_table_ok(s, s->count.len_a));
+	if (s->count.len_a > 0)
 		if (s->a[0] < s->b[0] || !verif_table_ok(s, s->count.len_a))
 			return (1);*/
 	return (0);

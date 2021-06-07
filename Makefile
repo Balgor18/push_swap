@@ -6,12 +6,13 @@ CFLAGS=-Wall -Wextra -Werror
 
 RM=rm -f
 
-SRC =	printa.c ft_rr.c\
+SRC =	ft_print.c ft_pa.c\
+		ft_pb.c\
+		ft_rr.c\
 		ft_rrr.c\
 		ft_ss.c\
 		init_struct.c\
-		pa.c\
-		pb.c\
+		operation.c\
 		push_swap.c\
 		solver.c\
 		verif.c\
@@ -23,9 +24,8 @@ $(NAME): libft $(OBJ)
 			@$(CC) $(CFLAGS) -o $@ $(OBJ) -Llibft -lft
 # -fsanitize=address
 
-#			./push_swap 4 3 10
-#			./push_swap 10 4 3
-
+			./push_swap 4 3 10
+			./push_swap 10 4 3
 			./push_swap 8 5 1 3 4
 #			./push_swap 4 3 10 11 9 2
 #			valgrind ./push_swap 2 1 3 6 5 8

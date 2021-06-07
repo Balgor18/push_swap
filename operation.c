@@ -1,51 +1,62 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_rr.c                                            :+:      :+:    :+:   */
+/*   operation.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/20 15:54:45 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/06/07 17:07:57 by fcatinau         ###   ########.fr       */
+/*   Created: 2021/06/07 15:41:43 by fcatinau          #+#    #+#             */
+/*   Updated: 2021/06/07 17:23:46 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ft_ra(t_swap *s)
+void	find_low_int(t_operation *ope, t_swap *s)
 {
-	int	tmp;
 	int	i;
+	int	tmp;
 
+	tmp = 2147483647;
 	i = 0;
-	tmp = s->a[0];
 	while (i < s->count.len_a)
 	{
-		s->a[i] = s->a[i + 1];
+		if (s->a[i] <= tmp)
+		{
+			tmp = s->a[i];
+			ope->low_int = i;
+		}
 		i++;
 	}
-	s->a[i - 1] = tmp;
-	ft_putstr_fd("ra\n", 1);
 }
 
-void	ft_rb(t_swap *s)
+void	verif_operation(t_swap *s)
 {
-	int	tmp;
-	int	i;
+	t_operation	ope;
+	int			i;
 
 	i = 0;
-	tmp = s->b[0];
-	while (i < s->count.len_b)
+	ope.mid = s->count.len_a / 2;
+	find_low_int(&ope, s);
+	if (ope.low_int >= ope.mid)
 	{
-		s->b[i] = s->b[i + 1];
-		i++;
+		while (i < ope.mid && s->a[i] > s->a[ope.mid])
+		{
+			i++;
+		}
 	}
-	s->b[i - 1] = tmp;
-	ft_putstr_fd("rb\n", 1);
-}
-
-void	ft_rr(t_swap *s)
-{
-	ft_ra(s);
-	ft_rb(s);
+	if (i == ope.mid)
+		while (i > 0)
+		{
+			ft_ra(s);
+			--i;
+		}
+	/*else
+	{
+		i =
+		while (i < ope.mid && s->a[i] )
+		{
+			i--;
+		}
+	}*/
 }

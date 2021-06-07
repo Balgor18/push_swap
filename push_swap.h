@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 11:46:36 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/06/07 11:10:31 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/06/07 17:16:26 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,15 @@ typedef struct s_swap
 	char	type;
 	int		*a;
 	int		*b;
-	int		len;
+//	int		len;
 	t_count	count;
 }				t_swap;
+
+typedef struct s_operation
+{
+	int	mid;
+	int	low_int;
+}				t_operation;
 
 // a degager
 void	ft_print(int *s, char c, int len);
@@ -51,6 +57,7 @@ int		verif_pb_is_need(t_swap *s);
 
 int		verif_pa_is_need(t_swap *s);
 
+void	verif_operation(t_swap *s);
 /*
 ** Solver
 */
