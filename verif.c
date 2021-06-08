@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/20 14:47:47 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/06/07 10:47:30 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/06/08 11:23:30 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,22 +69,24 @@ void	verif_swap_list(t_swap *s)
 {
 	if (s->count.len_b == 0)
 		pa(s);
-	if (verif_table_ok(s, s->count.len_a) && s->count.len_b > 0)
+	if (verif_table_ok(s->a, s->count.len_a) && s->count.len_b > 0)
 		pb(s);
 }
 
-int	verif_table_ok(t_swap *s, int len)
+int	verif_table_ok(int *s, int len)
 {
 	int	i;
 
 	i = 1;
 	while (i < len)
 	{
-		if (s->a[i - 1] > s->a[i])
+		printf("1 %d\n2 %d\n3 %d\n",s[0],s[1], s[2]);
+		printf("%d > %d \n",s[i - 1], s[i]);
+		if (s[i - 1] > s[i])
 			return (0);
 		i++;
 	}
-	if (i == len && !s->count.len_b)
+	if (i == len)
 		return (1);
 	return (0);
 }

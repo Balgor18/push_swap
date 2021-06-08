@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 11:46:36 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/06/07 17:16:26 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/06/08 10:40:40 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,9 @@ typedef struct s_operation
 void	ft_print(int *s, char c, int len);
 # include <stdio.h>
 
+// test
+void	sort_3(t_swap *s);
+
 /*
 ** Init
 */
@@ -49,7 +52,7 @@ void	init_struct(t_swap *s);
 */
 void	verif_two_first(t_swap *s);
 int		verif_digit(char *s, int len, t_swap *swap);
-int		verif_table_ok(t_swap *s, int len);
+int		verif_table_ok(int *s, int len);
 void	verif_swap_list(t_swap *s);
 void	verif_for_rr(t_swap *s);
 void	verif_for_rrr(t_swap *s);
