@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/20 14:47:47 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/06/08 11:23:30 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/06/08 14:50:29 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,8 +80,8 @@ int	verif_table_ok(int *s, int len)
 	i = 1;
 	while (i < len)
 	{
-		printf("1 %d\n2 %d\n3 %d\n",s[0],s[1], s[2]);
-		printf("%d > %d \n",s[i - 1], s[i]);
+		//printf("1 %d\n2 %d\n3 %d\n",s[0],s[1], s[2]);
+		//printf("%d > %d \n",s[i - 1], s[i]);
 		if (s[i - 1] > s[i])
 			return (0);
 		i++;

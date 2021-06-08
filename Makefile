@@ -27,18 +27,22 @@ $(NAME): libft $(OBJ)
 
 #			./push_swap 2 1 3
 
-			./push_swap 3 2 1
+#			./push_swap 3 2 1
 
-			./push_swap 3 1 2
+#			./push_swap 3 1 2
 
 #			./push_swap 1 3 2
 
-#			./push_swap 3 4 10
-#			./push_swap 4 3 10
-#			./push_swap 10 4 3
-#			./push_swap 10 3 4
-#			./push_swap 4 10 3
-#			./push_swap 3 10 4
+#			./push_swap 2 3 1
+
+
+			./push_swap 3 4 10
+			./push_swap 4 3 10
+			./push_swap 10 4 3
+			./push_swap 10 3 4
+			./push_swap 4 10 3
+			./push_swap 3 10 4
+
 #			./push_swap 8 5 1 3 4
 #			./push_swap 5 8 1 3 4
 #			./push_swap 5 8 1 4 3
