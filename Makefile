@@ -23,36 +23,8 @@ OBJ = $(SRC:.c=.o)
 $(NAME): libft $(OBJ)
 			@$(CC) $(CFLAGS) -o $@ $(OBJ) -Llibft -lft
 # -fsanitize=address
-
-#			./push_swap 2 1 3
-
-#			./push_swap 3 2 1
-
-#			./push_swap 3 1 2
-
-#			./push_swap 1 3 2
-
-#			./push_swap 2 3 1
-
-#			./push_swap 1 2 3 4 5
-
-#			./push_swap 1 2 3 5 4
-
-#			./push_swap 1 2 5 3 4
-
-#			./push_swap 1 2 5 4 3
-
-#			./push_swap 1 2 4 5 3
-
-
-#			./push_swap 1 5 2 4 3
-
-#			./push_swap 5 2 4 3 1
-#			./push_swap 8 5 1 3 4
-
-#			./push_swap 5 8 1 3 4
-#			./push_swap 5 8 1 4 3
-
+			./push_swap 1 4 2 3 5
+			./push_swap 1 4 2 3 5 | wc -l
 #			./push_swap 4 3 10 11 9 2
 #			valgrind ./push_swap 2 1 3 6 5 8
 #			valgrind --leak-check=full --show-leak-kinds=all ./push_swap 2 1 3 6 5 8

@@ -1,12 +1,324 @@
+      12
+      14
+      13
+      13
+      13
+      14
+before comment
+after comment
+pa
+pa
+pb
+sa
+pb
+pa
+pa
+ra
+sb
+pb
+pb
 [0;32mOK
 [0;37mpa
 pa
 sa
 ra
 pb
+sa
+pb
+pa
+pa
+ra
+sb
+pb
 pb
 [0;32mOK
 [0;37mpa
+pa
+sa
+pb
+sa
+pb
+pa
+pa
+ra
+sb
+pb
+pb
+[0;32mOK
+[0;37mpa
+pa
+rra
+pb
+sa
+pb
+pa
+pa
+ra
+sb
+pb
+pb
+[0;32mOK
+[0;37mpa
+pa
+ra
+pb
+sa
+pb
+pa
+pa
+ra
+sb
+pb
+pb
+[0;32mOK
+[0;37mpa
+pa
+sa
+rra
+pb
+sa
+pb
+pa
+pa
+ra
+sb
+pb
+pb
+[0;32mOK
+[0;37mpa
+pa
+sb
+pb
+pb
+pa
+pa
+pb
+sa
+pb
+[0;32mOK
+[0;37mpa
+pa
+sa
+ra
+sb
+pb
+pb
+pa
+pa
+pb
+sa
+pb
+[0;32mOK
+[0;37mpa
+pa
+sa
+sb
+pb
+pb
+pa
+pa
+pb
+sa
+pb
+[0;32mOK
+[0;37mpa
+pa
+rra
+sb
+pb
+pb
+pa
+pa
+pb
+sa
+pb
+[0;32mOK
+[0;37mpa
+pa
+ra
+sb
+pb
+pb
+pa
+pa
+pb
+sa
+pb
+[0;32mOK
+[0;37mpa
+pa
+sa
+rra
+sb
+pb
+pb
+pa
+pa
+pb
+sa
+pb
+[0;32mOK
+[0;37mpa
+pa
+pb
+sa
+pb
+pa
+pa
+sb
+pb
+pb
+pa
+pa
+pb
+sa
+pb
+[0;32mOK
+[0;37mpa
+pa
+sa
+ra
+pb
+sa
+pb
+pa
+pa
+sb
+pb
+pb
+pa
+pa
+pb
+sa
+pb
+[0;32mOK
+[0;37mpa
+pa
+sa
+pb
+sa
+pb
+pa
+pa
+sb
+pb
+pb
+pa
+pa
+pb
+sa
+pb
+[0;32mOK
+[0;37mpa
+pa
+rra
+pb
+sa
+pb
+pa
+pa
+sb
+pb
+pb
+pa
+pa
+pb
+sa
+pb
+[0;32mOK
+[0;37mpa
+pa
+ra
+pb
+sa
+pb
+pa
+pa
+sb
+pb
+pb
+pa
+pa
+pb
+sa
+pb
+[0;32mOK
+[0;37mpa
+pa
+sa
+rra
+pb
+sa
+pb
+pa
+pa
+sb
+pb
+pb
+pa
+pa
+pb
+sa
+pb
+[0;32mOK
+[0;37mpa
+pa
+pb
+sa
+pb
+rra
+sa
+ra
+ra
+pa
+pa
+pb
+sa
+pb
+pa
+pa
+sa
+pb
+pb
+[0;32mOK
+[0;37mpa
+pa
+sa
+ra
+pb
+sa
+pb
+rra
+sa
+ra
+ra
+pa
+pa
+pb
+sa
+pb
+pa
+pa
+sa
+pb
+pb
+[0;32mOK
+[0;37mpa
+pa
+sa
+pb
+sa
+pb
+rra
+sa
+ra
+ra
+pa
+pa
+pb
+sa
+pb
+pa
 pa
 sa
 pb
@@ -16,9 +328,166 @@ pb
 pa
 rra
 pb
+sa
+pb
+rra
+sa
+ra
+ra
+pa
+pa
+pb
+sa
+pb
+pa
+pa
+sa
+pb
 pb
 [0;32mOK
 [0;37mpa
+pa
+ra
+pb
+sa
+pb
+rra
+sa
+ra
+ra
+pa
+pa
+pb
+sa
+pb
+pa
+pa
+sa
+pb
+pb
+[0;32mOK
+[0;37mpa
+pa
+sa
+rra
+pb
+sa
+pb
+rra
+sa
+ra
+ra
+pa
+pa
+pb
+sa
+pb
+pa
+pa
+sa
+pb
+pb
+[0;32mOK
+[0;37mpa
+pa
+pb
+sa
+pb
+rra
+sa
+ra
+ra
+pa
+pa
+pb
+sa
+pb
+pa
+pa
+ra
+pb
+pb
+[0;32mOK
+[0;37mpa
+pa
+sa
+ra
+pb
+sa
+pb
+rra
+sa
+ra
+ra
+pa
+pa
+pb
+sa
+pb
+pa
+pa
+ra
+pb
+pb
+[0;32mOK
+[0;37mpa
+pa
+sa
+pb
+sa
+pb
+rra
+sa
+ra
+ra
+pa
+pa
+pb
+sa
+pb
+pa
+pa
+ra
+pb
+pb
+[0;32mOK
+[0;37mpa
+pa
+rra
+pb
+sa
+pb
+rra
+sa
+ra
+ra
+pa
+pa
+pb
+sa
+pb
+pa
+pa
+ra
+pb
+pb
+[0;32mOK
+[0;37mpa
+pa
+ra
+pb
+sa
+pb
+rra
+sa
+ra
+ra
+pa
+pa
+pb
+sa
+pb
+pa
 pa
 ra
 pb
@@ -29,18 +498,312 @@ pa
 sa
 rra
 pb
+sa
+pb
+rra
+sa
+ra
+ra
+pa
+pa
+pb
+sa
+pb
+pa
+pa
+ra
+pb
+pb
+[0;32mOK
+[0;37mpa
+pa
+sb
+pb
+pb
+pa
+pa
+pb
+sa
+pb
+pa
+pa
+sa
+pb
+pb
+[0;32mOK
+[0;37mpa
+pa
+sa
+ra
+sb
+pb
+pb
+pa
+pa
+pb
+sa
+pb
+pa
+pa
+sa
+pb
+pb
+[0;32mOK
+[0;37mpa
+pa
+sa
+sb
+pb
+pb
+pa
+pa
+pb
+sa
+pb
+pa
+pa
+sa
+pb
+pb
+[0;32mOK
+[0;37mpa
+pa
+rra
+sb
+pb
+pb
+pa
+pa
+pb
+sa
+pb
+pa
+pa
+sa
+pb
+pb
+[0;32mOK
+[0;37mpa
+pa
+ra
+sb
+pb
+pb
+pa
+pa
+pb
+sa
+pb
+pa
+pa
+sa
+pb
+pb
+[0;32mOK
+[0;37mpa
+pa
+sa
+rra
+sb
+pb
+pb
+pa
+pa
+pb
+sa
+pb
+pa
+pa
+sa
+pb
 pb
 [0;32mOK
 [0;37mpa
 pa
 pb
+sa
+pb
+rra
+sa
+ra
+ra
+[0;32mOK
+[0;37mpa
+pa
+sa
+ra
+pb
+sa
+pb
+rra
+sa
+ra
+ra
+[0;32mOK
+[0;37mpa
+pa
+sa
+pb
+sa
+pb
+rra
+sa
+ra
+ra
+[0;32mOK
+[0;37mpa
+pa
+rra
+pb
+sa
+pb
+rra
+sa
+ra
+ra
+[0;32mOK
+[0;37mpa
+pa
+ra
+pb
+sa
+pb
+rra
+sa
+ra
+ra
+[0;32mOK
+[0;37mpa
+pa
+sa
+rra
+pb
+sa
+pb
+rra
+sa
+ra
+ra
+[0;32mOK
+[0;37mpa
+pa
+pb
+sa
+pb
+rra
+sa
+ra
+ra
+pa
+pa
+pb
+sa
+pb
+[0;32mOK
+[0;37mpa
+pa
+sa
+ra
+pb
+sa
+pb
+rra
+sa
+ra
+ra
+pa
+pa
+pb
+sa
+pb
+[0;32mOK
+[0;37mpa
+pa
+sa
+pb
+sa
+pb
+rra
+sa
+ra
+ra
+pa
+pa
+pb
+sa
+pb
+[0;32mOK
+[0;37mpa
+pa
+rra
+pb
+sa
+pb
+rra
+sa
+ra
+ra
+pa
+pa
+pb
+sa
+pb
+[0;32mOK
+[0;37mpa
+pa
+ra
+pb
+sa
+pb
+rra
+sa
+ra
+ra
+pa
+pa
+pb
+sa
+pb
+[0;32mOK
+[0;37mpa
+pa
+sa
+rra
+pb
+sa
+pb
+rra
+sa
+ra
+ra
+pa
+pa
+pb
+sa
+pb
+[0;32mOK
+[0;37mpa
+pa
+pb
+sa
+pb
+pa
+pa
+ra
+sb
+pb
+pb
+pa
+pa
+pb
+sa
 pb
 Error to much turn 
 ------ A ------
 pos 0 | val 1
-pos 1 | val 3
-pos 2 | val 2
-pos 3 | val 4
+pos 1 | val 2
+pos 2 | val 4
+pos 3 | val 3
 pos 4 | val 5
 ---------------
 [0;31mKO
@@ -49,13 +812,25 @@ pa
 sa
 ra
 pb
+sa
+pb
+pa
+pa
+ra
+sb
+pb
+pb
+pa
+pa
+pb
+sa
 pb
 Error to much turn 
 ------ A ------
 pos 0 | val 1
-pos 1 | val 3
-pos 2 | val 2
-pos 3 | val 4
+pos 1 | val 2
+pos 2 | val 4
+pos 3 | val 3
 pos 4 | val 5
 ---------------
 [0;31mKO
@@ -63,13 +838,25 @@ pos 4 | val 5
 pa
 sa
 pb
+sa
+pb
+pa
+pa
+ra
+sb
+pb
+pb
+pa
+pa
+pb
+sa
 pb
 Error to much turn 
 ------ A ------
 pos 0 | val 1
-pos 1 | val 3
-pos 2 | val 2
-pos 3 | val 4
+pos 1 | val 2
+pos 2 | val 4
+pos 3 | val 3
 pos 4 | val 5
 ---------------
 [0;31mKO
@@ -77,13 +864,25 @@ pos 4 | val 5
 pa
 rra
 pb
+sa
+pb
+pa
+pa
+ra
+sb
+pb
+pb
+pa
+pa
+pb
+sa
 pb
 Error to much turn 
 ------ A ------
 pos 0 | val 1
-pos 1 | val 3
-pos 2 | val 2
-pos 3 | val 4
+pos 1 | val 2
+pos 2 | val 4
+pos 3 | val 3
 pos 4 | val 5
 ---------------
 [0;31mKO
@@ -91,13 +890,25 @@ pos 4 | val 5
 pa
 ra
 pb
+sa
+pb
+pa
+pa
+ra
+sb
+pb
+pb
+pa
+pa
+pb
+sa
 pb
 Error to much turn 
 ------ A ------
 pos 0 | val 1
-pos 1 | val 3
-pos 2 | val 2
-pos 3 | val 4
+pos 1 | val 2
+pos 2 | val 4
+pos 3 | val 3
 pos 4 | val 5
 ---------------
 [0;31mKO
@@ -106,1218 +917,28 @@ pa
 sa
 rra
 pb
+sa
+pb
+pa
+pa
+ra
+sb
+pb
+pb
+pa
+pa
+pb
+sa
 pb
 Error to much turn 
 ------ A ------
 pos 0 | val 1
-pos 1 | val 3
-pos 2 | val 2
-pos 3 | val 4
-pos 4 | val 5
----------------
-[0;31mKO
-[0;37mpa
-pa
-pb
-pb
-Error to much turn 
------- A ------
-pos 0 | val 1
-pos 1 | val 4
-pos 2 | val 2
+pos 1 | val 2
+pos 2 | val 4
 pos 3 | val 3
 pos 4 | val 5
 ---------------
 [0;31mKO
-[0;37mpa
-pa
-sa
-ra
-pb
-pb
-Error to much turn 
------- A ------
-pos 0 | val 1
-pos 1 | val 4
-pos 2 | val 2
-pos 3 | val 3
-pos 4 | val 5
----------------
-[0;31mKO
-[0;37mpa
-pa
-sa
-pb
-pb
-Error to much turn 
------- A ------
-pos 0 | val 1
-pos 1 | val 4
-pos 2 | val 2
-pos 3 | val 3
-pos 4 | val 5
----------------
-[0;31mKO
-[0;37mpa
-pa
-rra
-pb
-pb
-Error to much turn 
------- A ------
-pos 0 | val 1
-pos 1 | val 4
-pos 2 | val 2
-pos 3 | val 3
-pos 4 | val 5
----------------
-[0;31mKO
-[0;37mpa
-pa
-ra
-pb
-pb
-Error to much turn 
------- A ------
-pos 0 | val 1
-pos 1 | val 4
-pos 2 | val 2
-pos 3 | val 3
-pos 4 | val 5
----------------
-[0;31mKO
-[0;37mpa
-pa
-sa
-rra
-pb
-pb
-Error to much turn 
------- A ------
-pos 0 | val 1
-pos 1 | val 4
-pos 2 | val 2
-pos 3 | val 3
-pos 4 | val 5
----------------
-[0;31mKO
-[0;37mpa
-pa
-pb
-pb
-sa
-ra
-[0;32mOK
-[0;37mpa
-pa
-sa
-ra
-pb
-pb
-sa
-ra
-[0;32mOK
-[0;37mpa
-pa
-sa
-pb
-pb
-sa
-ra
-[0;32mOK
-[0;37mpa
-pa
-rra
-pb
-pb
-sa
-ra
-[0;32mOK
-[0;37mpa
-pa
-ra
-pb
-pb
-sa
-ra
-[0;32mOK
-[0;37mpa
-pa
-sa
-rra
-pb
-pb
-sa
-ra
-[0;32mOK
-[0;37mpa
-pa
-sb
-pb
-pb
-[0;32mOK
-[0;37mpa
-pa
-sa
-ra
-sb
-pb
-pb
-[0;32mOK
-[0;37mpa
-pa
-sa
-sb
-pb
-pb
-[0;32mOK
-[0;37mpa
-pa
-rra
-sb
-pb
-pb
-[0;32mOK
-[0;37mpa
-pa
-ra
-sb
-pb
-pb
-[0;32mOK
-[0;37mpa
-pa
-sa
-rra
-sb
-pb
-pb
-[0;32mOK
-[0;37mpa
-pa
-pb
-pb
-Error to much turn 
------- A ------
-pos 0 | val 2
-pos 1 | val 3
-pos 2 | val 1
-pos 3 | val 4
-pos 4 | val 5
----------------
-[0;31mKO
-[0;37mpa
-pa
-sa
-ra
-pb
-pb
-Error to much turn 
------- A ------
-pos 0 | val 2
-pos 1 | val 3
-pos 2 | val 1
-pos 3 | val 4
-pos 4 | val 5
----------------
-[0;31mKO
-[0;37mpa
-pa
-sa
-pb
-pb
-Error to much turn 
------- A ------
-pos 0 | val 2
-pos 1 | val 3
-pos 2 | val 1
-pos 3 | val 4
-pos 4 | val 5
----------------
-[0;31mKO
-[0;37mpa
-pa
-rra
-pb
-pb
-Error to much turn 
------- A ------
-pos 0 | val 2
-pos 1 | val 3
-pos 2 | val 1
-pos 3 | val 4
-pos 4 | val 5
----------------
-[0;31mKO
-[0;37mpa
-pa
-ra
-pb
-pb
-Error to much turn 
------- A ------
-pos 0 | val 2
-pos 1 | val 3
-pos 2 | val 1
-pos 3 | val 4
-pos 4 | val 5
----------------
-[0;31mKO
-[0;37mpa
-pa
-sa
-rra
-pb
-pb
-Error to much turn 
------- A ------
-pos 0 | val 2
-pos 1 | val 3
-pos 2 | val 1
-pos 3 | val 4
-pos 4 | val 5
----------------
-[0;31mKO
-[0;37mpa
-pa
-pb
-pb
-Error to much turn 
------- A ------
-pos 0 | val 2
-pos 1 | val 4
-pos 2 | val 1
-pos 3 | val 3
-pos 4 | val 5
----------------
-[0;31mKO
-[0;37mpa
-pa
-sa
-ra
-pb
-pb
-Error to much turn 
------- A ------
-pos 0 | val 2
-pos 1 | val 4
-pos 2 | val 1
-pos 3 | val 3
-pos 4 | val 5
----------------
-[0;31mKO
-[0;37mpa
-pa
-sa
-pb
-pb
-Error to much turn 
------- A ------
-pos 0 | val 2
-pos 1 | val 4
-pos 2 | val 1
-pos 3 | val 3
-pos 4 | val 5
----------------
-[0;31mKO
-[0;37mpa
-pa
-rra
-pb
-pb
-Error to much turn 
------- A ------
-pos 0 | val 2
-pos 1 | val 4
-pos 2 | val 1
-pos 3 | val 3
-pos 4 | val 5
----------------
-[0;31mKO
-[0;37mpa
-pa
-ra
-pb
-pb
-Error to much turn 
------- A ------
-pos 0 | val 2
-pos 1 | val 4
-pos 2 | val 1
-pos 3 | val 3
-pos 4 | val 5
----------------
-[0;31mKO
-[0;37mpa
-pa
-sa
-rra
-pb
-pb
-Error to much turn 
------- A ------
-pos 0 | val 2
-pos 1 | val 4
-pos 2 | val 1
-pos 3 | val 3
-pos 4 | val 5
----------------
-[0;31mKO
-[0;37mpa
-pa
-pb
-pb
-sa
-ra
-Error to much turn 
------- A ------
-pos 0 | val 2
-pos 1 | val 1
-pos 2 | val 3
-pos 3 | val 4
-pos 4 | val 5
----------------
-[0;31mKO
-[0;37mpa
-pa
-sa
-ra
-pb
-pb
-sa
-ra
-Error to much turn 
------- A ------
-pos 0 | val 2
-pos 1 | val 1
-pos 2 | val 3
-pos 3 | val 4
-pos 4 | val 5
----------------
-[0;31mKO
-[0;37mpa
-pa
-sa
-pb
-pb
-sa
-ra
-Error to much turn 
------- A ------
-pos 0 | val 2
-pos 1 | val 1
-pos 2 | val 3
-pos 3 | val 4
-pos 4 | val 5
----------------
-[0;31mKO
-[0;37mpa
-pa
-rra
-pb
-pb
-sa
-ra
-Error to much turn 
------- A ------
-pos 0 | val 2
-pos 1 | val 1
-pos 2 | val 3
-pos 3 | val 4
-pos 4 | val 5
----------------
-[0;31mKO
-[0;37mpa
-pa
-ra
-pb
-pb
-sa
-ra
-Error to much turn 
------- A ------
-pos 0 | val 2
-pos 1 | val 1
-pos 2 | val 3
-pos 3 | val 4
-pos 4 | val 5
----------------
-[0;31mKO
-[0;37mpa
-pa
-sa
-rra
-pb
-pb
-sa
-ra
-Error to much turn 
------- A ------
-pos 0 | val 2
-pos 1 | val 1
-pos 2 | val 3
-pos 3 | val 4
-pos 4 | val 5
----------------
-[0;31mKO
-[0;37mpa
-pa
-sb
-pb
-pb
-Error to much turn 
------- A ------
-pos 0 | val 1
-pos 1 | val 3
-pos 2 | val 2
-pos 3 | val 4
-pos 4 | val 5
----------------
-[0;31mKO
-[0;37mpa
-pa
-sa
-ra
-sb
-pb
-pb
-Error to much turn 
------- A ------
-pos 0 | val 1
-pos 1 | val 3
-pos 2 | val 2
-pos 3 | val 4
-pos 4 | val 5
----------------
-[0;31mKO
-[0;37mpa
-pa
-sa
-sb
-pb
-pb
-Error to much turn 
------- A ------
-pos 0 | val 1
-pos 1 | val 3
-pos 2 | val 2
-pos 3 | val 4
-pos 4 | val 5
----------------
-[0;31mKO
-[0;37mpa
-pa
-rra
-sb
-pb
-pb
-Error to much turn 
------- A ------
-pos 0 | val 1
-pos 1 | val 3
-pos 2 | val 2
-pos 3 | val 4
-pos 4 | val 5
----------------
-[0;31mKO
-[0;37mpa
-pa
-ra
-sb
-pb
-pb
-Error to much turn 
------- A ------
-pos 0 | val 1
-pos 1 | val 3
-pos 2 | val 2
-pos 3 | val 4
-pos 4 | val 5
----------------
-[0;31mKO
-[0;37mpa
-pa
-sa
-rra
-sb
-pb
-pb
-Error to much turn 
------- A ------
-pos 0 | val 1
-pos 1 | val 3
-pos 2 | val 2
-pos 3 | val 4
-pos 4 | val 5
----------------
-[0;31mKO
-[0;37mpa
-pa
-sb
-pb
-pb
-Error to much turn 
------- A ------
-pos 0 | val 2
-pos 1 | val 3
-pos 2 | val 1
-pos 3 | val 4
-pos 4 | val 5
----------------
-[0;31mKO
-[0;37mpa
-pa
-sa
-ra
-sb
-pb
-pb
-Error to much turn 
------- A ------
-pos 0 | val 2
-pos 1 | val 3
-pos 2 | val 1
-pos 3 | val 4
-pos 4 | val 5
----------------
-[0;31mKO
-[0;37mpa
-pa
-sa
-sb
-pb
-pb
-Error to much turn 
------- A ------
-pos 0 | val 2
-pos 1 | val 3
-pos 2 | val 1
-pos 3 | val 4
-pos 4 | val 5
----------------
-[0;31mKO
-[0;37mpa
-pa
-rra
-sb
-pb
-pb
-Error to much turn 
------- A ------
-pos 0 | val 2
-pos 1 | val 3
-pos 2 | val 1
-pos 3 | val 4
-pos 4 | val 5
----------------
-[0;31mKO
-[0;37mpa
-pa
-ra
-sb
-pb
-pb
-Error to much turn 
------- A ------
-pos 0 | val 2
-pos 1 | val 3
-pos 2 | val 1
-pos 3 | val 4
-pos 4 | val 5
----------------
-[0;31mKO
-[0;37mpa
-pa
-sa
-rra
-sb
-pb
-pb
-Error to much turn 
------- A ------
-pos 0 | val 2
-pos 1 | val 3
-pos 2 | val 1
-pos 3 | val 4
-pos 4 | val 5
----------------
-[0;31mKO
-[0;37mpa
-pa
-pb
-pb
-rra
-sa
-ra
-ra
-Error to much turn 
------- A ------
-pos 0 | val 4
-pos 1 | val 1
-pos 2 | val 2
-pos 3 | val 3
-pos 4 | val 5
----------------
-[0;31mKO
-[0;37mpa
-pa
-sa
-ra
-pb
-pb
-rra
-sa
-ra
-ra
-Error to much turn 
------- A ------
-pos 0 | val 4
-pos 1 | val 1
-pos 2 | val 2
-pos 3 | val 3
-pos 4 | val 5
----------------
-[0;31mKO
-[0;37mpa
-pa
-sa
-pb
-pb
-rra
-sa
-ra
-ra
-Error to much turn 
------- A ------
-pos 0 | val 4
-pos 1 | val 1
-pos 2 | val 2
-pos 3 | val 3
-pos 4 | val 5
----------------
-[0;31mKO
-[0;37mpa
-pa
-rra
-pb
-pb
-rra
-sa
-ra
-ra
-Error to much turn 
------- A ------
-pos 0 | val 4
-pos 1 | val 1
-pos 2 | val 2
-pos 3 | val 3
-pos 4 | val 5
----------------
-[0;31mKO
-[0;37mpa
-pa
-ra
-pb
-pb
-rra
-sa
-ra
-ra
-Error to much turn 
------- A ------
-pos 0 | val 4
-pos 1 | val 1
-pos 2 | val 2
-pos 3 | val 3
-pos 4 | val 5
----------------
-[0;31mKO
-[0;37mpa
-pa
-sa
-rra
-pb
-pb
-rra
-sa
-ra
-ra
-Error to much turn 
------- A ------
-pos 0 | val 4
-pos 1 | val 1
-pos 2 | val 2
-pos 3 | val 3
-pos 4 | val 5
----------------
-[0;31mKO
-[0;37mpa
-pa
-pb
-pb
-sa
-ra
-Error to much turn 
------- A ------
-pos 0 | val 3
-pos 1 | val 1
-pos 2 | val 2
-pos 3 | val 4
-pos 4 | val 5
----------------
-[0;31mKO
-[0;37mpa
-pa
-sa
-ra
-pb
-pb
-sa
-ra
-Error to much turn 
------- A ------
-pos 0 | val 3
-pos 1 | val 1
-pos 2 | val 2
-pos 3 | val 4
-pos 4 | val 5
----------------
-[0;31mKO
-[0;37mpa
-pa
-sa
-pb
-pb
-sa
-ra
-Error to much turn 
------- A ------
-pos 0 | val 3
-pos 1 | val 1
-pos 2 | val 2
-pos 3 | val 4
-pos 4 | val 5
----------------
-[0;31mKO
-[0;37mpa
-pa
-rra
-pb
-pb
-sa
-ra
-Error to much turn 
------- A ------
-pos 0 | val 3
-pos 1 | val 1
-pos 2 | val 2
-pos 3 | val 4
-pos 4 | val 5
----------------
-[0;31mKO
-[0;37mpa
-pa
-ra
-pb
-pb
-sa
-ra
-Error to much turn 
------- A ------
-pos 0 | val 3
-pos 1 | val 1
-pos 2 | val 2
-pos 3 | val 4
-pos 4 | val 5
----------------
-[0;31mKO
-[0;37mpa
-pa
-sa
-rra
-pb
-pb
-sa
-ra
-Error to much turn 
------- A ------
-pos 0 | val 3
-pos 1 | val 1
-pos 2 | val 2
-pos 3 | val 4
-pos 4 | val 5
----------------
-[0;31mKO
-[0;37mpa
-pa
-sb
-pb
-pb
-Error to much turn 
------- A ------
-pos 0 | val 1
-pos 1 | val 4
-pos 2 | val 2
-pos 3 | val 3
-pos 4 | val 5
----------------
-[0;31mKO
-[0;37mpa
-pa
-sa
-ra
-sb
-pb
-pb
-Error to much turn 
------- A ------
-pos 0 | val 1
-pos 1 | val 4
-pos 2 | val 2
-pos 3 | val 3
-pos 4 | val 5
----------------
-[0;31mKO
-[0;37mpa
-pa
-sa
-sb
-pb
-pb
-Error to much turn 
------- A ------
-pos 0 | val 1
-pos 1 | val 4
-pos 2 | val 2
-pos 3 | val 3
-pos 4 | val 5
----------------
-[0;31mKO
-[0;37mpa
-pa
-rra
-sb
-pb
-pb
-Error to much turn 
------- A ------
-pos 0 | val 1
-pos 1 | val 4
-pos 2 | val 2
-pos 3 | val 3
-pos 4 | val 5
----------------
-[0;31mKO
-[0;37mpa
-pa
-ra
-sb
-pb
-pb
-Error to much turn 
------- A ------
-pos 0 | val 1
-pos 1 | val 4
-pos 2 | val 2
-pos 3 | val 3
-pos 4 | val 5
----------------
-[0;31mKO
-[0;37mpa
-pa
-sa
-rra
-sb
-pb
-pb
-Error to much turn 
------- A ------
-pos 0 | val 1
-pos 1 | val 4
-pos 2 | val 2
-pos 3 | val 3
-pos 4 | val 5
----------------
-[0;31mKO
-[0;37mpa
-pa
-sb
-pb
-pb
-Error to much turn 
------- A ------
-pos 0 | val 2
-pos 1 | val 4
-pos 2 | val 1
-pos 3 | val 3
-pos 4 | val 5
----------------
-[0;31mKO
-[0;37mpa
-pa
-sa
-ra
-sb
-pb
-pb
-Error to much turn 
------- A ------
-pos 0 | val 2
-pos 1 | val 4
-pos 2 | val 1
-pos 3 | val 3
-pos 4 | val 5
----------------
-[0;31mKO
-[0;37mpa
-pa
-sa
-sb
-pb
-pb
-Error to much turn 
------- A ------
-pos 0 | val 2
-pos 1 | val 4
-pos 2 | val 1
-pos 3 | val 3
-pos 4 | val 5
----------------
-[0;31mKO
-[0;37mpa
-pa
-rra
-sb
-pb
-pb
-Error to much turn 
------- A ------
-pos 0 | val 2
-pos 1 | val 4
-pos 2 | val 1
-pos 3 | val 3
-pos 4 | val 5
----------------
-[0;31mKO
-[0;37mpa
-pa
-ra
-sb
-pb
-pb
-Error to much turn 
------- A ------
-pos 0 | val 2
-pos 1 | val 4
-pos 2 | val 1
-pos 3 | val 3
-pos 4 | val 5
----------------
-[0;31mKO
-[0;37mpa
-pa
-sa
-rra
-sb
-pb
-pb
-Error to much turn 
------- A ------
-pos 0 | val 2
-pos 1 | val 4
-pos 2 | val 1
-pos 3 | val 3
-pos 4 | val 5
----------------
-[0;31mKO
-[0;37mpa
-pa
-sb
-pb
-pb
-rra
-sa
-ra
-ra
-Error to much turn 
------- A ------
-pos 0 | val 4
-pos 1 | val 1
-pos 2 | val 2
-pos 3 | val 3
-pos 4 | val 5
----------------
-[0;31mKO
-[0;37mpa
-pa
-sa
-ra
-sb
-pb
-pb
-rra
-sa
-ra
-ra
-Error to much turn 
------- A ------
-pos 0 | val 4
-pos 1 | val 1
-pos 2 | val 2
-pos 3 | val 3
-pos 4 | val 5
----------------
-[0;31mKO
-[0;37mpa
-pa
-sa
-sb
-pb
-pb
-rra
-sa
-ra
-ra
-Error to much turn 
------- A ------
-pos 0 | val 4
-pos 1 | val 1
-pos 2 | val 2
-pos 3 | val 3
-pos 4 | val 5
----------------
-[0;31mKO
-[0;37mpa
-pa
-rra
-sb
-pb
-pb
-rra
-sa
-ra
-ra
-Error to much turn 
------- A ------
-pos 0 | val 4
-pos 1 | val 1
-pos 2 | val 2
-pos 3 | val 3
-pos 4 | val 5
----------------
-[0;31mKO
-[0;37mpa
-pa
-ra
-sb
-pb
-pb
-rra
-sa
-ra
-ra
-Error to much turn 
------- A ------
-pos 0 | val 4
-pos 1 | val 1
-pos 2 | val 2
-pos 3 | val 3
-pos 4 | val 5
----------------
-[0;31mKO
-[0;37mpa
-pa
-sa
-rra
-sb
-pb
-pb
-rra
-sa
-ra
-ra
-Error to much turn 
------- A ------
-pos 0 | val 4
-pos 1 | val 1
-pos 2 | val 2
-pos 3 | val 3
-pos 4 | val 5
----------------
-[0;31mKO
-[0;37mpa
-pa
-pb
-pb
-sa
-ra
-rra
-sa
-ra
-ra
-[0;32mOK
-[0;37mpa
-pa
-sa
-ra
-pb
-pb
-sa
-ra
-rra
-sa
-ra
-ra
-[0;32mOK
-[0;37mpa
-pa
-sa
-pb
-pb
-sa
-ra
-rra
-sa
-ra
-ra
-[0;32mOK
-[0;37mpa
-pa
-rra
-pb
-pb
-sa
-ra
-rra
-sa
-ra
-ra
-[0;32mOK
-[0;37mpa
-pa
-ra
-pb
-pb
-sa
-ra
-rra
-sa
-ra
-ra
-[0;32mOK
-[0;37mpa
-pa
-sa
-rra
-pb
-pb
-sa
-ra
-rra
-sa
-ra
-ra
-[0;32mOK
 [0;37mpa
 pa
 sb
@@ -1375,237 +996,95 @@ ra
 [0;32mOK
 [0;37mpa
 pa
-sb
-pb
 pb
 sa
-ra
-Error to much turn 
------- A ------
-pos 0 | val 2
-pos 1 | val 1
-pos 2 | val 3
-pos 3 | val 4
-pos 4 | val 5
----------------
-[0;31mKO
-[0;37mpa
+pb
 pa
-sa
-ra
-sb
-pb
-pb
-sa
-ra
-Error to much turn 
------- A ------
-pos 0 | val 2
-pos 1 | val 1
-pos 2 | val 3
-pos 3 | val 4
-pos 4 | val 5
----------------
-[0;31mKO
-[0;37mpa
-pa
-sa
-sb
-pb
-pb
-sa
-ra
-Error to much turn 
------- A ------
-pos 0 | val 2
-pos 1 | val 1
-pos 2 | val 3
-pos 3 | val 4
-pos 4 | val 5
----------------
-[0;31mKO
-[0;37mpa
-pa
-rra
-sb
-pb
-pb
-sa
-ra
-Error to much turn 
------- A ------
-pos 0 | val 2
-pos 1 | val 1
-pos 2 | val 3
-pos 3 | val 4
-pos 4 | val 5
----------------
-[0;31mKO
-[0;37mpa
-pa
-ra
-sb
-pb
-pb
-sa
-ra
-Error to much turn 
------- A ------
-pos 0 | val 2
-pos 1 | val 1
-pos 2 | val 3
-pos 3 | val 4
-pos 4 | val 5
----------------
-[0;31mKO
-[0;37mpa
-pa
-sa
-rra
-sb
-pb
-pb
-sa
-ra
-Error to much turn 
------- A ------
-pos 0 | val 2
-pos 1 | val 1
-pos 2 | val 3
-pos 3 | val 4
-pos 4 | val 5
----------------
-[0;31mKO
-[0;37mpa
 pa
 sb
 pb
 pb
 sa
-ra
-Error to much turn 
------- A ------
-pos 0 | val 3
-pos 1 | val 1
-pos 2 | val 2
-pos 3 | val 4
-pos 4 | val 5
----------------
-[0;31mKO
-[0;37mpa
-pa
-sa
-ra
-sb
-pb
-pb
-sa
-ra
-Error to much turn 
------- A ------
-pos 0 | val 3
-pos 1 | val 1
-pos 2 | val 2
-pos 3 | val 4
-pos 4 | val 5
----------------
-[0;31mKO
-[0;37mpa
-pa
-sa
-sb
-pb
-pb
-sa
-ra
-Error to much turn 
------- A ------
-pos 0 | val 3
-pos 1 | val 1
-pos 2 | val 2
-pos 3 | val 4
-pos 4 | val 5
----------------
-[0;31mKO
-[0;37mpa
-pa
-rra
-sb
-pb
-pb
-sa
-ra
-Error to much turn 
------- A ------
-pos 0 | val 3
-pos 1 | val 1
-pos 2 | val 2
-pos 3 | val 4
-pos 4 | val 5
----------------
-[0;31mKO
-[0;37mpa
-pa
-ra
-sb
-pb
-pb
-sa
-ra
-Error to much turn 
------- A ------
-pos 0 | val 3
-pos 1 | val 1
-pos 2 | val 2
-pos 3 | val 4
-pos 4 | val 5
----------------
-[0;31mKO
-[0;37mpa
-pa
-sa
-rra
-sb
-pb
-pb
-sa
-ra
-Error to much turn 
------- A ------
-pos 0 | val 3
-pos 1 | val 1
-pos 2 | val 2
-pos 3 | val 4
-pos 4 | val 5
----------------
-[0;31mKO
-[0;37mpa
-pa
-sb
-pb
-pb
-sa
-ra
-rra
-sa
-ra
 ra
 [0;32mOK
 [0;37mpa
 pa
 sa
 ra
+pb
+sa
+pb
+pa
+pa
 sb
 pb
 pb
 sa
 ra
-rra
+[0;32mOK
+[0;37mpa
+pa
 sa
-ra
+pb
+sa
+pb
+pa
+pa
+sb
+pb
+pb
+sa
 ra
 [0;32mOK
 [0;37mpa
+pa
+rra
+pb
+sa
+pb
+pa
+pa
+sb
+pb
+pb
+sa
+ra
+[0;32mOK
+[0;37mpa
+pa
+ra
+pb
+sa
+pb
+pa
+pa
+sb
+pb
+pb
+sa
+ra
+[0;32mOK
+[0;37mpa
+pa
+sa
+rra
+pb
+sa
+pb
+pa
+pa
+sb
+pb
+pb
+sa
+ra
+[0;32mOK
+[0;37mpa
+pa
+pb
+sa
+pb
+pa
 pa
 sa
 sb
@@ -1613,25 +1092,90 @@ pb
 pb
 sa
 ra
-rra
-sa
-ra
-ra
 [0;32mOK
 [0;37mpa
 pa
-rra
+sa
+ra
+pb
+sa
+pb
+pa
+pa
+sa
 sb
 pb
 pb
 sa
 ra
-rra
+[0;32mOK
+[0;37mpa
+pa
 sa
-ra
+pb
+sa
+pb
+pa
+pa
+sa
+sb
+pb
+pb
+sa
 ra
 [0;32mOK
 [0;37mpa
+pa
+rra
+pb
+sa
+pb
+pa
+pa
+sa
+sb
+pb
+pb
+sa
+ra
+[0;32mOK
+[0;37mpa
+pa
+ra
+pb
+sa
+pb
+pa
+pa
+sa
+sb
+pb
+pb
+sa
+ra
+[0;32mOK
+[0;37mpa
+pa
+sa
+rra
+pb
+sa
+pb
+pa
+pa
+sa
+sb
+pb
+pb
+sa
+ra
+[0;32mOK
+[0;37mpa
+pa
+pb
+sa
+pb
+pa
 pa
 ra
 sb
@@ -1639,23 +1183,82 @@ pb
 pb
 sa
 ra
-rra
+[0;32mOK
+[0;37mpa
+pa
 sa
 ra
+pb
+sa
+pb
+pa
+pa
+ra
+sb
+pb
+pb
+sa
+ra
+[0;32mOK
+[0;37mpa
+pa
+sa
+pb
+sa
+pb
+pa
+pa
+ra
+sb
+pb
+pb
+sa
+ra
+[0;32mOK
+[0;37mpa
+pa
+rra
+pb
+sa
+pb
+pa
+pa
+ra
+sb
+pb
+pb
+sa
+ra
+[0;32mOK
+[0;37mpa
+pa
+ra
+pb
+sa
+pb
+pa
+pa
+ra
+sb
+pb
+pb
+sa
 ra
 [0;32mOK
 [0;37mpa
 pa
 sa
 rra
+pb
+sa
+pb
+pa
+pa
+ra
 sb
 pb
 pb
 sa
-ra
-rra
-sa
-ra
 ra
 [0;32mOK
 [0;37m
