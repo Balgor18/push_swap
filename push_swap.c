@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 12:26:50 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/06/08 16:58:22 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/06/09 10:45:06 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,6 +89,7 @@ int	main(int argc, char **argv)
 
 	tmp = argc;
 	init_struct(&swap);
+
 	if (argc < 2)
 		return (0);
 //	ft_same_int(1, argv);// dangers more than 25 line
@@ -108,7 +109,20 @@ int	main(int argc, char **argv)
 		return (0);
 	}
 	solver(&swap);
-	ft_print(swap.a, 'A', swap.count.len_a);
+	if (verif_table_ok(swap.a, swap.count.len_a))
+	{
+		printf("\033[0;32m");
+		printf("OK\n");
+		printf("\033[0;37m");
+	}
+	else
+	{
+		printf("\033[0;31m");
+		printf("KO\n");
+		printf("\033[0;37m");
+		ft_print(swap.a, 'A', swap.count.len_a);
+	}
+
 	free(swap.a);
 	free(swap.b);
 	return (0);

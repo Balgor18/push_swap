@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/20 15:12:42 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/06/08 16:11:19 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/06/09 10:51:31 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,20 +28,24 @@ int	solver(t_swap *swap)
 
 	if (!i)
 		i = 1;
-	//printf("tour %d \n", i);
+	//printf("tour j %d \n", i);
 	i++;
+	if (verif_table_ok(swap->a, swap->count.len_a))
+		return (1);
 	if (swap->count.len_a == 5)
 		sort_5(swap);
-	sort_3(swap);
+	else
+		sort_3(swap);
+	//ft_print(swap->a, 'A', swap->count.len_a);
 
 //	ft_print(swap->a, 'A', swap->count.len_a);
-	if (i > 10)
+	if (i > 10 && !verif_table_ok(swap->a, swap->count.len_a))
 	{
 		ft_putstr_fd("Error to much turn \n", 1);
 		return (0);
 	}
-	//if (!verif_table_ok(swap, swap->count.len_a + swap->count.len_b))
-	//	solver(swap);
+	if (!verif_table_ok(swap->a, swap->count.len_a))
+		solver(swap);
 	//ft_print(swap->a, 'A', swap->count.len_a);
 	return (1);
 }
