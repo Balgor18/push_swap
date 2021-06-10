@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/04 14:07:15 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/06/09 08:56:59 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/06/10 10:32:07 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	verif_pb_is_need(t_swap *s)
 	i = 1;
 	while (i < s->count.len_a)
 	{
-		ft_putstr_fd("boucle verif pb \n s->a[", 1);
+		ft_putstr_fd("boucle verif pa \n s->a[", 1);
 		ft_putnbr_fd(i - 1, 1);
 		ft_putchar_fd(']', 1);
 		ft_putchar_fd(' ', 1);
@@ -49,10 +49,10 @@ int	verif_pa_is_need(t_swap *s)
 	int i;
 
 	i = 1;
-	//printf("for pa\n");
+	//printf("for pb\n");
 	if (s->a[0] > s->b[0] && s->count.len_b > 0)
 		return (1);
-	//ft_putstr_fd("boucle need pa \n", 1);
+	//ft_putstr_fd("boucle need pb \n", 1);
 	while (i < s->count.len_b)
 	{
 		//printf("(%d < %d) && %d < %d \n", s->b[i - 1], s->b[i], s->b[i], s->a[0]);

@@ -6,13 +6,13 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/22 23:52:21 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/06/09 10:45:17 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/06/10 10:31:55 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	pb(t_swap *s)
+void	pa(t_swap *s)
 {
 	int	i;
 
@@ -25,5 +25,5 @@ void	pb(t_swap *s)
 	s->count.len_b--;
 	while (++i < s->count.len_b)
 		s->b[i] = s->b[i + 1];
-	ft_putstr_fd("pb\n", 1);
+	ft_putstr_fd("pa\n", 1);
 }

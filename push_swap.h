@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 11:46:36 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/06/09 08:57:51 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/06/10 10:32:07 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,8 +80,8 @@ void	ft_ss(t_swap *s);
 /*
 ** Push list
 */
-void	pa(t_swap *s);
 void	pb(t_swap *s);
+void	pa(t_swap *s);
 
 //void	copy_list(t_copylist *c, char ch);
 
