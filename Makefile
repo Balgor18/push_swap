@@ -6,7 +6,8 @@ CFLAGS=-Wall -Wextra -Werror
 
 RM=rm -f
 
-SRC =	ft_print.c ft_pa.c\
+SRC =	ft_print.c find_min.c \
+		ft_pa.c\
 		ft_pb.c\
 		ft_rr.c\
 		ft_rrr.c\
@@ -25,8 +26,23 @@ $(NAME): libft $(OBJ)
 # -fsanitize=address
 #			./push_swap 2 4 1 5 3
 
+			./push_swap 2 3 1 4 5 | wc -l
+			./push_swap 2 3 1 5 4 | wc -l
+			./push_swap 2 3 4 1 5 | wc -l
+			./push_swap 2 3 4 5 1 | wc -l
+			./push_swap 2 3 5 1 4 | wc -l
+			./push_swap 2 3 5 4 1 | wc -l
 
-			./push_swap 2 4 5 3 1
+			./push_swap 2 3 1 4 5 | wc -l
+			./push_swap 2 3 1 5 4 | wc -l
+			./push_swap 2 3 4 1 5 | wc -l
+			./push_swap 2 3 4 5 1 | wc -l
+			./push_swap 2 3 5 1 4 | wc -l
+			./push_swap 2 3 5 4 1 | wc -l
+
+
+
+#			./push_swap 2 4 5 3 1
 
 #			./push_swap 1 4 2 3 5 | wc -l
 #			./push_swap 4 3 10 11 9 2

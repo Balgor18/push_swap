@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/08 09:31:05 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/06/10 10:32:07 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/06/10 11:14:53 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ void	sort_b_for_a(t_swap *s)
 {
 	if (s->b[0] > s->a[0] && s->b[0] < s->a[s->count.len_a - 1])
 	{
-		pa(s);
+		ft_pa(s);
 		ft_rra(s);
 		ft_sa(s);
 		ft_ra(s);
@@ -40,7 +40,7 @@ void	sort_b_for_a(t_swap *s)
 	}
 	if (s->b[0] > s->a[0])
 	{
-		pa(s);
+		ft_pa(s);
 		ft_sa(s);
 	}
 }
@@ -63,7 +63,6 @@ void	sort_3(t_swap *s)
 		ft_rra(s);
 	else if (s->a[0] > s->a[1] && s->a[0] < s->a[2])
 		ft_sa(s);
-
 }
 
 void	sort_5(t_swap *s)
@@ -71,9 +70,12 @@ void	sort_5(t_swap *s)
 	int i;
 
 	i = -1;
-	while (++i < 2)
-		pb(s);
-	//ft_print(s->a, 'A', s->count.len_a);
+	/*while (++i < 2)
+		ft_pb(s);*/
+	while (s->count.len_a > 3)
+	{
+		find_min(s);
+	}
 	sort_3(s);
 	//ft_print(s->a, 'A', s->count.len_a);
 	//ft_print(s->b, 'B', s->count.len_b);
@@ -84,6 +86,6 @@ void	sort_5(t_swap *s)
 	if (s->b[0] < s->b[1] && verif_table_ok(s->a, s->count.len_a))
 		ft_sb(s);
 	while (s->count.len_b > 0)
-		pa(s);
+		ft_pa(s);
 	two_first(s);
 }

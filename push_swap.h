@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 11:46:36 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/06/10 10:32:07 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/06/10 11:14:46 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ void	ft_print(int *s, char c, int len);
 // test
 void	sort_3(t_swap *s);
 void	sort_5(t_swap *s);
-
+void	find_min(t_swap *s);
 /*
 ** Init
 */
@@ -80,8 +80,8 @@ void	ft_ss(t_swap *s);
 /*
 ** Push list
 */
-void	pb(t_swap *s);
-void	pa(t_swap *s);
+void	ft_pb(t_swap *s);
+void	ft_pa(t_swap *s);
 
 //void	copy_list(t_copylist *c, char ch);
 

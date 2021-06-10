@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/20 14:47:47 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/06/10 10:32:07 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/06/10 10:34:23 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,9 +68,9 @@ void	verif_for_rrr(t_swap *s)
 void	verif_swap_list(t_swap *s)
 {
 	if (s->count.len_b == 0)
-		pb(s);
+		ft_pb(s);
 	if (verif_table_ok(s->a, s->count.len_a) && s->count.len_b > 0)
-		pa(s);
+		ft_pa(s);
 }
 
 int	verif_table_ok(int *s, int len)
