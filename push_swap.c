@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 12:26:50 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/06/10 11:18:08 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/06/13 22:17:58 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -109,7 +109,7 @@ int	main(int argc, char **argv)
 		return (0);
 	}
 	solver(&swap);
-	if (verif_table_ok(swap.a, swap.count.len_a))
+	/*if (verif_table_ok(swap.a, swap.count.len_a))
 	{
 		printf("\033[0;32m");// vert
 		printf("OK\n");
@@ -121,7 +121,7 @@ int	main(int argc, char **argv)
 		printf("KO\n");
 		printf("\033[0;37m");// blanc
 		ft_print(swap.a, 'A', swap.count.len_a);
-	}
+	}*/
 	free(swap.a);
 	free(swap.b);
 	return (0);
