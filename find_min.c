@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/10 10:43:33 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/06/14 11:43:57 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/06/14 11:46:34 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -136,6 +136,18 @@ void	find_min_max(t_swap *s)
 			ft_rra(s);
 		ft_pb(s);
 	}
+	ft_print(s->a,'A', s->count.len_a);
+	ft_print(s->b,'B', s->count.len_b);
+	//if (maxpos < minpos && maxpos + 50 > minpos)
+	/*if (maxpos < minpos)
+	{
+		printf("\033[0;31m");
+		ft_print(s->a,'A', s->count.len_a);
+		ft_ra(s);
+		printf("\033[0;32m");
+		ft_print(s->a,'A', s->count.len_a);
+		printf("\033[0;37m");
+	}*/
 	/*if (minpos <= mid && minpos < maxpos)
 		ft_ra(s);
 	else if (minpos > mid && minpos > maxpos)
