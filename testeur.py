@@ -5,7 +5,7 @@ import subprocess
 import sys
 is_exited = 0
 try:
-	stack_size = int(sys.argv[1]) 
+	stack_size = int(sys.argv[1])
 	if (stack_size < 1):
 		print("You must choose a bigger number")
 		is_exited = 1
@@ -38,7 +38,7 @@ for loop in range (REPEAT):
 	else:
 		print(push_swap_output)
 		splited = push_swap_output.split("\n")
-		count = len(splited) -1 
+		count = len(splited) -1
 	print("count : " + str(count))
 	try:
 		f = open("tester_temp", "w")

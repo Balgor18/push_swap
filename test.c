@@ -1,6 +1,6 @@
 /// try to change pa and pb
 
-//#include "push_swap.h"
+#include "push_swap.h"
 
 int	pa(t_swap *s)
 {

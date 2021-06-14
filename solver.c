@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/20 15:12:42 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/06/10 14:49:39 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/06/14 10:56:44 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,29 +24,32 @@ void	resolve_len_two(t_swap *s)
 
 int	solver(t_swap *swap)
 {
-	static int i;
+	//static int i;
 
-	if (!i)
-		i = 1;
+	//if (!i)
+	//	i = 1;
 	//printf("tour j %d \n", i);
-	i++;
+	//i++;
+	//printf("len = %d \n", swap->count.len_a);
 	if (verif_table_ok(swap->a, swap->count.len_a))
 		return (1);
 	if (swap->count.len_a <= 3)
 		sort_3(swap);
-	else if (swap->count.len_a < 49)
-		sort_5(swap);
+	else if (swap->count.len_a <= 49)
+		sort_49(swap);
+	else if (swap->count.len_a <= 100)
+		sort_100(swap);
 	//ft_print(swap->a, 'A', swap->count.len_a);
 
 	//ft_print(swap->a, 'A', swap->count.len_a);
 
-	if (i > 3 && !verif_table_ok(swap->a, swap->count.len_a))
+	/*if (i > 3 && !verif_table_ok(swap->a, swap->count.len_a))
 	{
 		ft_putstr_fd("Error to much turn \n", 1);
 		return (0);
-	}
-	if (!verif_table_ok(swap->a, swap->count.len_a))
-		solver(swap);
+	}*/
+	//if (!verif_table_ok(swap->a, swap->count.len_a))
+	//	solver(swap);
 	//ft_print(swap->a, 'A', swap->count.len_a);
 	return (1);
 }

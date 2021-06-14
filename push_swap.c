@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 12:26:50 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/06/13 22:17:58 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/06/14 10:57:29 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,6 +105,7 @@ int	main(int argc, char **argv)
 		swap.type = 'S';
 	if (!prepare_A(&swap, argv))
 	{
+		printf("je renvoie une erreur\n");
 		ft_putstr_fd("Error\n", 1);
 		return (0);
 	}
@@ -113,6 +114,7 @@ int	main(int argc, char **argv)
 	{
 		printf("\033[0;32m");// vert
 		printf("OK\n");
+		//ft_print(swap.a, 'A', swap.count.len_a);
 		printf("\033[0;37m");// blanc
 	}
 	else

@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 11:46:36 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/06/10 11:14:46 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/06/14 10:50:52 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,11 @@ void	ft_print(int *s, char c, int len);
 
 // test
 void	sort_3(t_swap *s);
-void	sort_5(t_swap *s);
+void	sort_49(t_swap *s);
+void	sort_100(t_swap *s);
 void	find_min(t_swap *s);
+void	find_min_max(t_swap *s);
+
 /*
 ** Init
 */
