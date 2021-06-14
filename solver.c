@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/20 15:12:42 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/06/14 10:56:44 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/06/14 16:10:49 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,10 +35,10 @@ int	solver(t_swap *swap)
 		return (1);
 	if (swap->count.len_a <= 3)
 		sort_3(swap);
-	else if (swap->count.len_a <= 49)
+	//else if (swap->count.len_a <= 49)
 		sort_49(swap);
-	else if (swap->count.len_a <= 100)
-		sort_100(swap);
+	//else if (swap->count.len_a <= 100)
+	//	sort_100(swap);
 	//ft_print(swap->a, 'A', swap->count.len_a);
 
 	//ft_print(swap->a, 'A', swap->count.len_a);
