@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/08 09:31:05 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/06/14 18:53:18 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/06/15 17:17:39 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,6 +80,68 @@ void	sort_49(t_swap *s)
 	two_first(s);
 }
 
+/*
+** faire une struct pour le min max
+** s_chunk
+** int	nb;
+** int	minpos;
+** int	maxpos;
+** int	nb_int;
+** s_chunk *next;
+** t_chunk
+*/
+
+// Voir si je fais cet fonction pour les 2 listes ou que 1
+/*void	find_min_max_in_chunck(int *lst, int len)
+{
+	int	minpos;
+	int	maxpos;
+	int	i;
+
+	i = 0;
+	minpos = 0;
+	maxpos = 0;
+	while (i < len)
+	{
+		if (lst[minpos] > lst[i])
+			minpos = i;
+		if (lst[maxpos] < lst[i])
+			maxpos = i;
+		i++;
+	}
+	printf("minpos %d\nmaxpos %d \n", minpos, maxpos);
+}*/
+
+void	find_min_max_in_chunck(t_swap *s)
+{
+	int	minpos;
+	int	maxpos;
+	int	i;
+
+	i = 0;
+	minpos = 0;
+	maxpos = 0;
+	while (i < s->count.len_a)
+	{
+		if (s->a[minpos] > s->a[i])
+			minpos = i;
+		if (s->a[maxpos] < s->a[i])
+			maxpos = i;
+		i++;
+	}
+	printf("minpos %d\nmaxpos %d \n", minpos, maxpos);
+}
+
+//void	sort_list(int *lst, int len)
+void	sort_list(t_swap *s)
+{
+	find_min_max_in_chunck(s);
+	//find_min_max_in_chunck(lst, len);
+
+
+
+}
+
 void	sort_100(t_swap *s)
 {
 	int mid;
@@ -87,8 +149,11 @@ void	sort_100(t_swap *s)
 	mid = s->count.len_a / 2;
 	while (mid != s->count.len_a)
 		ft_pb(s);
-	//sort_49(s);
-	//find_min_max(s);
+	sort_list(s);
+	//sort_list(s->a, s->count.len_a);
+
+	//while (s->count.len_b > 0)
+	//	ft_pa(s);
 
 	//ft_print(s->a,'A', s->count.len_a);
 	//ft_print(s->b,'B', s->count.len_b);

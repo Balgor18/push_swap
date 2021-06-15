@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 12:26:50 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/06/14 16:14:43 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/06/15 16:38:44 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -123,6 +123,8 @@ int	main(int argc, char **argv)
 		printf("KO\n");
 		printf("\033[0;37m");// blanc
 		ft_print(swap.a, 'A', swap.count.len_a);
+		if (swap.count.len_b > 0)
+			ft_print(swap.b, 'B', swap.count.len_b);
 	}
 	free(swap.a);
 	free(swap.b);
