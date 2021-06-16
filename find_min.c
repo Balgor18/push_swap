@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/10 10:43:33 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/06/14 11:46:34 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/06/16 09:46:49 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,27 +15,31 @@
 void	find_min(t_swap *s)
 {
 	int	i;
-	int	tmp;
 	int	pos;
 	int	mid;
 
 	mid = s->count.len_a / 2;
 	i = 0;
-	tmp = s->a[0];
+	pos = i;
 	while (i < s->count.len_a)
 	{
-		if (tmp > s->a[i])
-		{
-			tmp = s->a[i];
+		if (s->a[pos] > s->a[i])
 			pos = i;
-		}
 		i++;
 	}
-	if (pos <= mid)
+	if (pos <= mid && pos != 0)
+	{
 		ft_ra(s);
+		pos--;
+	}
 	else if (pos > mid)
+	{
 		ft_rra(s);
-	if (s->a[0] == tmp)
+		pos++;
+		if (pos == s->count.len_a)
+			pos = 0;
+	}
+	if (s->a[0] == s->a[pos])
 		ft_pb(s);
 }
 

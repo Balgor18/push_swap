@@ -13,7 +13,7 @@ tableau_key_value ={
 
 for people , val in tableau_key_value.items() :
 	print(people + " = age " + str(val))
-"""
+
 
 for b1 in tabl :
 	for b2 in tabl :
@@ -29,4 +29,14 @@ for b1 in tabl :
 											print("./push_swap " + str(b1) +" "+ str(b2) +" "+ str(b3) +" "+ str(b4) +" "+ str(b5) +" "+ str(b6) +" "+ str(b7) +" "+ str(b8) +" "+ str(b9) +" "+ str(b10) + " | wc -l")
 										#if b1 == 0 and b2 == 3 and b3 == 9 and b4 == 8 and b5 == 7 and b6 == 6 and b7 == 5 and b8 == 4 and b9 == 2 and b10 == 1 :
 										#	exit()
+"""
+
+for b1 in tabl :
+	for b2 in tabl :
+		for b3 in tabl :
+			for b4 in tabl :
+				for b5 in tabl :
+					if b1 != b2 and b1 != b3 and b1 != b4 and b1 != b5 and b2 != b3 and b2 != b4 and b2 != b5 and b3 != b4 and b3 != b5 and b4 != b5:
+						#print("./push_swap " + str(b1) +" "+ str(b2) +" "+ str(b3) +" "+ str(b4) +" "+ str(b5) )
+						print("./push_swap " + str(b1) +" "+ str(b2) +" "+ str(b3) +" "+ str(b4) +" "+ str(b5) + " | wc -l")
 

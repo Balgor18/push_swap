@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/08 09:31:05 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/06/15 17:17:39 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/06/16 09:51:40 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,16 +68,16 @@ void	sort_3(t_swap *s)
 void	sort_49(t_swap *s)
 {
 	while (s->count.len_a > 3)
-	{
 		find_min(s);
-	}
 	sort_3(s);
-	sort_b_for_a(s);
+	//ft_print(s->a, 'A',s->count.len_a);
+	//ft_print(s->b, 'B',s->count.len_b);
+	//sort_b_for_a(s);
 	if (s->b[0] < s->b[1] && verif_table_ok(s->a, s->count.len_a))
 		ft_sb(s);
 	while (s->count.len_b > 0)
 		ft_pa(s);
-	two_first(s);
+	//two_first(s);
 }
 
 /*
@@ -112,6 +112,8 @@ void	sort_49(t_swap *s)
 	printf("minpos %d\nmaxpos %d \n", minpos, maxpos);
 }*/
 
+//void	//
+
 void	find_min_max_in_chunck(t_swap *s)
 {
 	int	minpos;
@@ -129,6 +131,18 @@ void	find_min_max_in_chunck(t_swap *s)
 			maxpos = i;
 		i++;
 	}
+	ft_print(s->a, 'A', s->count.len_a);
+	ft_print(s->b, 'B', s->count.len_b);
+	if (maxpos > minpos)
+	{
+		ft_rra(s);
+	}
+	else if (minpos > maxpos)
+	{
+		ft_ra(s);
+	}
+	ft_print(s->a, 'A', s->count.len_a);
+	ft_print(s->b, 'B', s->count.len_b);
 	printf("minpos %d\nmaxpos %d \n", minpos, maxpos);
 }
 

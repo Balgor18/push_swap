@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 12:26:50 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/06/15 16:38:44 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/06/16 09:23:13 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ int	prepare_A(t_swap *swap, char **s)
 	i = 0;
 	swap->a = malloc(sizeof(int *) * swap->count.len_a);
 	swap->b = malloc(sizeof(int *) * swap->count.len_a);
-	if (!swap->a)
+	if (!swap->a || !swap->b)
 		return (0);
 	if (swap->type == 'S')
 	{
@@ -89,10 +89,8 @@ int	main(int argc, char **argv)
 
 	tmp = argc;
 	init_struct(&swap);
-
 	if (argc < 2)
 		return (0);
-//	ft_same_int(1, argv);// dangers more than 25 line
 	while (--tmp >= 1)
 	{
 		if (!verif_digit(argv[tmp], ft_strlen(argv[tmp]), &swap) || ft_same_int(1, argv))// || verif_size_int(argv[tmp]))
@@ -105,7 +103,7 @@ int	main(int argc, char **argv)
 		swap.type = 'S';
 	if (!prepare_A(&swap, argv))
 	{
-		printf("je renvoie une erreur\n");
+		//printf("je renvoie une erreur\n");
 		ft_putstr_fd("Error\n", 1);
 		return (0);
 	}
@@ -114,7 +112,7 @@ int	main(int argc, char **argv)
 	{
 		printf("\033[0;32m");// vert
 		printf("OK\n");
-		ft_print(swap.a, 'A', swap.count.len_a);
+		//ft_print(swap.a, 'A', swap.count.len_a);
 		printf("\033[0;37m");// blanc
 	}
 	else

@@ -6,67 +6,11 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/04 14:07:15 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/06/10 10:34:23 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/06/16 10:02:32 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-/*
-int	verif_pb_is_need(t_swap *s)
-{
-	int i;
-
-	i = 1;
-	while (i < s->count.len_a)
-	{
-		ft_putstr_fd("boucle verif ft_pa \n s->a[", 1);
-		ft_putnbr_fd(i - 1, 1);
-		ft_putchar_fd(']', 1);
-		ft_putchar_fd(' ', 1);
-		ft_putnbr_fd(s->a[i - 1] , 1);
-		ft_putstr_fd(" > s->a[", 1);
-		ft_putnbr_fd(i , 1);
-		ft_putchar_fd(']', 1);
-		ft_putchar_fd(' ', 1);
-		ft_putnbr_fd(s->a[i] , 1);
-		ft_putchar_fd('\n', 1);
-
-		if (((s->a[i - 1] > s->a[i]) && (s->a[i] < s->b[0])) || !verif_table_ok(s, s->count.len_a))
-			return (0);
-		i++;
-	}
-
-	if (s->count.len_b > 0)
-		if (s->b[0] < s->a[0] || !verif_table_ok(s, s->count.len_a))
-			return (1);
-	return (0);
-}
-
-
-int	verif_pa_is_need(t_swap *s)
-{
-	int i;
-
-	i = 1;
-	//printf("for ft_pb\n");
-	if (s->a[0] > s->b[0] && s->count.len_b > 0)
-		return (1);
-	//ft_putstr_fd("boucle need ft_pb \n", 1);
-	while (i < s->count.len_b)
-	{
-		//printf("(%d < %d) && %d < %d \n", s->b[i - 1], s->b[i], s->b[i], s->a[0]);
-		if ((s->b[i - 1] < s->b[i]) && (s->b[i] < s->a[0]))
-			return (0);
-		i++;
-	}
-
-	printf("%d < %d || %d \n", s->a[0], s->b[0], verif_table_ok(s, s->count.len_a));
-	if (s->count.len_a > 0)
-		if (s->a[0] < s->b[0] || !verif_table_ok(s, s->count.len_a))
-			return (1);
-	return (0);
-}*/
 
 int	verif_digit(char *s, int len, t_swap *swap)
 {
