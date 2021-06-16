@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/08 09:31:05 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/06/16 19:27:15 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/06/16 23:15:08 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,6 +92,95 @@ void	sort_49(t_swap *s)
 ** t_chunk
 */
 
+char	min_or_max(int minpos, int maxpos)
+{
+	int	tmpmin;
+	int	tmpmax;
+
+	tmpmin = minpos - 50;
+	tmpmax = maxpos - 50;
+
+	// VERIF POSSIBILTY CLOSE OF 0 OR 99
+
+	// CASE MINPOS = 50
+	// CASE MAXPOS = 49
+
+	// TMPMIN = 0
+	// TMPMAX = -1
+
+	if (tmpmax < tmpmin)
+		return ('A');
+	else if (tmpmax > tmpmin)
+		return ('I');
+	tmpmin = minpos + 50;
+	tmpmax = maxpos + 50;
+	if (tmpmin > tmpmax)
+		return ('I');
+	else if (tmpmax > tmpmin)
+		return ('A');
+	return ('R');
+}
+
+void	find_min_max(t_swap *s, t_chunk *c)
+{
+	int	i;
+	int	mid;
+
+	mid = s->count.len_a / 2;
+	i = 0;
+	if (min_or_max(c->minpos, c->maxpos) == 'I')
+	{
+		while (c->minpos != 99 && c->minpos != 0)
+		{
+			if (c->minpos > 50)
+			{
+				ft_rra(s);
+				c->minpos++;
+			}
+			else if (c->minpos < 50)
+			{
+				ft_ra(s);
+				c->minpos--;
+			}
+		}
+		if (c->minpos == 99)
+			ft_rra(s);
+		ft_pb(s);
+	}
+	else if (min_or_max(c->minpos, c->maxpos) == 'A')
+	{
+		while (c->maxpos != 99 && c->maxpos != 0)
+		{
+			if (c->maxpos > 50)
+			{
+				ft_rra(s);
+				c->maxpos++;
+			}
+			else if (c->maxpos < 50)
+			{
+				ft_ra(s);
+				c->maxpos--;
+			}
+		}
+		if (c->maxpos == 99)
+			ft_rra(s);
+		ft_pb(s);
+	}
+	ft_print(s->a,'A', s->count.len_a);
+	ft_print(s->b,'B', s->count.len_b);
+}
+
+void	max_or_min(t_chunk *c)
+{
+	printf("   | %d < %d \n",  c->minpos ,c->maxpos);
+	printf("-50| %d < %d \n", c->minpos - 50 ,c->maxpos - 50);
+	printf("+50| %d < %d \n", c->minpos + 50 ,c->maxpos + 50);
+	//while (c->minpos != 0 && c->minpos != 99)
+	//if ((c->minpos - 50) < (c->maxpos - 50))
+	//else if ((c->minpos - 50) > (c->maxpos - 50))
+	//if ((c->minpos + 50) < (c->maxpos + 50))
+	//else if ((c->minpos + 50) > (c->maxpos + 50))
+}
 
 void	sort_list(t_swap *s, int size)
 {
@@ -101,6 +190,10 @@ void	sort_list(t_swap *s, int size)
 	i = -1;
 	chunk.max_size = size;
 	init_chunk(&chunk, s);
+	find_min_max(s, &chunk);
+	//max_or_min(&chunk);
+	//printf("minpos %d \n", chunk.minpos);
+	//printf("maxpos %d \n", chunk.maxpos);
 }
 
 void	sort_100(t_swap *s)
@@ -123,3 +216,93 @@ void	sort_100(t_swap *s)
 	//ft_print(s->a,'A', s->count.len_a);
 	//ft_print(s->b,'B', s->count.len_b);
 }
+
+/*
+char	min_or_max(int minpos, int maxpos)
+{
+	int	tmpmin;
+	int	tmpmax;
+
+	tmpmin = minpos - 50;
+	tmpmax = maxpos - 50;
+
+	// VERIF POSSIBILTY CLOSE OF 0 OR 99
+
+	// CASE MINPOS = 50
+	// CASE MAXPOS = 49
+
+	// TMPMIN = 0
+	// TMPMAX = -1
+
+	if (tmpmax < tmpmin)
+		return ('A');
+	else if (tmpmax > tmpmin)
+		return ('I');
+	tmpmin = minpos + 50;
+	tmpmax = maxpos + 50;
+	if (tmpmin > tmpmax)
+		return ('I');
+	else if (tmpmax > tmpmin)
+		return ('A');
+	return ('R');
+}
+void	find_min_max(t_swap *s)
+{
+	int	i;
+	int	minpos;
+	int	maxpos;
+	int	mid;
+
+	mid = s->count.len_a / 2;
+	i = 0;
+	minpos = 0;
+	maxpos = 0;
+	while (i < s->count.len_a)
+	{
+		if (s->a[minpos] > s->a[i])
+			minpos = i;
+		else if (s->a[maxpos] < s->a[i])
+			maxpos = i;
+		i++;
+	}
+	if (min_or_max(minpos, maxpos) == 'I')
+	{
+		while (minpos != 99 && minpos != 0)
+		{
+			if (minpos > 50)
+			{
+				ft_rra(s);
+				minpos++;
+			}
+			else if (minpos < 50)
+			{
+				ft_ra(s);
+				minpos--;
+			}
+		}
+		if (minpos == 99)
+			ft_rra(s);
+		ft_pb(s);
+	}
+	else if (min_or_max(minpos, maxpos) == 'A')
+	{
+		while (maxpos != 99 && maxpos != 0)
+		{
+			if (maxpos > 50)
+			{
+				ft_rra(s);
+				maxpos++;
+			}
+			else if (maxpos < 50)
+			{
+				ft_ra(s);
+				maxpos--;
+			}
+		}
+		if (maxpos == 99)
+			ft_rra(s);
+		ft_pb(s);
+	}
+	ft_print(s->a,'A', s->count.len_a);
+	ft_print(s->b,'B', s->count.len_b);
+}*/

@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 11:46:36 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/06/16 19:27:03 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/06/16 23:13:49 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ typedef struct s_swap
 
 // test
 void	sort_100(t_swap *s);
-void	find_min_max(t_swap *s);
+void	find_min_max(t_swap *s, t_chunk *c);
 void	init_chunk(t_chunk *c, t_swap *s);
 void	find_min_max_in_chunck(t_swap *s);
 
