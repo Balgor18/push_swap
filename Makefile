@@ -16,6 +16,7 @@ SRC =	ft_print.c find_min.c \
 		push_swap.c\
 		solver.c\
 		sort_3.c\
+		sort_tab.c\
 		verif.c\
 		verif2.c
 

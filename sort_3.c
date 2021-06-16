@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/08 09:31:05 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/06/16 09:51:40 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/06/16 19:27:15 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,8 +73,8 @@ void	sort_49(t_swap *s)
 	//ft_print(s->a, 'A',s->count.len_a);
 	//ft_print(s->b, 'B',s->count.len_b);
 	//sort_b_for_a(s);
-	if (s->b[0] < s->b[1] && verif_table_ok(s->a, s->count.len_a))
-		ft_sb(s);
+	//if (s->b[0] < s->b[1] && verif_table_ok(s->a, s->count.len_a))
+	//	ft_sb(s);
 	while (s->count.len_b > 0)
 		ft_pa(s);
 	//two_first(s);
@@ -84,86 +84,37 @@ void	sort_49(t_swap *s)
 ** faire une struct pour le min max
 ** s_chunk
 ** int	nb;
-** int	minpos;
-** int	maxpos;
+** int	min_value;
+** int	max_value;
 ** int	nb_int;
-** s_chunk *next;
+** int	taille max;
+** //s_chunk *next;
 ** t_chunk
 */
 
-// Voir si je fais cet fonction pour les 2 listes ou que 1
-/*void	find_min_max_in_chunck(int *lst, int len)
+
+void	sort_list(t_swap *s, int size)
 {
-	int	minpos;
-	int	maxpos;
-	int	i;
+	t_chunk chunk;
+	int i;
 
-	i = 0;
-	minpos = 0;
-	maxpos = 0;
-	while (i < len)
-	{
-		if (lst[minpos] > lst[i])
-			minpos = i;
-		if (lst[maxpos] < lst[i])
-			maxpos = i;
-		i++;
-	}
-	printf("minpos %d\nmaxpos %d \n", minpos, maxpos);
-}*/
-
-//void	//
-
-void	find_min_max_in_chunck(t_swap *s)
-{
-	int	minpos;
-	int	maxpos;
-	int	i;
-
-	i = 0;
-	minpos = 0;
-	maxpos = 0;
-	while (i < s->count.len_a)
-	{
-		if (s->a[minpos] > s->a[i])
-			minpos = i;
-		if (s->a[maxpos] < s->a[i])
-			maxpos = i;
-		i++;
-	}
-	ft_print(s->a, 'A', s->count.len_a);
-	ft_print(s->b, 'B', s->count.len_b);
-	if (maxpos > minpos)
-	{
-		ft_rra(s);
-	}
-	else if (minpos > maxpos)
-	{
-		ft_ra(s);
-	}
-	ft_print(s->a, 'A', s->count.len_a);
-	ft_print(s->b, 'B', s->count.len_b);
-	printf("minpos %d\nmaxpos %d \n", minpos, maxpos);
-}
-
-//void	sort_list(int *lst, int len)
-void	sort_list(t_swap *s)
-{
-	find_min_max_in_chunck(s);
-	//find_min_max_in_chunck(lst, len);
-
-
-
+	i = -1;
+	chunk.max_size = size;
+	init_chunk(&chunk, s);
 }
 
 void	sort_100(t_swap *s)
 {
 	int mid;
+	int size;
 
+	size = 0;
 	mid = s->count.len_a / 2;
-	while (mid != s->count.len_a)
-		ft_pb(s);
-	sort_list(s);
+	//while (mid != s->count.len_a)
+	//	ft_pb(s);
+	//while ()
+		size += 20;
+		sort_list(s, size);
 	//sort_list(s->a, s->count.len_a);
 
 	//while (s->count.len_b > 0)

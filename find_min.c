@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/10 10:43:33 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/06/16 09:46:49 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/06/16 18:58:27 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,7 @@ void	find_min(t_swap *s)
 
 // FAIRE FONCTION QUE RETURN 'I' OU 'A' EN FONCTION DE QUI EST LE PLUS PROCHE
 
+/*
 char	min_or_max(int minpos, int maxpos)
 {
 	int	tmpmin;
@@ -99,9 +100,6 @@ void	find_min_max(t_swap *s)
 			maxpos = i;
 		i++;
 	}
-	printf("minpos = %d \nmaxpos = %d \n", minpos , maxpos);
-	printf("min = %d \nmax = %d \n", s->a[minpos] , s->a[maxpos]);
-
 	if (min_or_max(minpos, maxpos) == 'I')
 	{
 		while (minpos != 99 && minpos != 0)
@@ -142,22 +140,4 @@ void	find_min_max(t_swap *s)
 	}
 	ft_print(s->a,'A', s->count.len_a);
 	ft_print(s->b,'B', s->count.len_b);
-	//if (maxpos < minpos && maxpos + 50 > minpos)
-	/*if (maxpos < minpos)
-	{
-		printf("\033[0;31m");
-		ft_print(s->a,'A', s->count.len_a);
-		ft_ra(s);
-		printf("\033[0;32m");
-		ft_print(s->a,'A', s->count.len_a);
-		printf("\033[0;37m");
-	}*/
-	/*if (minpos <= mid && minpos < maxpos)
-		ft_ra(s);
-	else if (minpos > mid && minpos > maxpos)
-		ft_rra(s);
-	if (s->a[0] == s->a[minpos])
-		ft_pb(s);
-	if(maxpos <= mid && minpos > maxpos)
-		ft_ra(s);*/
-}
+}*/
