@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/08 09:31:05 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/06/16 23:15:08 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/06/17 11:10:35 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -109,9 +109,9 @@ char	min_or_max(int minpos, int maxpos)
 	// TMPMAX = -1
 
 	if (tmpmax < tmpmin)
-		return ('A');
-	else if (tmpmax > tmpmin)
 		return ('I');
+	else if (tmpmax > tmpmin)
+		return ('A');
 	tmpmin = minpos + 50;
 	tmpmax = maxpos + 50;
 	if (tmpmin > tmpmax)
@@ -130,21 +130,42 @@ void	find_min_max(t_swap *s, t_chunk *c)
 	i = 0;
 	if (min_or_max(c->minpos, c->maxpos) == 'I')
 	{
-		while (c->minpos != 99 && c->minpos != 0)
+		if (c->minpos < c->maxpos)
 		{
-			if (c->minpos > 50)
+			while (c->minpos != 99 && c->minpos != 0)
 			{
+				if (c->minpos > 50)
+				{
+					ft_rra(s);
+					c->minpos++;
+				}
+				else if (c->minpos < 50)
+				{
+					ft_ra(s);
+					c->minpos--;
+				}
+			}
+			if (c->minpos == 99)
 				ft_rra(s);
-				c->minpos++;
-			}
-			else if (c->minpos < 50)
-			{
-				ft_ra(s);
-				c->minpos--;
-			}
 		}
-		if (c->minpos == 99)
-			ft_rra(s);
+		else if (c->minpos > c->maxpos)
+		{
+			while (c->maxpos != 99 && c->maxpos != 0)
+			{
+				if (c->maxpos > 50)
+				{
+					ft_rra(s);
+					c->maxpos++;
+				}
+				else if (c->maxpos < 50)
+				{
+					ft_ra(s);
+					c->maxpos--;
+				}
+			}
+			if (c->maxpos == 99)
+				ft_rra(s);
+		}
 		ft_pb(s);
 	}
 	else if (min_or_max(c->minpos, c->maxpos) == 'A')
@@ -166,20 +187,40 @@ void	find_min_max(t_swap *s, t_chunk *c)
 			ft_rra(s);
 		ft_pb(s);
 	}
-	ft_print(s->a,'A', s->count.len_a);
-	ft_print(s->b,'B', s->count.len_b);
+	//ft_print(s->a,'A', s->count.len_a);
+	//ft_print(s->b,'B', s->count.len_b);
 }
 
-void	max_or_min(t_chunk *c)
+void	find_new_min_or_max(t_swap *s, t_chunk *c)
 {
-	printf("   | %d < %d \n",  c->minpos ,c->maxpos);
-	printf("-50| %d < %d \n", c->minpos - 50 ,c->maxpos - 50);
-	printf("+50| %d < %d \n", c->minpos + 50 ,c->maxpos + 50);
-	//while (c->minpos != 0 && c->minpos != 99)
-	//if ((c->minpos - 50) < (c->maxpos - 50))
-	//else if ((c->minpos - 50) > (c->maxpos - 50))
-	//if ((c->minpos + 50) < (c->maxpos + 50))
-	//else if ((c->minpos + 50) > (c->maxpos + 50))
+	int	tmp;
+	int	i;
+	int	tmp_value;
+
+	i = -1;
+	tmp = s->b[0];
+	tmp_value = s->a[0];
+	if (tmp == c->min_value)
+	{
+		while (++i < s->count.len_a)
+		{
+			if (s->a[i] < tmp_value)
+			{
+				c->min_value = s->a[i];
+				c->minpos = s->a[i];
+			}
+		}
+	}
+	else if (tmp == c->max_value)
+	{
+		c->max_value = max_value_chunk(s->a, s->count.len_a, (c->max_size - c->nb) - 1);
+		i = -1;
+		while (++i < s->count.len_a)
+			if (c->max_value == s->a[i])
+				c->maxpos = i;
+		printf("");
+	}
+	//printf("max_value %d && maxpos %d \n", c->max_value, c->maxpos);
 }
 
 void	sort_list(t_swap *s, int size)
@@ -190,7 +231,18 @@ void	sort_list(t_swap *s, int size)
 	i = -1;
 	chunk.max_size = size;
 	init_chunk(&chunk, s);
-	find_min_max(s, &chunk);
+	while (chunk.nb < chunk.max_size)
+	{
+		find_min_max(s, &chunk);
+		chunk.nb++;
+		find_new_min_or_max(s, &chunk);
+		printf("c->max-value %d | c->maxpos %d\n", chunk.max_value, chunk.maxpos);
+		printf("c->min_value %d | c->minpos %d\n", chunk.min_value, chunk.minpos);
+		ft_print(s->a,'A', s->count.len_a);
+		ft_print(s->b,'B', s->count.len_b);
+		if (chunk.nb == 6)
+			break ;
+	}
 	//max_or_min(&chunk);
 	//printf("minpos %d \n", chunk.minpos);
 	//printf("maxpos %d \n", chunk.maxpos);
@@ -198,11 +250,11 @@ void	sort_list(t_swap *s, int size)
 
 void	sort_100(t_swap *s)
 {
-	int mid;
+	//int mid;
 	int size;
 
 	size = 0;
-	mid = s->count.len_a / 2;
+	//mid = s->count.len_a / 2;
 	//while (mid != s->count.len_a)
 	//	ft_pb(s);
 	//while ()
