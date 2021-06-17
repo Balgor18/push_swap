@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/08 09:31:05 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/06/17 11:10:35 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/06/17 19:45:48 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,14 +92,35 @@ void	sort_49(t_swap *s)
 ** t_chunk
 */
 
-char	min_or_max(int minpos, int maxpos)
+char	min_or_max(int minpos, int maxpos, int len)
 {
-	int	tmpmin;
-	int	tmpmax;
+	int	min_0;
+	int	max_0;
+	int	min_len;
+	int	max_len;
+	int	i;
 
-	tmpmin = minpos - 50;
-	tmpmax = maxpos - 50;
+	i = -1;
+	min_0 = minpos;
+	max_0 = maxpos;
+	min_len = minpos - len;
+	max_len = maxpos - len;// nb carac a faire
+	printf("len %d \n", len);
+	//printf("%d || %d --- %d || %d \n", min_0, max_0, min_len, max_len);
+	if (min_len < 0)
+		min_len *= -1;
+	if (max_len < 0)
+		max_len *= -1;
+	printf("%d || %d --- %d || %d \n", min_0, max_0, min_len, max_len);
 
+	if (min_0 < max_0 && min_0 < max_len)// verif avec son oppose
+		return ('A');//A
+	if (max_0 < min_0 && max_0 < min_len)
+		return ('B');//B
+	if (min_len < max_len && min_len < max_0)
+		return ('C');//C
+	if (max_len < min_len && max_len < min_0)
+		return ('D');//D
 	// VERIF POSSIBILTY CLOSE OF 0 OR 99
 
 	// CASE MINPOS = 50
@@ -107,32 +128,66 @@ char	min_or_max(int minpos, int maxpos)
 
 	// TMPMIN = 0
 	// TMPMAX = -1
-
-	if (tmpmax < tmpmin)
-		return ('I');
-	else if (tmpmax > tmpmin)
-		return ('A');
-	tmpmin = minpos + 50;
-	tmpmax = maxpos + 50;
-	if (tmpmin > tmpmax)
-		return ('I');
-	else if (tmpmax > tmpmin)
-		return ('A');
-	return ('R');
+	return (0);
 }
 
 void	find_min_max(t_swap *s, t_chunk *c)
 {
 	int	i;
-	int	mid;
+	int	res;
 
-	mid = s->count.len_a / 2;
+	res = min_or_max(c->minpos, c->maxpos, s->count.len_a);
 	i = 0;
-	if (min_or_max(c->minpos, c->maxpos) == 'I')
+	//printf("%c \n", min_or_max(c->minpos, c->maxpos, s->count.len_a));
+	if (res == 'A')
 	{
-		if (c->minpos < c->maxpos)
+		while (c->minpos != 0)
 		{
-			while (c->minpos != 99 && c->minpos != 0)
+			//ft_print(s->a, 'A', s->count.len_a);
+			ft_ra(s);
+			//ft_print(s->a, 'A', s->count.len_a);
+			c->minpos--;
+		}
+		ft_pb(s);
+	}
+	else if (res == 'B')
+	{
+		while (c->maxpos != 0)
+		{
+			//ft_print(s->a, 'A', s->count.len_a);
+			ft_ra(s);
+			//ft_print(s->a, 'A', s->count.len_a);
+			c->maxpos--;
+		}
+		ft_pb(s);
+	}
+	else if (res == 'c')
+	{
+		while (c->minpos != s->count.len_a - 1)
+		{
+			//ft_print(s->a, 'A', s->count.len_a);
+			ft_rra(s);
+			//ft_print(s->a, 'A', s->count.len_a);
+			c->minpos++;
+		}
+		ft_rra(s);
+		ft_pb(s);
+	}
+	else if (res == 'D')
+	{
+		while (c->maxpos != s->count.len_a - 1)
+		{
+			//ft_print(s->a, 'A', s->count.len_a);
+			ft_rra(s);
+			//ft_print(s->a, 'A', s->count.len_a);
+			c->maxpos++;
+		}
+		ft_rra(s);
+		ft_pb(s);
+	}
+		/*if (c->minpos < c->maxpos)
+		{
+			while (c->minpos != (s->count.len_a - 1) && c->minpos != 0)
 			{
 				if (c->minpos > 50)
 				{
@@ -145,12 +200,12 @@ void	find_min_max(t_swap *s, t_chunk *c)
 					c->minpos--;
 				}
 			}
-			if (c->minpos == 99)
+			if (c->minpos == (s->count.len_a - 1))
 				ft_rra(s);
 		}
 		else if (c->minpos > c->maxpos)
 		{
-			while (c->maxpos != 99 && c->maxpos != 0)
+			while (c->maxpos != (s->count.len_a - 1) && c->maxpos != 0)
 			{
 				if (c->maxpos > 50)
 				{
@@ -163,14 +218,13 @@ void	find_min_max(t_swap *s, t_chunk *c)
 					c->maxpos--;
 				}
 			}
-			if (c->maxpos == 99)
+			if (c->maxpos == (s->count.len_a - 1))
 				ft_rra(s);
 		}
-		ft_pb(s);
-	}
-	else if (min_or_max(c->minpos, c->maxpos) == 'A')
+		ft_pb(s);*/
+	/*else if (min_or_max(c->minpos, c->maxpos, s->count.len_a) == 'A')
 	{
-		while (c->maxpos != 99 && c->maxpos != 0)
+		while (c->maxpos != (s->count.len_a - 1) && c->maxpos != 0)
 		{
 			if (c->maxpos > 50)
 			{
@@ -183,10 +237,10 @@ void	find_min_max(t_swap *s, t_chunk *c)
 				c->maxpos--;
 			}
 		}
-		if (c->maxpos == 99)
+		if (c->maxpos == (s->count.len_a - 1))
 			ft_rra(s);
 		ft_pb(s);
-	}
+	}*/
 	//ft_print(s->a,'A', s->count.len_a);
 	//ft_print(s->b,'B', s->count.len_b);
 }
@@ -214,13 +268,13 @@ void	find_new_min_or_max(t_swap *s, t_chunk *c)
 	else if (tmp == c->max_value)
 	{
 		c->max_value = max_value_chunk(s->a, s->count.len_a, (c->max_size - c->nb) - 1);
+		//printf("max_value %d \n", c->max_value);
 		i = -1;
 		while (++i < s->count.len_a)
 			if (c->max_value == s->a[i])
 				c->maxpos = i;
-		printf("");
+		//printf("maxpos %d \n", c->maxpos);
 	}
-	//printf("max_value %d && maxpos %d \n", c->max_value, c->maxpos);
 }
 
 void	sort_list(t_swap *s, int size)
@@ -234,15 +288,20 @@ void	sort_list(t_swap *s, int size)
 	while (chunk.nb < chunk.max_size)
 	{
 		find_min_max(s, &chunk);
+		//min_or_max(chunk.minpos, chunk.maxpos, s->count.len_a);
+		//break ;
 		chunk.nb++;
 		find_new_min_or_max(s, &chunk);
-		printf("c->max-value %d | c->maxpos %d\n", chunk.max_value, chunk.maxpos);
-		printf("c->min_value %d | c->minpos %d\n", chunk.min_value, chunk.minpos);
+
+		//printf("c->max-value %d | c->maxpos %d\n", chunk.max_value, chunk.maxpos);
+		//printf("c->min_value %d | c->minpos %d\n", chunk.min_value, chunk.minpos);
 		ft_print(s->a,'A', s->count.len_a);
 		ft_print(s->b,'B', s->count.len_b);
-		if (chunk.nb == 6)
-			break ;
+		//if (chunk.nb == 21)
+		//	break ;
 	}
+	//ft_print(s->a,'A', s->count.len_a);
+	//ft_print(s->b,'B', s->count.len_b);
 	//max_or_min(&chunk);
 	//printf("minpos %d \n", chunk.minpos);
 	//printf("maxpos %d \n", chunk.maxpos);
