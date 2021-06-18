@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/08 09:31:05 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/06/18 11:41:29 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/06/18 16:59:40 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,18 +74,6 @@ void	sort_49(t_swap *s)
 		ft_pa(s);
 }
 
-/*
-** faire une struct pour le min max
-** s_chunk
-** int	nb;
-** int	min_value;
-** int	max_value;
-** int	nb_int;
-** int	taille max;
-** //s_chunk *next;
-** t_chunk
-*/
-
 char	min_or_max(int minpos, int maxpos, int len)
 {
 	int	min_0;
@@ -114,6 +102,30 @@ char	min_or_max(int minpos, int maxpos, int len)
 	return (0);
 }
 
+void	while_min_max(char c, int *pos, t_swap *s)
+{
+	if (c == 'A' || c == 'B')
+	{
+		while (*pos != 0)
+		{
+			ft_ra(s);
+			*pos -= 1;
+		}
+		ft_pb(s);
+	}
+	else if (c == 'C' || c == 'D')
+	{
+		while (*pos != s->count.len_a - 1)
+		{
+
+			ft_rra(s);
+			*pos += 1;
+		}
+		ft_rra(s);
+		ft_pb(s);
+	}
+}
+
 void	find_min_max(t_swap *s, t_chunk *c)
 {
 	int	i;
@@ -121,47 +133,13 @@ void	find_min_max(t_swap *s, t_chunk *c)
 
 	res = min_or_max(c->minpos, c->maxpos, s->count.len_a);
 	i = 0;
-	if (res == 'A')
-	{
-		while (c->minpos != 0)
-		{
-			ft_ra(s);
-			c->minpos--;
-		}
-		ft_pb(s);
-	}
-	else if (res == 'B')
-	{
-		while (c->maxpos != 0)
-		{
-			ft_ra(s);
-			c->maxpos--;
-		}
-		ft_pb(s);
-	}
-	else if (res == 'C')
-	{
-		while (c->maxpos != s->count.len_a - 1)
-		{
-			ft_rra(s);
-			c->maxpos++;
-		}
-		ft_rra(s);
-		ft_pb(s);
-	}
-	else if (res == 'D')
-	{
-		while (c->maxpos != s->count.len_a - 1)
-		{
-			ft_rra(s);
-			c->maxpos++;
-		}
-		ft_rra(s);
-		ft_pb(s);
-	}
+	if (res == 'A'|| res == 'C')
+		while_min_max(res, &c->minpos, s);
+	else if (res == 'B'|| res == 'D')
+		while_min_max(res, &c->maxpos, s);
 }
 
-void	find_new_min_or_max(t_swap *s, t_chunk *c)
+void	find_new_min_or_max(t_swap *s, t_chunk *c, int size)
 {
 	int	tmp;
 	int	i;
@@ -170,25 +148,42 @@ void	find_new_min_or_max(t_swap *s, t_chunk *c)
 	i = -1;
 	tmp = s->b[0];
 	tmp_value = s->a[0];
-	if (tmp == c->min_value)
+	c->min_value = min_value_chunk(s->a, s->count.len_a, size - 20);
+	while (++i < s->count.len_a)
+		if (c->min_value == s->a[i])
+			c->minpos = i;
+	i = -1;
+	c->max_value = max_value_chunk(s->a, s->count.len_a, (c->max_size - c->nb));
+	while (++i < s->count.len_a)
+		if (c->max_value == s->a[i])
+			c->maxpos = i;
+}
+
+void	sort_3_b(t_swap *s)
+{
+	if (s->b[0] > s->b[1] && s->b[1] < s->b[2])
 	{
-		while (++i < s->count.len_a)
-		{
-			if (s->a[i] < tmp_value)
-			{
-				c->min_value = s->a[i];
-				c->minpos = s->a[i];
-			}
-		}
+		ft_sb(s);
+		ft_rrb(s);
 	}
-	else if (tmp == c->max_value)
+	else if (s->b[0] > s->b[1] && s->b[1] < s->b[2] && s->b[0] > s->b[2])
 	{
-		c->max_value = max_value_chunk(s->a, s->count.len_a, (c->max_size - c->nb) - 1);
-		i = -1;
-		while (++i < s->count.len_a)
-			if (c->max_value == s->a[i])
-				c->maxpos = i;
+		ft_sb(s);
+		ft_rb(s);
 	}
+	else if (s->b[0] < s->b[2] && s->b[0] < s->b[1] && s->b[1] > s->b[2])
+		ft_rb(s);
+	else if (s->b[0] > s->b[1] && s->b[2] > s->b[1] && s->b[2] > s->b[0])
+		ft_rrb(s);
+	else if (s->b[0] < s->b[1] && s->b[0] > s->b[2])
+		ft_sb(s);
+}
+
+void	sort_chunk(t_swap *s)
+{
+	while (s->count.len_b > 3)
+		find_max(s);
+	sort_3_b(s);
 }
 
 void	sort_list(t_swap *s, int size)
@@ -198,33 +193,38 @@ void	sort_list(t_swap *s, int size)
 
 	i = -1;
 	chunk.max_size = size;
-	init_chunk(&chunk, s);
+	init_chunk(&chunk, s, size);
 	while (chunk.nb < chunk.max_size)
 	{
+		//ft_print(s->a,'A', s->count.len_a);
 		find_min_max(s, &chunk);
-		printf("avant \n------------\nmin_value %d\nminpos %d\n------------\nmax_value %d\nmaxpos %d \n------------\n------------\n\n", chunk.min_value, chunk.minpos, chunk.max_value, chunk.maxpos);
+		//printf("avant \n------------\nmin_value %d\nminpos %d\n------------\nmax_value %d\nmaxpos %d \n------------\n------------\n\n", chunk.min_value, chunk.minpos, chunk.max_value, chunk.maxpos);
 		chunk.nb++;
-		find_new_min_or_max(s, &chunk);
-		printf("apres \n------------\nmin_value %d\nminpos %d\n------------\nmax_value %d\nmaxpos %d \n------------\n------------\n\n", chunk.min_value, chunk.minpos, chunk.max_value, chunk.maxpos);
+		find_new_min_or_max(s, &chunk, size);
+		//ft_print(s->a,'A', s->count.len_a);
+		//ft_print(s->b,'B', s->count.len_b);
+		//printf("apres \n------------\nmin_value %d\nminpos %d\n------------\nmax_value %d\nmaxpos %d \n------------\n------------\n\n", chunk.min_value, chunk.minpos, chunk.max_value, chunk.maxpos);
 		//printf("nb turn %d \n", chunk.nb);
 		//printf("c->max-value %d | c->maxpos %d\n", chunk.max_value, chunk.maxpos);
 		//printf("c->min_value %d | c->minpos %d\n", chunk.min_value, chunk.minpos);
-		ft_print(s->a,'A', s->count.len_a);
-		ft_print(s->b,'B', s->count.len_b);
-		printf("je boucle %d < %d\n",chunk.nb, chunk.max_size);
-		if (chunk.nb == 50)
-			break ;
-	}
-	while (s->count.len_b > 0)
-	{
-		ft_pa(s);
-		ft_ra(s);
+		//ft_print(s->a,'A', s->count.len_a);
+		//ft_print(s->b,'B', s->count.len_b);
+	//	printf("je boucle %d < %d\n",chunk.nb, chunk.max_size);
+		//if (chunk.nb == 20)
+		//	break ;
 	}
 	//ft_print(s->a,'A', s->count.len_a);
 	//ft_print(s->b,'B', s->count.len_b);
-	//max_or_min(&chunk);
-	//printf("minpos %d \n", chunk.minpos);
-	//printf("maxpos %d \n", chunk.maxpos);
+	//printf("FINIS VOILA LES VALEUR DANS B\n");
+	//ft_print(s->b,'B', s->count.len_b);
+	//printf("-----------------------------\n");
+
+	sort_chunk(s);
+
+	while (s->count.len_b > 0)
+		ft_pa(s);
+	ft_print(s->a,'A', s->count.len_a);
+	ft_print(s->b,'B', s->count.len_b);
 }
 
 void	sort_100(t_swap *s)
@@ -242,7 +242,7 @@ void	sort_100(t_swap *s)
 		sort_list(s, size);
 		//ft_print(s->a,'A', s->count.len_a);
 		//ft_print(s->b,'B', s->count.len_b);
-		if (size > 59)
+		if (size > 29)
 			break;
 	}
 	//ft_print(s->a,'A', s->count.len_a);

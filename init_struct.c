@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 17:19:39 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/06/16 19:30:27 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/06/18 16:49:46 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,28 +59,46 @@ int	max_value_chunk(int *t, int len, int pos)
 	return (val);
 }
 
-void	init_chunk(t_chunk *c, t_swap *s)
+int	min_value_chunk(int *t, int len, int pos)
+{
+	int	*tmp;
+	int	val;
+
+	tmp = copy_list(t, len);
+	ft_sort_int_tab(tmp, len);
+
+	//printf("pos = %d \n", pos);
+	//ft_print(tmp, 'T', len);
+	val = tmp[pos];
+	free(tmp);
+	return (val);
+}
+
+void	init_chunk(t_chunk *c, t_swap *s, int size)
 {
 	int	i;
 	int	nb_max;
-	//int	last_value;
 
-	//nb_max = s->count.len_a - c->max_size;
 	nb_max = 1;
 	i = -1;
 	c->nb = 0;
-	c->min_value = s->a[0];
-	while (++i < s->count.len_a)
+	//c->min_value = s->a[0];
+	/*while (++i < s->count.len_a)
 	{
 		if (c->min_value > s->a[i])
 		{
 			c->min_value = s->a[i];
 			c->minpos = i;
 		}
-	}
+	}*/
 	c->max_value = max_value_chunk(s->a, s->count.len_a, c->max_size - 1);
+	c->min_value = min_value_chunk(s->a, s->count.len_a, size - 20);
 	i = -1;
 	while (++i < s->count.len_a)
 		if (c->max_value == s->a[i])
 			c->maxpos = i;
+	i = -1;
+	while (++i < s->count.len_a)
+		if (c->min_value == s->a[i])
+			c->minpos = i;
 }

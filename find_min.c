@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/10 10:43:33 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/06/16 18:58:27 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/06/18 16:56:40 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,36 @@ void	find_min(t_swap *s)
 		ft_pb(s);
 }
 
+void	find_max(t_swap *s)
+{
+	int	i;
+	int	pos;
+	int	mid;
+
+	mid = s->count.len_b / 2;
+	i = 0;
+	pos = i;
+	while (i < s->count.len_b)
+	{
+		if (s->b[pos] < s->b[i])
+			pos = i;
+		i++;
+	}
+	if (pos <= mid && pos != 0)
+	{
+		ft_rb(s);
+		pos--;
+	}
+	else if (pos > mid)
+	{
+		ft_rrb(s);
+		pos++;
+		if (pos == s->count.len_b)
+			pos = 0;
+	}
+	if (s->b[0] == s->b[pos])
+		ft_pa(s);
+}
 
 // VOIR CAS OU MIN = 50 ET MAX = 49
 
