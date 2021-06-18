@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 17:19:39 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/06/18 16:49:46 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/06/18 19:04:40 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,8 @@ int	max_value_chunk(int *t, int len, int pos)
 	tmp = copy_list(t, len);
 	ft_sort_int_tab(tmp, len);
 
+	printf("pos = %d \n", pos);
+	ft_print(tmp, 'T', len);
 	val = tmp[pos];
 	free(tmp);
 	return (val);
@@ -81,7 +83,8 @@ void	init_chunk(t_chunk *c, t_swap *s, int size)
 
 	nb_max = 1;
 	i = -1;
-	c->nb = 0;
+	if (!c->nb)
+		c->nb = 0;
 	//c->min_value = s->a[0];
 	/*while (++i < s->count.len_a)
 	{
