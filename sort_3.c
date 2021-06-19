@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/08 09:31:05 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/06/18 19:06:36 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/06/19 17:21:10 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -150,13 +150,39 @@ void	find_new_min_or_max(t_swap *s, t_chunk *c, int size)
 	int	i;
 	int	tmp_value;
 	int	res;
+	int	pos_max;
 
+	pos_max = size- c->nb;
+	printf("find_new_min_or_max pos = %d = %d - %d\n", pos_max, size, c->nb);
 	i = -1;
 	tmp = s->b[0];
 	tmp_value = s->a[0];
-	res = c->nb - c->max_size; // MARCHE PAS VOIR POURQUOI
-	if (res < 0 && c->nb < c->max_size)
-		res = c->max_size - c->nb;
+	res = (c->max_size - 20) + pos_max - 1;
+	if ((c->max_size - 20) > res)
+		res += 1;
+	printf("avant res = %d \n", res);
+	if (res == -1)
+		res = 1;
+	if (res == -2)
+		res = 0;
+	printf("after res = %d \n", res);
+	//res = (c->max_size - c->nb) - 1;// + 1; // MARCHE PAS VOIR POURQUOI
+	//printf("%d = (%d - %d) - 1\n", res, c->nb, c->max_size);
+	//printf("c->nb %d | c->max_size %d \n", c->nb, c->max_size);
+	/*if (res == 0)
+		res = 1;
+	else if (res < 0)
+		res = 0;*/
+	/*if (res < 0 && c->nb < c->max_size)
+	{
+		//res *= -1;
+		res = (c->max_size - c->nb);// + 1;
+		//res = (c->max_size - s->count.len_b) - 1;
+		//
+		//printf("%d = (%d - %d) - 1\n", res, c->max_size, s->count.len_b);
+		printf("%d = (%d - %d)\n", res, c->max_size, c->nb);
+		//printf("res = %d \n",res);
+	}*/
 	c->min_value = min_value_chunk(s->a, s->count.len_a, size - 20);
 	while (++i < s->count.len_a)
 		if (c->min_value == s->a[i])
@@ -191,62 +217,51 @@ void	sort_3_b(t_swap *s)
 		ft_sb(s);
 }
 
-/*
-void	sort_chunk(t_swap *s)
+int	get_max_value_sort(t_chunk *c, t_swap *s)
 {
-	while (s->count.len_b > 3)
-		find_max(s);
-	sort_3_b(s);
-}*/
+	int	*tmp;
+	int	val;
+
+	tmp = copy_list(s->a, s->count.len_a);
+	ft_sort_int_tab(tmp, s->count.len_a);
+
+	ft_print(tmp, 'T', s->count.len_a);
+	printf("max_size %d \n",c->max_size - 20 - 1);
+	val = tmp[c->max_size - 20 - 1];
+	free(tmp);
+	return (val);
+}
 
 void	sort_list(t_chunk *chunk, t_swap *s, int size)
 {
-
-	int i;
+	int	i;
+	int	val;
 
 	i = -1;
 	chunk->max_size = size;
 	init_chunk(chunk, s, size);
-	while (chunk->nb < chunk->max_size)
+	while (chunk->nb <= chunk->max_size)
 	{
 		find_min_max(s, chunk);
-
-		printf("\navant \n------------\nmin_value %d\nminpos %d\n------------\nmax_value %d\nmaxpos %d \n------------\n\n", chunk->min_value, chunk->minpos, chunk->max_value, chunk->maxpos);
 		chunk->nb++;
 		find_new_min_or_max(s, chunk, size);
-		//chunk->nb++;
-		//ft_print(s->a,'A', s->count.len_a);
-		//ft_print(s->b,'B', s->count.len_b);
-//		if (chunk->min_value == chunk->max_value)
-//			find_min_max(s, chunk);
-		//ft_print(s->a,'A', s->count.len_a);
-		//ft_print(s->b,'B', s->count.len_b);
-		printf("apres \n------------\nmin_value %d\nminpos %d\n------------\nmax_value %d\nmaxpos %d \n------------\n\n", chunk->min_value, chunk->minpos, chunk->max_value, chunk->maxpos);
-		//printf("nb turn %d \n", chunk.nb);
-		//printf("c->max-value %d | c->maxpos %d\n", chunk.max_value, chunk.maxpos);
-		//printf("c->min_value %d | c->minpos %d\n", chunk.min_value, chunk.minpos);
-		//ft_print(s->a,'A', s->count.len_a);
-		//ft_print(s->b,'B', s->count.len_b);
-		//printf("%d < %d\n",chunk->nb, chunk->max_size);
-		if (chunk->nb > 20)
-			break ;
-		printf("chunk.nb = %d \n", chunk->nb);
 	}
-	ft_print(s->a,'A', s->count.len_a);
-	ft_print(s->b,'B', s->count.len_b);
+	//ft_print(s->a,'A', s->count.len_a);
+	//ft_print(s->b,'B', s->count.len_b);
 	//printf("FINIS VOILA LES VALEUR DANS B\n");
 	//ft_print(s->b,'B', s->count.len_b);
 	//printf("-----------------------------\n");
-
-
-	//sort_chunk(s);
+	if (chunk->max_size != 20 && chunk->max_size != 100)
+	{
+		val = get_max_value_sort(chunk, s);
+		while (s->a[s->count.len_a - 1] != val)
+			ft_rra(s);
+	}
 	while (s->count.len_b > 3)
 		find_max(s);
 	sort_3_b(s);
-
 	while (s->count.len_b > 0)
 		ft_pa(s);
-
 	ft_print(s->a,'A', s->count.len_a);
 	ft_print(s->b,'B', s->count.len_b);
 }
@@ -254,14 +269,10 @@ void	sort_list(t_chunk *chunk, t_swap *s, int size)
 void	sort_100(t_swap *s)
 {
 	t_chunk chunk;
-	//int mid;
 	int size;
 
 	chunk.nb = 0;
 	size = 0;
-	//mid = s->count.len_a / 2;
-	//while (mid != s->count.len_a)
-	//	ft_pb(s);
 	while (!verif_table_ok(s->a, s->count.len_a + s->count.len_b))
 	{
 		size += 20;
@@ -269,8 +280,8 @@ void	sort_100(t_swap *s)
 		printf("chunk.nb = %d \n", chunk.nb);
 		//ft_print(s->a,'A', s->count.len_a);
 		//ft_print(s->b,'B', s->count.len_b);
-		if (size > 29)
-			break;
+		//if (size > 89)
+		//	break;
 	}
 	//ft_print(s->a,'A', s->count.len_a);
 	//ft_print(s->b,'B', s->count.len_b);

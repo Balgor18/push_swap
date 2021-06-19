@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 11:46:36 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/06/18 16:22:43 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/06/19 17:05:10 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,7 @@ void	init_chunk(t_chunk *c, t_swap *s, int size);
 void	find_min_max_in_chunck(t_swap *s);
 int		max_value_chunk(int *t, int len, int pos);
 int		min_value_chunk(int *t, int len, int pos);
+int		*copy_list(int *t, int len);
 
 void	ft_sort_int_tab(int *tab, int size);
 /*
