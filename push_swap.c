@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 12:26:50 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/06/17 19:34:29 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/06/20 17:15:38 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,14 +103,11 @@ int	main(int argc, char **argv)
 		swap.type = 'S';
 	if (!prepare_A(&swap, argv))
 	{
-		//printf("je renvoie une erreur\n");
 		ft_putstr_fd("Error\n", 1);
 		return (0);
 	}
-	//ft_print(swap.a, 'A', swap.count.len_a);
 	solver(&swap);
-	//ft_print(swap.a, 'A', swap.count.len_a);
-	/*if (verif_table_ok(swap.a, swap.count.len_a))
+	if (verif_table_ok(swap.a, swap.count.len_a))
 	{
 		printf("\033[0;32m");// vert
 		printf("OK\n");
@@ -125,7 +122,7 @@ int	main(int argc, char **argv)
 		ft_print(swap.a, 'A', swap.count.len_a);
 		if (swap.count.len_b > 0)
 			ft_print(swap.b, 'B', swap.count.len_b);
-	}*/
+	}
 	free(swap.a);
 	free(swap.b);
 	return (0);
