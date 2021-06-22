@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/08 09:31:05 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/06/20 17:19:38 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/06/22 16:04:36 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -143,7 +143,7 @@ void	find_min_max(t_swap *s, t_chunk *c)
 	else if (res == 'B'|| res == 'D')
 		while_min_max(res, &c->maxpos, s);
 }
-
+/*
 void	find_new_min_or_max(t_swap *s, t_chunk *c, int size)
 {
 	int	tmp;
@@ -158,6 +158,34 @@ void	find_new_min_or_max(t_swap *s, t_chunk *c, int size)
 	tmp_value = s->a[0];
 	res = (c->max_size - SIZE_100) + pos_max - 1;
 	c->min_value = min_value_chunk(s->a, s->count.len_a, size - SIZE_100);
+	while (++i < s->count.len_a)
+		if (c->min_value == s->a[i])
+			c->minpos = i;
+	i = -1;
+	c->max_value = max_value_chunk(s->a, s->count.len_a, res);
+	while (++i < s->count.len_a)
+		if (c->max_value == s->a[i])
+			c->maxpos = i;
+}*/
+
+void	find_new_min_or_max(t_swap *s, t_chunk *c, int size)
+{
+	int	tmp;
+	int	i;
+	int	tmp_value;
+	int	res;
+	int	pos_max;
+
+	pos_max = size - c->nb;
+	i = -1;
+	tmp = s->b[0];
+	tmp_value = s->a[0];
+	res = pos_max - 1;
+	//printf("pos_max - 1 res %d \n", res);
+	//res = (c->max_size - SIZE_100) + pos_max - 1;
+	//printf("(%d - %d) + %d - 1\n", c->max_size, SIZE_100, pos_max);
+	//printf("res %d \n", res);
+	c->min_value = min_value_chunk(s->a, s->count.len_a, 0);
 	while (++i < s->count.len_a)
 		if (c->min_value == s->a[i])
 			c->minpos = i;
@@ -203,7 +231,7 @@ int	get_max_value_sort(t_chunk *c, t_swap *s)
 void	sort_list(t_chunk *chunk, t_swap *s, int size)
 {
 	int	i;
-	int	val;
+	//int	val;
 
 	i = -1;
 	chunk->max_size = size;
@@ -213,17 +241,27 @@ void	sort_list(t_chunk *chunk, t_swap *s, int size)
 		find_min_max(s, chunk);
 		chunk->nb++;
 	}
-	if (chunk->max_size != SIZE_100)
+	ft_print(s->a, 'A', s->count.len_a);
+	ft_print(s->b, 'B', s->count.len_b);
+	return ;
+	//ft_print(s->a, 'A', s->count.len_a);
+	//ft_print(s->b, 'B', s->count.len_b);
+	//printf("%d < %d \n", chunk->max_size, chunk->nb);
+	//printf("%d == %d\n", chunk->nb, s->count.len_a + s->count.len_b);
+	/*if (chunk->max_size != SIZE_100)
 	{
 		val = get_max_value_sort(chunk, s);
 		while (s->a[s->count.len_a - 1] != val && chunk->max_size <= (s->count.len_a + s->count.len_b))
 			ft_rra(s);
+	}*/
+	if (chunk->nb == s->count.len_a + s->count.len_b)
+	{
+		while (s->count.len_b > 0)// check le find max
+			find_max(s);
+		//sort_3_b(s);
+		//while (s->count.len_b > 0)
+			ft_pa(s);
 	}
-	while (s->count.len_b > 3)
-		find_max(s);
-	sort_3_b(s);
-	while (s->count.len_b > 0)
-		ft_pa(s);
 }
 
 void	rotate_min_top(t_swap *s)
@@ -258,19 +296,21 @@ void	rotate_min_top(t_swap *s)
 	}
 }
 
-void	sort_100(t_swap *s)
+void	sort_100(t_swap *s)// CHANGER LA LOGIC ET FAIRE EN SORTE QUE TOUT LES CHUNK SOIT DANS B POUR ENSUITE BALANCER LE PLUS GRAND DANS PA;
 {
 	t_chunk	chunk;
 	int		size;
 
 	chunk.nb = 0;
 	size = 0;
-	while (!verif_table_ok(s->a, s->count.len_a + s->count.len_b) && size < s->count.len_a)
+	while (!verif_table_ok(s->a, s->count.len_a + s->count.len_b))// && size < s->count.len_a)
 	{
 		size += SIZE_100;
 		sort_list(&chunk, s, size);
+		if (size > 99)
+			break;
 	}
-	rotate_min_top(s);
+	//rotate_min_top(s);
 	//ft_print(s->a,'A', s->count.len_a);
 	//ft_print(s->b,'B', s->count.len_b);
 }

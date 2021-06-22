@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 11:46:36 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/06/20 17:15:14 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/06/22 15:30:24 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ typedef struct s_swap
 // a degager
 # include <stdio.h>
 
-# define SIZE_100 50
+# define SIZE_100 20
 
 
 // test
