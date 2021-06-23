@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 11:46:36 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/06/22 15:30:24 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/06/23 16:17:01 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,7 @@ typedef struct	s_chunk
 	int	minpos;
 	int	max_value;
 	int	maxpos;
-//	int	nb_int;
 	int	max_size;
-	//s_chunk *next;
 }				t_chunk;
 
 typedef struct s_swap
@@ -37,7 +35,6 @@ typedef struct s_swap
 	char	type;
 	int		*a;
 	int		*b;
-//	int		len;
 	t_count	count;
 }				t_swap;
 
@@ -56,6 +53,7 @@ void	find_min_max_in_chunck(t_swap *s);
 int		max_value_chunk(int *t, int len, int pos);
 int		min_value_chunk(int *t, int len, int pos);
 int		*copy_list(int *t, int len);
+char	min_or_max(int minpos, int maxpos, int len);
 
 void	ft_sort_int_tab(int *tab, int size);
 /*

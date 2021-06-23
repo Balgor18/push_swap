@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/10 10:43:33 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/06/22 16:03:17 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/06/23 16:04:26 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,10 +58,6 @@ void	find_max(t_swap *s)
 			pos = i;
 		i++;
 	}
-	//printf("-----------------------------------------------------------------------------------------\n");
-	//ft_print(s->a, 'A', s->count.len_a);
-	//ft_print(s->b, 'B', s->count.len_b);
-	//printf("-----------------------------------------------------------------------------------------\n");
 	while (pos <= mid && pos != 0)
 	{
 		ft_rb(s);
@@ -69,9 +65,7 @@ void	find_max(t_swap *s)
 	}
 	while (pos > mid)
 	{
-		//ft_print(s->b, 'B', s->count.len_b);
 		ft_rrb(s);
-		//ft_print(s->b, 'B', s->count.len_b);
 		pos++;
 		if (pos == s->count.len_b)
 			pos = 0;
