@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 12:26:50 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/06/23 15:43:16 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/06/23 17:53:50 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,7 +93,8 @@ int	main(int argc, char **argv)
 		return (0);
 	while (--tmp >= 1)
 	{
-		if (!verif_digit(argv[tmp], ft_strlen(argv[tmp]), &swap) || ft_same_int(1, argv))// || verif_size_int(argv[tmp]))
+		if (!verif_digit(argv[tmp], ft_strlen(argv[tmp]), &swap)
+			|| ft_same_int(1, argv))// || verif_size_int(argv[tmp]))
 		{
 			ft_putstr_fd("Error\n", 1);
 			return (0);
@@ -106,23 +107,23 @@ int	main(int argc, char **argv)
 		ft_putstr_fd("Error\n", 1);
 		return (0);
 	}
+	ft_print(swap.a, 'A', swap.count.len_a);
 	solver(&swap);
-	/*if (verif_table_ok(swap.a, swap.count.len_a))
+	if (verif_table_ok(swap.a, swap.count.len_a))
 	{
-		printf("\033[0;32m");// vert
+		printf("\033[0;32m");
 		printf("OK\n");
-		//ft_print(swap.a, 'A', swap.count.len_a);
-		printf("\033[0;37m");// blanc
+		printf("\033[0;37m");
 	}
 	else
 	{
-		printf("\033[0;31m");// rouge
+		printf("\033[0;31m");
 		printf("KO\n");
-		printf("\033[0;37m");// blanc
+		printf("\033[0;37m");
 		ft_print(swap.a, 'A', swap.count.len_a);
 		if (swap.count.len_b > 0)
 			ft_print(swap.b, 'B', swap.count.len_b);
-	}*/
+	}
 	free(swap.a);
 	free(swap.b);
 	return (0);

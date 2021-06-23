@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/23 16:09:30 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/06/23 16:17:19 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/06/23 17:43:47 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,9 +42,9 @@ void	find_min_max(t_swap *s, t_chunk *c)
 
 	res = min_or_max(c->minpos, c->maxpos, s->count.len_a);
 	i = 0;
-	if (res == 'A'|| res == 'C')
+	if (res == 'A' || res == 'C')
 		while_min_max(res, &c->minpos, s);
-	else if (res == 'B'|| res == 'D')
+	else if (res == 'B' || res == 'D')
 		while_min_max(res, &c->maxpos, s);
 }
 
@@ -78,30 +78,43 @@ void	sort_list(t_chunk *chunk, t_swap *s, int size)
 
 	i = -1;
 	chunk->max_size = size;
-	while (chunk->nb < chunk->max_size && chunk->nb < (s->count.len_a + s->count.len_b))
+	while (chunk->nb < chunk->max_size
+		&& chunk->nb < (s->count.len_a + s->count.len_b))
 	{
+		//if (chunk->nb > 19)
+		//	break ;
 		find_new_min_or_max(s, chunk, size);
 		find_min_max(s, chunk);
 		chunk->nb++;
 	}
+	ft_print(s->a, 'A', s->count.len_a);
+	ft_print(s->b, 'B', s->count.len_b);
 	if (chunk->nb == s->count.len_a + s->count.len_b)
 	{
 		while (s->count.len_b > 0)
+		{
 			find_max(s);
 			ft_pa(s);
+		}
 	}
 }
 
-void	sort_100(t_swap *s){
+void	sort_100(t_swap *s)
+{
 	t_chunk	chunk;
 	int		size;
 
 	chunk.nb = 0;
 	size = 0;
-	while (!verif_table_ok(s->a, s->count.len_a + s->count.len_b))// && size < s->count.len_a)
+	//printf("AVANT LA BOUCLE \n");
+	//ft_print(s->a, 'A', s->count.len_a);
+	//printf("APRES LA BOUCLE \n");
+	while (!verif_table_ok(s->a, s->count.len_a + s->count.len_b))
 	{
 		size += SIZE_100;
 		sort_list(&chunk, s, size);
+		if (size > 39)
+			break ;
 	}
 	//ft_print(s->a, 'A', s->count.len_a);
 	//ft_print(s->b, 'B', s->count.len_b);

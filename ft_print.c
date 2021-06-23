@@ -6,42 +6,41 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/20 17:31:14 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/06/23 15:48:08 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/06/23 17:38:24 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	blue()
+void	blue(void)
 {
 	ft_putstr_fd("\033[0;34m", 1);
 }
 
-void	cyan()
+void	cyan(void)
 {
 	ft_putstr_fd("\033[0;36m", 1);
 }
 
-void	red()
+void	red(void)
 {
 	ft_putstr_fd("\033[0;31m", 1);
 }
 
-void	white()
+void	white(void)
 {
 	ft_putstr_fd("\033[0;37m", 1);
 }
 
-void	green()
+void	green(void)
 {
 	ft_putstr_fd("\033[0;32m", 1);
 }
 
-void	yellow()
+void	yellow(void)
 {
 	ft_putstr_fd("\033[0;33m", 1);
 }
-
 
 void	ft_print(int *s, char c, int len)
 {
