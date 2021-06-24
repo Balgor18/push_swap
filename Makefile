@@ -6,7 +6,8 @@ CFLAGS=-Wall -Wextra -Werror
 
 RM=rm -f
 
-SRC =	ft_print.c find_min.c \
+SRC =	ft_print.c color.c\
+		find_min.c \
 		ft_pa.c\
 		ft_pb.c\
 		ft_rr.c\

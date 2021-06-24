@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 11:46:36 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/06/24 18:19:04 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/06/24 19:05:03 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,6 +92,16 @@ int		max_value_chunk(int *t, int len, int pos);
 ** Solver
 */
 int		solver(t_swap *swap);
+
+/*
+** Color
+*/
+void	yellow(void);
+void	blue(void);
+void	cyan(void);
+void	red(void);
+void	white(void);
+void	green(void);
 
 /*
 ** Rotate
