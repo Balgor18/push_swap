@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/20 17:31:14 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/06/23 17:38:24 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/06/24 15:59:14 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,15 +55,25 @@ void	ft_print(int *s, char c, int len)
 	ft_putstr_fd(" ------\n", 1);
 	while (i < len)
 	{
-		if (i < 20)
+		if (i < 50)
 			green();
-		else if (i < 40)
-			red();
-		else if (i < 60)
-			cyan();
-		else if (i < 80)
-			blue();
 		else if (i < 100)
+			red();
+		else if (i < 150)
+			cyan();
+		else if (i < 200)
+			blue();
+		else if (i < 250)
+			yellow();
+		else if (i < 300)
+			green();
+		else if (i < 350)
+			red();
+		else if (i < 400)
+			cyan();
+		else if (i < 450)
+			blue();
+		else if (i < 500)
 			yellow();
 		ft_putstr_fd("pos ", 1);
 		ft_putnbr_fd(i, 1);

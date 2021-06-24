@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 11:46:36 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/06/23 16:17:01 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/06/24 18:19:04 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,10 @@ typedef struct	s_count
 typedef struct	s_chunk
 {
 	int	nb;
-	int	min_value;
-	int	minpos;
 	int	max_value;
-	int	maxpos;
 	int	max_size;
+	int	minpos;
+	int	maxpos;
 }				t_chunk;
 
 typedef struct s_swap
@@ -42,27 +41,22 @@ typedef struct s_swap
 # include <stdio.h>
 
 # define SIZE_100 20
+# define SIZE_500 50
 
-
-// test
-void	sort_100(t_swap *s);
-void	find_min_max(t_swap *s, t_chunk *c);
-void	find_max(t_swap *s);
-void	init_chunk(t_chunk *c, t_swap *s, int size);
-void	find_min_max_in_chunck(t_swap *s);
-int		max_value_chunk(int *t, int len, int pos);
-int		min_value_chunk(int *t, int len, int pos);
-int		*copy_list(int *t, int len);
-char	min_or_max(int minpos, int maxpos, int len);
-
-void	ft_sort_int_tab(int *tab, int size);
 /*
 ** Init
 */
 void	init_struct(t_swap *s);
+void	init_chunk(t_chunk *c, t_swap *s, int size);
 
 /*
-** print
+** Includes
+*/
+void	ft_sort_int_tab(int *tab, int size);
+int		*copy_list(int *t, int len);
+
+/*
+** Print
 */
 void	ft_print(int *s, char c, int len);
 
@@ -77,11 +71,22 @@ int		verif_digit(char *s, int len, t_swap *swap);
 */
 void	sort_3(t_swap *s);
 void	sort_49(t_swap *s);
-
+void	sort_100(t_swap *s);
+void	sort_500(t_swap *s);
+void	sort_list(t_chunk *chunk, t_swap *s, int size);
 /*
-** Find min
+** Find
 */
 void	find_min(t_swap *s);
+void	find_max(t_swap *s);
+void	find_min_max(t_swap *s, t_chunk *c);
+void	find_new_min_or_max(t_swap *s, t_chunk *c, int size);
+
+/*
+** Min Max
+*/
+char	min_or_max(int minpos, int maxpos, int len);
+int		max_value_chunk(int *t, int len, int pos);
 
 /*
 ** Solver
