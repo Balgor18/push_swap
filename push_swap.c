@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 12:26:50 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/06/24 18:18:53 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/06/25 16:17:53 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,13 +74,12 @@ int	ft_same_int(int j, char **av)
 	return (0);
 }
 
-/*
-int	verif_size_int(char *s)
+void	call_solver_and_free(t_swap *s)
 {
-	ft_strncmp(s, "2147483647", ft_strlen(s));
-	ft_strncmp(s, "-2147483648", ft_strlen(s));
+	solver(s);
+	free(s->a);
+	free(s->b);
 }
-*/
 
 int	main(int argc, char **argv)
 {
@@ -94,7 +93,7 @@ int	main(int argc, char **argv)
 	while (--tmp >= 1)
 	{
 		if (!verif_digit(argv[tmp], ft_strlen(argv[tmp]), &swap)
-			|| ft_same_int(1, argv))// || verif_size_int(argv[tmp]))
+			|| ft_same_int(1, argv) || verif_size_int(argv[tmp]))
 		{
 			ft_putstr_fd("Error\n", 1);
 			return (0);
@@ -107,8 +106,6 @@ int	main(int argc, char **argv)
 		ft_putstr_fd("Error\n", 1);
 		return (0);
 	}
-	solver(&swap);
-	free(swap.a);
-	free(swap.b);
+	call_solver_and_free(&swap);
 	return (0);
 }

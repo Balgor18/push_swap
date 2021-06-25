@@ -1,4 +1,0 @@
-https://www.youtube.com/watch?v=SLauY6PpjW4
-https://www.youtube.com/watch?v=egU3YD8OKbw&t=51s
-https://medium.com/@jamierobertdawson/push-swap-the-least-amount-of-moves-with-two-stacks-d1e76a71789a
-https://github.com/Binary-Hackers/42_Corrections/tree/master/00_Projects/02_Algorithmic/push_swap/00_new_correction_here

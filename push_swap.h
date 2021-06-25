@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 11:46:36 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/06/24 19:05:03 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/06/25 16:20:19 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,13 +37,23 @@ typedef struct s_swap
 	t_count	count;
 }				t_swap;
 
-// a degager
-# include <stdio.h>
-
+/*
+** Defines
+** ------------------------------------------------
+** Define chunk size
+*/
 # define SIZE_100 20
 # define SIZE_500 50
 
 /*
+** Define limits INT
+*/
+# define INT_MIN -2147483648
+# define INT_MAX 2147483647
+
+/*
+** Functions
+** -------------------------------------------------
 ** Init
 */
 void	init_struct(t_swap *s);
@@ -65,6 +75,12 @@ void	ft_print(int *s, char c, int len);
 */
 int		verif_table_ok(int *s, int len);
 int		verif_digit(char *s, int len, t_swap *swap);
+int		verif_size_int(char *s);
+
+/*
+** While_pb
+*/
+void	while_pb(t_swap *s, t_chunk *c, int max);
 
 /*
 ** Sort
@@ -74,6 +90,7 @@ void	sort_49(t_swap *s);
 void	sort_100(t_swap *s);
 void	sort_500(t_swap *s);
 void	sort_list(t_chunk *chunk, t_swap *s, int size);
+
 /*
 ** Find
 */
@@ -85,13 +102,12 @@ void	find_new_min_or_max(t_swap *s, t_chunk *c, int size);
 /*
 ** Min Max
 */
-char	min_or_max(int minpos, int maxpos, int len);
 int		max_value_chunk(int *t, int len, int pos);
 
 /*
 ** Solver
 */
-int		solver(t_swap *swap);
+void		solver(t_swap *swap);
 
 /*
 ** Color
@@ -126,6 +142,5 @@ void	ft_ss(t_swap *s);
 */
 void	ft_pb(t_swap *s);
 void	ft_pa(t_swap *s);
-
 
 #endif

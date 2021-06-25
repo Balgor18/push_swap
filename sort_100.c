@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/23 16:09:30 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/06/24 18:12:20 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/06/25 16:11:42 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,17 +59,7 @@ void	find_min_max(t_swap *s, t_chunk *c)
 		}
 	}
 	max = s->count.len_a - c->maxpos;
-	while (c->minpos < max && c->minpos != 0)
-	{
-		ft_ra(s);
-		c->minpos--;
-	}
-	while (max < c->minpos && c->maxpos != s->count.len_a)
-	{
-		ft_rra(s);
-		c->maxpos++;
-	}
-	ft_pb(s);
+	while_pb(s, c, max);
 }
 
 void	find_new_min_or_max(t_swap *s, t_chunk *c, int size)

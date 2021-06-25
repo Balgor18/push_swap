@@ -6,16 +6,16 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/20 15:12:42 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/06/24 15:33:31 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/06/25 16:09:50 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	solver(t_swap *swap) // voir solver a mettre en type void
+void	solver(t_swap *swap)
 {
 	if (verif_table_ok(swap->a, swap->count.len_a))
-		return (1);
+		return ;
 	else if (swap->a[0] > swap->a[1] && swap->count.len_a == 2)
 		ft_sa(swap);
 	else if (swap->count.len_a == 3)
@@ -26,5 +26,5 @@ int	solver(t_swap *swap) // voir solver a mettre en type void
 		sort_100(swap);
 	else if (swap->count.len_a > 100)
 		sort_500(swap);
-	return (1);
+	return ;
 }

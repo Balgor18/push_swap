@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/09 15:32:40 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/06/01 15:12:06 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/06/25 15:30:04 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void			*ft_memccpy(void *dst, const void *src, int c, size_t n);
 void			*ft_memchr(const void *s, int c, size_t n);
 void			*ft_memcpy(void *dest, const void *src, size_t n);
 void			*ft_memmove(void *dst, const void *src, size_t len);
-int				ft_atoi(char *c);
+long			ft_atoi(char *c);
 void			*ft_calloc(size_t nmemb, size_t size);
 int				ft_isprint(int c);
 int				ft_isdigit(int c);

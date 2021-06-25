@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/20 14:47:47 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/06/23 17:42:54 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/06/25 16:17:18 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,4 +26,36 @@ int	verif_table_ok(int *s, int len)
 	if (i == len)
 		return (1);
 	return (0);
+}
+
+int	verif_size_int(char *s)
+{
+	int	i;
+
+	i = 0;
+	while (s[i])
+	{
+		if (ft_atoi(&s[i]) > INT_MAX || ft_atoi(&s[i]) < INT_MIN)
+			return (1);
+		if (s[i] == '-')
+			i++;
+		while (ft_isdigit(s[i]))
+			i++;
+		while (s[i] == ' ')
+			i++;
+	}
+	return (0);
+}
+
+int	verif_digit(char *s, int len, t_swap *swap)
+{
+	while (len > 0)
+	{
+		if (!ft_isdigit(s[len - 1]) && s[len - 1] != ' ' & s[len - 1] != '-')
+			return (0);
+		if (ft_isdigit(s[len - 1]) && !ft_isdigit(s[len - 2]))
+			swap->count.len_a++;
+		len--;
+	}
+	return (1);
 }
