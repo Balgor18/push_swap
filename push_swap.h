@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 11:46:36 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/06/25 16:20:19 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/06/25 16:39:59 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 # define PUSH_SWAP_H
 # include "libft/libft.h"
 
-typedef struct	s_count
+typedef struct s_count
 {
-	int		len_a;
-	int		len_b;
+	int	len_a;
+	int	len_b;
 }				t_count;
 
-typedef struct	s_chunk
+typedef struct s_chunk
 {
 	int	nb;
 	int	max_value;
@@ -107,7 +107,7 @@ int		max_value_chunk(int *t, int len, int pos);
 /*
 ** Solver
 */
-void		solver(t_swap *swap);
+void	solver(t_swap *swap);
 
 /*
 ** Color
