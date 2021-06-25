@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/23 16:09:30 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/06/25 16:11:42 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/06/25 16:29:31 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,9 +74,6 @@ void	find_new_min_or_max(t_swap *s, t_chunk *c, int size)
 
 void	sort_list(t_chunk *chunk, t_swap *s, int size)
 {
-	int	i;
-
-	i = -1;
 	chunk->max_size = size;
 	find_new_min_or_max(s, chunk, size);
 	while (chunk->nb < chunk->max_size
