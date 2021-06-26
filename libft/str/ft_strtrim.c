@@ -1,25 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/09 15:35:26 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/05/19 15:59:53 by fcatinau         ###   ########.fr       */
+/*   Created: 2021/01/09 15:35:18 by fcatinau          #+#    #+#             */
+/*   Updated: 2021/05/26 17:18:33 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(char *s1, char *s2, unsigned int n)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	unsigned int	i;
+	size_t		size;
+	char		*s2;
 
-	i = 0;
-	if (n == 0)
-		return (0);
-	while ((s1[i] && s2[i]) && s1[i] == s2[i] && i < n - 1)
-		i++;
-	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
+	if (!s1 || !set)
+		return (NULL);
+	while (*s1 && ft_strchr(set, *s1))
+		s1++;
+	size = ft_strlen((char *)s1);
+	while (size && ft_strchr(set, s1[size]))
+		size--;
+	s2 = ft_substr((char *)s1, 0, size + 1);
+	return (s2);
 }

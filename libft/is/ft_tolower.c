@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/09 15:35:14 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/05/19 16:01:59 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/05/26 17:17:12 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_tolower(int c)
 {
-	if ((c >= 'A' && c <= 'Z'))
+	if (c >= 'A' && c <= 'Z')
 		return (c + 32);
 	else
 		return (c);

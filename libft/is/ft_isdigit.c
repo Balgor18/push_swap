@@ -1,33 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/09 22:52:21 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/05/19 15:58:02 by fcatinau         ###   ########.fr       */
+/*   Created: 2021/01/09 15:33:02 by fcatinau          #+#    #+#             */
+/*   Updated: 2021/05/26 17:13:48 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(char *src)
+int	ft_isdigit(int c)
 {
-	char	*dup;
-	int		len_src;
-	int		i;
-
-	i = 0;
-	len_src = ft_strlen(src);
-	dup = malloc(sizeof(char) * (len_src + 1));
-	if (!dup)
-		return (0);
-	while (src[i])
-	{
-		dup[i] = src[i];
-		i++;
-	}
-	dup[i] = '\0';
-	return (dup);
+	if (c >= '0' && c <= '9')
+		return (1);
+	return (0);
 }

@@ -1,23 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/01 15:11:26 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/06/01 15:13:46 by fcatinau         ###   ########.fr       */
+/*   Created: 2021/01/09 15:33:06 by fcatinau          #+#    #+#             */
+/*   Updated: 2021/05/26 17:12:33 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strcmp(const char *s1, const char *s2)
+#include "libft.h"
+
+int	ft_isascii(int c)
 {
-	while (*s1 == *s2)
-	{
-		if (*s1 == '\0')
-			return (0);
-		s1++;
-		s2++;
-	}
-	return (*(const unsigned char *)s1 - *(const unsigned char *)s2);
+	if (c >= 0 && c <= 127)
+		return (1);
+	return (0);
 }
