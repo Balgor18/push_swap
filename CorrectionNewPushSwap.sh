@@ -13,7 +13,7 @@
 #!/bin/bash
 
 #To include a bash library:
-. ~/mnt/Custom/BashColorsLibrary.sh
+. ~/Bureau/push_swap/BashColorsLibrary.sh
 
 #average_score=0
 
