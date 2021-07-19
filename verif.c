@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/20 14:47:47 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/07/19 08:42:01 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/07/19 13:30:56 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,15 +23,10 @@ int	verif_nb_num(char *s)
 		num++;
 	while (s[i])
 	{
-		//printf ("s[%d] = %s\n", i, &s[i]);
-		//s[i] = ' '
-		//s[i - 1] = '4'
 		if ((ft_isdigit(s[i]) && (!ft_isdigit(s[i - 1]) || s[i - 1] == '-')))
 			num++;
-		//printf("num = %d\n\n", num);
 		i++;
 	}
-	//printf("num = %d \n",num);
 	return (num);
 }
 
@@ -79,7 +74,6 @@ int	verif_digit(char *s, int len, t_swap *swap)
 	{
 		if (s[len - 1] == ' ')
 			space++;
-		//if (!ft_isdigit(s[len - 1]) || space > 1 )
 		if (space > 1)
 			return (0);
 		if ((s[len] == '-' && s[len - 1] == '-') || !s)

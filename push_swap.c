@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 12:26:50 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/07/19 08:45:37 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/07/19 13:34:46 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,34 +14,27 @@
 
 void	parse(t_swap *swap, char **s)
 {
-	int	i;
-	int	j;
-	int	h;
-	char **ret;
+	int		i;
+	int		h;
+	char	**ret;
 
 	i = 0;
-	j = 1;
 	while (i < swap->count.len_a)
 	{
-		h = verif_nb_num(s[j]);
+		h = verif_nb_num(*s);
 		if (h > 1)
 		{
-			ret = ft_split(s[j], ' ');
+			ret = ft_split(*s, ' ');
 			while (h >= 1)
 			{
 				h--;
-				swap->a[i] = ft_atoi(*ret);
-				i++;
+				swap->a[i++] = ft_atoi(*ret);
 				ret++;
 			}
-			j++;
 		}
 		else
-		{
-			swap->a[i] = ft_atoi(s[j]);
-			i++;
-			j++;
-		}
+			swap->a[i++] = ft_atoi(*s);
+		s++;
 	}
 }
 
