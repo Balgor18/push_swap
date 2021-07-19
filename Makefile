@@ -30,6 +30,10 @@ OBJ = $(SRC:.c=.o)
 $(NAME): libft $(OBJ)
 			@$(CC) $(CFLAGS) -o $@ $(OBJ) -Llibft -lft
 # -fsanitize=address
+#			./push_swap "4 1" -5
+
+#			./push_swap "4 1 -5"
+#			./push_swap 4 1 -5
 
 #			./push_swap "" 3 2 1
 #			./push_swap "" 2
@@ -38,6 +42,7 @@ $(NAME): libft $(OBJ)
 #			./push_swap 42 "      43" 2
 #			./push_swap 0 1 2 3 "--1" 2
 #			./push_swap 0 1 2 3 "&" 2
+
 #			./push_swap 0 1 2 3 -5 2
 
 #			./push_swap 0 1 2 3 -5

@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 12:26:50 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/07/09 15:45:01 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/07/19 08:45:37 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,32 @@ void	parse(t_swap *swap, char **s)
 {
 	int	i;
 	int	j;
+	int	h;
+	char **ret;
 
 	i = 0;
 	j = 1;
 	while (i < swap->count.len_a)
 	{
-		swap->a[i] = ft_atoi(s[j]);
-		i++;
-		j++;
+		h = verif_nb_num(s[j]);
+		if (h > 1)
+		{
+			ret = ft_split(s[j], ' ');
+			while (h >= 1)
+			{
+				h--;
+				swap->a[i] = ft_atoi(*ret);
+				i++;
+				ret++;
+			}
+			j++;
+		}
+		else
+		{
+			swap->a[i] = ft_atoi(s[j]);
+			i++;
+			j++;
+		}
 	}
 }
 
@@ -38,20 +56,7 @@ int	prepare_A(t_swap *swap, char **s)
 	swap->b = malloc(sizeof(int *) * swap->count.len_a);
 	if (!swap->a || !swap->b)
 		return (0);
-	if (swap->type == 'S')
-	{
-		while (s[1][i] && pos <= swap->count.len_a)
-		{
-			swap->a[pos] = ft_atoi(&s[1][i]);
-			while (ft_isdigit(s[1][i]))
-				i++;
-			while (!ft_isdigit(s[1][i]))
-				i++;
-			pos++;
-		}
-	}
-	else
-		parse(swap, s);
+	parse(swap, s);
 	return (1);
 }
 
