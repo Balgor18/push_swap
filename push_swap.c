@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 12:26:50 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/07/19 13:34:46 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/07/28 11:48:16 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,11 +40,6 @@ void	parse(t_swap *swap, char **s)
 
 int	prepare_A(t_swap *swap, char **s)
 {
-	int	pos;
-	int	i;
-
-	i = 0;
-	pos = 0;
 	swap->a = malloc(sizeof(int *) * swap->count.len_a);
 	swap->b = malloc(sizeof(int *) * swap->count.len_a);
 	if (!swap->a || !swap->b)
