@@ -28,28 +28,29 @@ SRC =	color.c\
 OBJ = $(SRC:.c=.o)
 
 $(NAME): libft $(OBJ)
-			@$(CC) $(CFLAGS) -o $@ $(OBJ) -Llibft -lft
+	@$(CC) $(CFLAGS) -o $@ $(OBJ) -Llibft -lft
+	./push_swap 3 1 2 4
 
 libft :
-		make -C libft/
+	make -C libft/
 
 %.o: %.c
-				$(CC) $(CFLAGS) -I. -Imlx -o $@ -c $?
+	$(CC) $(CFLAGS) -I. -Imlx -o $@ -c $?
 
 all: $(NAME)
 
 norme :
 #		@make -C libft/ norme
-		norminette -R CheckForbiddenSourceHeader $(SRC)
-		norminette -R CheckDefine push_swap.h
+	norminette -R CheckForbiddenSourceHeader $(SRC)
+	norminette -R CheckDefine push_swap.h
 
 clean:
-				$(RM) $(OBJ)
-				@make -C libft/ clean
+	$(RM) $(OBJ)
+	@make -C libft/ clean
 
 fclean: clean
-				$(RM) $(NAME)
-				@make -C libft/ fclean
+	$(RM) $(NAME)
+	@make -C libft/ fclean
 
 re: fclean all
 
