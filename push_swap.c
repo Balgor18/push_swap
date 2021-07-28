@@ -95,6 +95,7 @@ int	main(int argc, char **argv)
 		swap.type = 'S';
 	if (!prepare_A(&swap, argv))
 		return (0);
+	ft_print(swap.a, 'A', swap.count.len_a);
 	call_solver_and_free(&swap);
 	return (0);
 }
