@@ -54,10 +54,14 @@ void	ft_print(int *s, char c, int len)
 	ft_putstr_fd(" ------\n", 1);
 	while (i < len)
 	{
-		color(i);
+		white();
 		ft_putstr_fd("pos ", 1);
 		ft_putnbr_fd(i, 1);
 		ft_putstr_fd(" | val ", 1);
+		if (s[i] < s[i + 1] ||  s[i - 1]  < s[i])
+			green();
+		else
+			red();
 		ft_putnbr_fd(s[i], 1);
 		ft_putchar_fd('\n', 1);
 		i++;

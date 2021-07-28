@@ -70,6 +70,7 @@ int	ft_same_int(int j, char **av)
 void	call_solver_and_free(t_swap *s)
 {
 	solver(s);
+	ft_print(s->a,'A', s->count.len_a);
 	free(s->a);
 	free(s->b);
 }
