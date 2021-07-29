@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/20 17:31:14 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/07/28 17:58:40 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/07/29 16:14:48 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ void	ft_print(int *s, char c, int len)
 		ft_putstr_fd("pos ", 1);
 		ft_putnbr_fd(i, 1);
 		ft_putstr_fd(" | val ", 1);
-		if (s[i] < s[i + 1] || s[i - 1] < s[i])
+		if (s[i] < s[i + 1] && i < len)
 			green();
 		else
 			red();

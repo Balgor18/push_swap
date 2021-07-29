@@ -29,7 +29,7 @@ OBJ = $(SRC:.c=.o)
 
 $(NAME): libft $(OBJ)
 	@$(CC) $(CFLAGS) -o $@ $(OBJ) -Llibft -lft
-	./push_swap 3 1 2 4
+#	ARG=`ruby -e "puts (1..49).to_a.shuffle.join(' ')"`; ./push_swap $ARG
 
 libft :
 	make -C libft/
@@ -40,7 +40,7 @@ libft :
 all: $(NAME)
 
 norme :
-#		@make -C libft/ norme
+#	@make -C libft/ norme
 	norminette -R CheckForbiddenSourceHeader $(SRC)
 	norminette -R CheckDefine push_swap.h
 

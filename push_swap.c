@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 12:26:50 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/07/28 17:58:25 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/07/29 16:17:38 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,6 @@ int	ft_same_int(int j, char **av)
 void	call_solver_and_free(t_swap *s)
 {
 	solver(s);
-	ft_print(s->a, 'A', s->count.len_a);
 	free(s->a);
 	free(s->b);
 }
@@ -96,7 +95,6 @@ int	main(int argc, char **argv)
 		swap.type = 'S';
 	if (!prepare_A(&swap, argv))
 		return (0);
-	ft_print(swap.a, 'A', swap.count.len_a);
 	call_solver_and_free(&swap);
 	return (0);
 }
