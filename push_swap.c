@@ -33,8 +33,7 @@ void	parse(t_swap *swap, char **s)
 				ret++;
 			}
 		}
-		else
-			swap->a[i++] = ft_atoi(*s);
+		swap->a[i++] = ft_atoi(*s);
 		s++;
 	}
 }
