@@ -14,6 +14,7 @@
 # define PUSH_SWAP_H
 # include "libft/libft.h"
 # include <stdio.h>
+
 typedef struct s_count
 {
 	int	len_a;
