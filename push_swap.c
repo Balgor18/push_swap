@@ -39,7 +39,7 @@ void	parse(t_swap *swap, char **s)
 	}
 }
 
-int	prepare_A(t_swap *swap, char **s)
+int	prepare_a(t_swap *swap, char **s)
 {
 	swap->a = malloc(sizeof(int *) * swap->count.len_a);
 	swap->b = malloc(sizeof(int *) * swap->count.len_a);
@@ -93,7 +93,7 @@ int	main(int argc, char **argv)
 	}
 	if (argc < swap.count.len_a)
 		swap.type = 'S';
-	if (!prepare_A(&swap, argv))
+	if (!prepare_a(&swap, argv))
 		return (0);
 	call_solver_and_free(&swap);
 	return (0);
