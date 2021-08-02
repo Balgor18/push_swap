@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/20 14:47:47 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/07/31 16:12:42 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/08/02 12:19:20 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	verif_nb_num(char *s)
 
 	num = 0;
 	i = 1;
-	if ((!ft_isdigit(s[1]) && (ft_isdigit(s[0]))))
+	if ((ft_isdigit(s[0])))
 		num++;
 	while (s[i])
 	{
