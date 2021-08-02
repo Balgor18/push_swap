@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/20 14:47:47 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/08/02 12:19:20 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/08/02 14:37:46 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,7 @@ int	verif_digit(char *s, int len, t_swap *swap)
 	{
 		if (s[len - 1] == ' ')
 			space++;
-		if (space > 1 || !ft_isdigit(s[len - 1]))
+		if (space > 1)
 			return (0);
 		if ((s[len] == '-' && s[len - 1] == '-') || !s)
 			return (0);

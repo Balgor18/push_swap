@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 12:26:50 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/08/02 12:19:15 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/08/02 14:39:09 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,9 @@ int	ft_same_int(int j, char **av)
 
 void	call_solver_and_free(t_swap *s)
 {
+	//ft_print(s->a, 'A', s->count.len_a);
 	solver(s);
+	//ft_print(s->a, 'A', s->count.len_a);
 	free(s->a);
 	free(s->b);
 }
