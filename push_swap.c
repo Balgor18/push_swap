@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 12:26:50 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/08/02 14:39:09 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/08/02 18:28:46 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	parse(t_swap *swap, char **s)
 
 	i = 0;
 	s++;
-	while (i + 1 < swap->count.len_a)
+	while (i < swap->count.len_a)
 	{
 		h = verif_nb_num(*s);
 		if (h > 1)
@@ -33,7 +33,7 @@ void	parse(t_swap *swap, char **s)
 				h--;
 			}
 		}
-		if (i + 1 < swap->count.len_a)
+		if (i < swap->count.len_a)
 		{
 			swap->a[i++] = ft_atoi(*s);
 			s++;
@@ -72,9 +72,7 @@ int	ft_same_int(int j, char **av)
 
 void	call_solver_and_free(t_swap *s)
 {
-	//ft_print(s->a, 'A', s->count.len_a);
 	solver(s);
-	//ft_print(s->a, 'A', s->count.len_a);
 	free(s->a);
 	free(s->b);
 }
