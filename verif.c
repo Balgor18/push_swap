@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/20 14:47:47 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/08/02 14:37:46 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/08/06 13:47:02 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ int	verif_size_int(char *s)
 	{
 		if (ft_atoi(&s[i]) > INT_MAX || ft_atoi(&s[i]) < INT_MIN)
 			return (1);
-		if (s[i] == '-')
+		if (s[i] == '-' || s[i] == '+')
 			i++;
 		while (ft_isdigit(s[i]))
 			i++;
@@ -63,6 +63,13 @@ int	verif_size_int(char *s)
 			i++;
 	}
 	return (0);
+}
+
+int	verif_isnot_char(char c)
+{
+	if (c != '-' && c != '+' && (c < '0' || c > '9'))
+		return (0);
+	return (1);
 }
 
 int	verif_digit(char *s, int len, t_swap *swap)
@@ -76,7 +83,10 @@ int	verif_digit(char *s, int len, t_swap *swap)
 			space++;
 		if (space > 1)
 			return (0);
-		if ((s[len] == '-' && s[len - 1] == '-') || !s)
+		if ((s[len] == '-' && s[len - 1] == '-') \
+		|| (s[len] == '+' && s[len - 1] == '+'))
+			return (0);
+		if (!verif_isnot_char(s[len - 1]))
 			return (0);
 		if (ft_isdigit(s[len - 1]) && !ft_isdigit(s[len - 2]))
 		{
