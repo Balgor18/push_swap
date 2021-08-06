@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 12:26:50 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/08/06 13:47:22 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/08/06 14:36:10 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,16 +82,19 @@ int	main(int argc, char **argv)
 	int		tmp;
 	t_swap	swap;
 
-	tmp = argc;
+	tmp = argc - 1;
 	init_struct(&swap);
 	if (argc < 2)
 		return (0);
-	while (--tmp >= 1)
+	if (argv[tmp] == NULL)
+		--tmp;
+	while (tmp >= 1)
 	{
 		if (!verif_digit(argv[tmp], ft_strlen(argv[tmp]), &swap)
 			|| ft_same_int(1, argv) || verif_size_int(argv[tmp])
 			|| !argv[tmp][0])
 			return (ft_error());
+		--tmp;
 	}
 	if (argc < swap.count.len_a)
 		swap.type = 'S';

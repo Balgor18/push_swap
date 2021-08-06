@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/20 14:47:47 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/08/06 13:47:02 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/08/06 14:36:00 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ int	verif_size_int(char *s)
 			i++;
 		while (ft_isdigit(s[i]))
 			i++;
-		while (s[i] == ' ')
+		if (s[i] == ' ')
 			i++;
 	}
 	return (0);
@@ -67,7 +67,7 @@ int	verif_size_int(char *s)
 
 int	verif_isnot_char(char c)
 {
-	if (c != '-' && c != '+' && (c < '0' || c > '9'))
+	if (c != '-' && c != '+' && (c < '0' || c > '9') && c != ' ')
 		return (0);
 	return (1);
 }
