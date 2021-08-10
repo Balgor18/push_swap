@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 11:46:36 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/07/19 07:47:23 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/08/10 08:32:58 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define PUSH_SWAP_H
 # include "libft/libft.h"
 # include <stdio.h>
+
 typedef struct s_count
 {
 	int	len_a;
@@ -31,7 +32,6 @@ typedef struct s_chunk
 
 typedef struct s_swap
 {
-	char	type;
 	int		*a;
 	int		*b;
 	t_count	count;
