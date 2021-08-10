@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 12:26:50 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/08/10 08:34:17 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/08/10 09:33:31 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,7 +83,8 @@ void	call_solver_and_free(t_swap *s)
 {
 	solver(s);
 	free(s->a);
-	free(s->b);
+	if (s->count.len_a > 3)
+		free(s->b);
 }
 
 int	main(int argc, char **argv)
