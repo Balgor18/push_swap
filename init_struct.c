@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 17:19:39 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/07/14 16:37:11 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/08/10 09:30:56 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@ void	init_struct(t_swap *s)
 {
 	s->a = 0;
 	s->b = 0;
-	s->type = '0';
 	s->count.len_a = 0;
 	s->count.len_b = 0;
 }
