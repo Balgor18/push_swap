@@ -16,8 +16,10 @@ void	parse(t_swap *swap, char **s)
 {
 	int		i;
 	int		h;
+	int		j;
 	char	**ret;
 
+	j = 0;
 	i = 0;
 	s++;
 	while (i < swap->count.len_a)
@@ -26,17 +28,14 @@ void	parse(t_swap *swap, char **s)
 		if (h > 1)
 		{
 			ret = ft_split(*s, ' ');
-			while (h-- > 0)
+			while (j < h || ret[j])
 			{
-				swap->a[i++] = ft_atoi(*ret);
-				printf("ret = %s\n", ret);
-				ret++;
-				//free(*ret);
+				swap->a[i++] = ft_atoi(ret[j]);
+				free(ret[j]);
+				j++;
 			}
-			printf("l'erreur est dans le split COMME DHAB\n");
-			//free(ret);
-			printf("AH BAH NON \n");
-			printf("je free ret\n");
+			free(ret);
+			
 		}
 		if (i < swap->count.len_a)
 		{
@@ -48,17 +47,14 @@ void	parse(t_swap *swap, char **s)
 
 int	prepare_a(t_swap *swap, char **s)
 {
-	printf("count = %d \n", swap->count.len_a);
 	if (swap->count.len_a <= 3)
 	{
-		printf("je malloc que a \n");
 		swap->a = malloc(sizeof(int *) * swap->count.len_a);
 		if (!swap->a)
 			return (0);
 	}
 	else
 	{
-		printf("je malloc a et b\n");
 		swap->a = malloc(sizeof(int *) * swap->count.len_a);
 		swap->b = malloc(sizeof(int *) * swap->count.len_a);
 		if (!swap->a || !swap->b)
@@ -90,15 +86,9 @@ int	ft_same_int(int j, char **av)
 void	call_solver_and_free(t_swap *s)
 {
 	solver(s);
-	//printf("je free a");
 	free(s->a);
-	printf("je free a");
 	if (s->count.len_a > 3)
-	{
-		printf(" et b");
 		free(s->b);
-	}
-	printf("\n");
 }
 
 int	main(int argc, char **argv)
@@ -122,7 +112,6 @@ int	main(int argc, char **argv)
 	}
 	if (!prepare_a(&swap, argv))
 		return (0);
-	printf("malloc error 0\n");
 	call_solver_and_free(&swap);
 	return (0);
 }
