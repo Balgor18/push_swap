@@ -16,6 +16,7 @@ SRC =	color.c\
 		ft_rrr.c\
 		ft_ss.c\
 		init_struct.c\
+		parser_bis.c\
 		push_swap.c\
 		solver.c\
 		sort_3.c\

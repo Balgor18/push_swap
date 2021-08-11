@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 11:46:36 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/08/10 08:32:58 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/08/11 18:51:57 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,6 +75,10 @@ void	ft_print(int *s, char c, int len);
 */
 int		ft_error(void);
 
+/*
+** Parser
+*/
+void	parser_bis(int h, int *i, char **s, t_swap *swap);
 /*
 ** Verif
 */
