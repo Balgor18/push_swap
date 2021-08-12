@@ -1,30 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   parser_bis.c                                       :+:      :+:    :+:   */
+/*   verif2.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/11 18:48:23 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/08/12 16:03:19 by fcatinau         ###   ########.fr       */
+/*   Created: 2021/08/12 16:58:36 by fcatinau          #+#    #+#             */
+/*   Updated: 2021/08/12 16:58:47 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	parser_bis(int h, int *i, char **s, t_swap *swap)
+int	verif_isnot_char(char c)
 {
-	int		j;
-	char	**ret;
-
-	j = 0;
-	ret = ft_split(*s, ' ');
-	while (j < h || ret[j])
-	{
-		swap->a[*i] = ft_atoi(ret[j]);
-		free(ret[j]);
-		j++;
-		i++;
-	}
-	free(ret);
+	if (c != '-' && c != '+' && (c < '0' || c > '9') && c != ' ')
+		return (0);
+	return (1);
 }

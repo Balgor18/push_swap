@@ -24,6 +24,7 @@ SRC =	color.c\
 		sort_500.c\
 		sort_tab.c\
 		verif.c\
+		verif2.c\
 		while_pb.c
 
 OBJ = $(SRC:.c=.o)

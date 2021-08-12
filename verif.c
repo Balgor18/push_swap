@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/20 14:47:47 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/08/06 14:36:00 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/08/12 16:58:29 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,37 +65,42 @@ int	verif_size_int(char *s)
 	return (0);
 }
 
-int	verif_isnot_char(char c)
+int	verif_operation(int len, char *s)
 {
-	if (c != '-' && c != '+' && (c < '0' || c > '9') && c != ' ')
-		return (0);
+	if (s[len] == '-')
+		if (s[len + 1] == '-' && !ft_isdigit(s[len]))
+			return (0);
+	if (s[len] == '+')
+		if ((s[len + 1] == '+' && !ft_isdigit(s[len])) || s[len + 1] == '\0')
+			return (0);
 	return (1);
 }
 
 int	verif_digit(char *s, int len, t_swap *swap)
 {
 	int	space;
+	int	i;
 
+	i = -1;
 	space = 0;
-	while (len > 0)
+	while (len > ++i)
 	{
-		if (s[len - 1] == ' ')
+		if (s[i] == ' ')
 			space++;
 		if (space > 1)
 			return (0);
-		if ((s[len] == '-' && s[len - 1] == '-') \
-		|| (s[len] == '+' && s[len - 1] == '+'))
+		if (s[i] == '-' || s[i] == '+')
+			if (!verif_operation(i, s))
+				return (0);
+		if (!verif_isnot_char(s[i]))
 			return (0);
-		if (!verif_isnot_char(s[len - 1]))
-			return (0);
-		if (ft_isdigit(s[len - 1]) && !ft_isdigit(s[len - 2]))
+		if (ft_isdigit(s[i]) && !ft_isdigit(s[i + 1]))
 		{
 			space = 0;
 			swap->count.len_a++;
-			while (ft_isdigit(s[len - 1]) && len > 0)
-				len--;
+			while (ft_isdigit(s[i]) && len > i)
+				++i;
 		}
-		len--;
 	}
 	return (1);
 }

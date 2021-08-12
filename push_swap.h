@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 11:46:36 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/08/11 18:51:57 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/08/12 16:59:01 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,6 +86,8 @@ int		verif_table_ok(int *s, int len);
 int		verif_digit(char *s, int len, t_swap *swap);
 int		verif_size_int(char *s);
 int		verif_nb_num(char *s);
+int		verif_isnot_char(char c);
+
 /*
 ** While_pb
 */
