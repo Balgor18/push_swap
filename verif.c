@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/20 14:47:47 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/08/17 00:10:35 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/08/17 00:21:14 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,11 +106,8 @@ int	verif_digit(char *s, int len, t_swap *swap)
 			while ((ft_isdigit(s[i]) || s[i] == '-' || s[i] == '+') && len > i)
 				++i;
 		}
-		printf("s[%d] = %c\n", i, s[i]);
 		if (!verif_all(s, i))
 			return (0);
-		//if(!ft_isdigit(s[i]) && s[i] != '\0')
-		//	return (0);
 	}
 	return (1);
 }
