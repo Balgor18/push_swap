@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/11 18:48:23 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/08/13 11:14:51 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/08/24 15:37:02 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,4 +27,32 @@ void	parser_bis(int h, int *i, char **s, t_swap *swap)
 		*i += 1;
 	}
 	free(ret);
+}
+
+int	parse_same_int(char *s)
+{
+	int	a;
+	int	b;
+	int	pos;
+	int	i;
+	int	j;
+
+	i = -1;
+	pos = 1;
+	while (s[++i])
+	{
+		a = ft_atoi(&s[i]);
+		while (ft_isdigit(s[i]))
+			i++;
+		j = i - 1;
+		while (s[++j])
+		{
+			b = ft_atoi(&s[j]);
+			while (ft_isdigit(s[j]))
+				j++;
+			if (a == b)
+				return (1);
+		}
+	}
+	return (0);
 }

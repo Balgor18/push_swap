@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 12:26:50 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/08/13 11:15:02 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/08/24 15:36:47 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,18 +54,25 @@ int	prepare_a(t_swap *swap, char **s)
 int	ft_same_int(int j, char **av)
 {
 	int	i;
+	int	h;
 
 	i = 1;
-	while (av[j])
+	h = verif_nb_num(av[j]);
+	if (h > 1)
+		return (parse_same_int(av[j]));
+	else
 	{
-		while (av[i])
+		while (av[j])
 		{
-			if (ft_strcmp(av[i], av[j]) == 0 && i != j)
-				return (1);
-			i++;
+			while (av[i])
+			{
+				if (ft_strcmp(av[i], av[j]) == 0 && i != j)
+					return (1);
+				i++;
+			}
+			j++;
+			i = 1;
 		}
-		j++;
-		i = 1;
 	}
 	return (0);
 }
