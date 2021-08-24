@@ -30,14 +30,14 @@ SRC =	color.c\
 OBJ = $(SRC:.c=.o)
 
 $(NAME): libft $(OBJ)
-	@$(CC) $(CFLAGS) -o $@ $(OBJ) -Llibft -lft
+	@$(CC) $(CFLAGS) -o $@ $(OBJ) -Lincludes/libft -lft
 #	ARG=`ruby -e "puts (1..49).to_a.shuffle.join(' ')"`; ./push_swap $ARG
 
 libft :
-	make -C libft/
+	make -C includes/libft/
 
 %.o: %.c
-	$(CC) $(CFLAGS) -I. -Imlx -o $@ -c $?
+	$(CC) $(CFLAGS) -I. -o $@ -c $?
 
 all: $(NAME)
 
@@ -48,12 +48,12 @@ norme :
 
 clean:
 	$(RM) $(OBJ)
-	@make -C libft/ clean
+	@make -C includes/libft/ clean
 
 fclean: clean
 	$(RM) $(NAME)
-	@make -C libft/ fclean
+	@make -C includes/libft/ fclean
 
 re: fclean all
 
-.PHONY: clean all fclean re libft
+.PHONY: clean fclean re

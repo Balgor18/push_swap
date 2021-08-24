@@ -6,7 +6,7 @@
 #    By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/01/09 15:35:09 by fcatinau          #+#    #+#              #
-#    Updated: 2021/07/08 15:00:51 by fcatinau         ###   ########.fr        #
+#    Updated: 2021/08/24 14:21:53 by fcatinau         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -59,4 +59,4 @@ norme :
 		norminette -R CheckForbiddenSourceHeader $(SRC_BONUS)
 		norminette -R CheckDefine libft.h
 
-.PHONY: clean fclean $(NAME)
+.PHONY: clean fclean
