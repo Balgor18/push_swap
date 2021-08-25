@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/11 18:48:23 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/08/24 15:37:02 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/08/25 10:37:41 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,18 +37,22 @@ int	parse_same_int(char *s)
 	int	i;
 	int	j;
 
-	i = -1;
+	i = 0;
 	pos = 1;
-	while (s[++i])
+	while (s[i])
 	{
 		a = ft_atoi(&s[i]);
 		while (ft_isdigit(s[i]))
 			i++;
-		j = i - 1;
-		while (s[++j])
+		if (s[i] == ' ')
+			i++;
+		j = i;
+		while (s[j])
 		{
 			b = ft_atoi(&s[j]);
 			while (ft_isdigit(s[j]))
+				j++;
+			if (s[j] == ' ')
 				j++;
 			if (a == b)
 				return (1);
