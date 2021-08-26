@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/11 18:48:23 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/08/25 10:48:41 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/08/26 13:53:27 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,12 +42,10 @@ int	parse_same_int(char *s)
 {
 	int	a;
 	int	b;
-	int	pos;
 	int	i;
 	int	j;
 
 	i = 0;
-	pos = 1;
 	while (s[i])
 	{
 		parse_same_int_2(s, &i, &a);
