@@ -28,17 +28,17 @@ SRC =	color.c\
 		verif2.c\
 		while_pb.c
 
-OBJ = $(SRC:.c=.o)
+OBJS = $(SRC:.c=.o)
 
-$(NAME): libft $(OBJ)
-	$(CC) $(CFLAGS) -o $@ $(OBJ) -Lincludes/libft -lft
+$(NAME): libft $(OBJS)
+	$(CC) $(CFLAGS) -o $@  $(addprefix obj/, ${OBJS}) -Lincludes/libft -lft
 #	ARG=`ruby -e "puts (1..49).to_a.shuffle.join(' ')"`; ./push_swap $ARG
 
 libft :
 	make -C includes/libft/
 
-%.o: %.c
-	$(CC) $(CFLAGS) -I. -o $@ -c $?
+%.o: src/%.c
+	$(CC) $(CFLAGS) -I. -o obj/$@ -c $?
 
 all: $(NAME)
 
@@ -47,7 +47,7 @@ norme :
 	norminette -R CheckDefine push_swap.h
 
 clean:
-	$(RM) $(OBJ)
+	$(RM) obj/*
 	@make -C includes/libft/ clean
 
 fclean: clean
