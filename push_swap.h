@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 11:46:36 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/08/25 10:38:00 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/08/30 11:52:59 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,6 +63,7 @@ void	init_chunk(t_chunk *c, t_swap *s, int size);
 */
 void	ft_sort_int_tab(int *tab, int size);
 int		*copy_list(int *t, int len);
+int		ft_strlen_int(char *c, int (*f)(int));
 
 /*
 ** Print
@@ -79,9 +80,12 @@ int		ft_error(void);
 */
 void	parser_bis(int h, int *i, char **s, t_swap *swap);
 int		parse_same_int(char *s);
+int		ft_same_int2(char *s1, char *s2, int *i, int *j);
+
 /*
 ** Verif
 */
+int		verif_same_zero(char *s1, char *s2);
 int		verif_table_ok(int *s, int len);
 int		verif_digit(char *s, int len, t_swap *swap);
 int		verif_size_int(char *s);

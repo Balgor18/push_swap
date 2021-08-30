@@ -1,37 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_strlen_int.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/09 15:32:53 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/08/30 10:56:02 by fcatinau         ###   ########.fr       */
+/*   Created: 2021/08/30 10:54:09 by fcatinau          #+#    #+#             */
+/*   Updated: 2021/08/30 10:54:26 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "push_swap.h"
 
-long long	ft_atoi(char *c)
+int	ft_strlen_int(char *c, int (*f)(int))
 {
-	int			i;
-	int			sign;
-	long long	total;
+	int	i;
 
-	total = 0;
 	i = 0;
-	sign = 1;
-	if (c[i] == '-' || c[i] == '+')
+	while (f(*c) || *c == '+' || *c == '-')
 	{
-		if (c[i] == '-')
-			sign *= -1;
 		i++;
+		c++;
 	}
-	while (c[i] >= '0' && c[i] <= '9')
-	{
-		total = total * 10;
-		total = total + (c[i] - 48);
-		i++;
-	}
-	return (total * sign);
+	return (i);
 }

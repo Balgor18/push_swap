@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/12 16:58:36 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/08/25 10:39:17 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/08/30 11:35:28 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,4 +38,15 @@ int	verif_digit(char *s, int len, t_swap *swap)
 			return (0);
 	}
 	return (1);
+}
+
+int	verif_same_zero(char *s1, char *s2)
+{
+	while (*s1 == '0')
+		s1++;
+	while (*s2 == '0')
+		s2++;
+	if (*s1 == '\0' && *s2 == '\0')
+		return (1);
+	return (0);
 }
