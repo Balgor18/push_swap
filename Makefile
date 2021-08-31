@@ -30,15 +30,12 @@ SRC =	color.c\
 
 OBJS = $(SRC:.c=.o)
 
-all : $(NAME)
-
-$(NAME): libft $(OBJS)
-	$(CC) $(CFLAGS) -o $(NAME) ${OBJS} -Lincludes/libft -lft
+$(NAME): $(OBJS)
+	make -s -C includes/libft/
+	$(CC) $(CFLAGS) -o $(NAME) -Lincludes/libft -lft $(OBJS)
 #	ARG=`ruby -e "puts (1..49).to_a.shuffle.join(' ')"`; ./push_swap $ARG
 
-
-libft :
-	make -s -C includes/libft/
+all : $(NAME)
 
 %.o: src/%.c
 	$(CC) $(CFLAGS) -I. -o $@ -c $?
@@ -48,7 +45,7 @@ norme :
 	norminette -R CheckDefine push_swap.h
 
 clean:
-	$(RM) *.o
+	$(RM) $(OBJS)
 	@make -s -C includes/libft/ clean
 
 fclean: clean
@@ -57,4 +54,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: clean fclean re
+.PHONY: clean fclean re norme
