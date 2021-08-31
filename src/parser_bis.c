@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/11 18:48:23 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/08/30 12:07:37 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/08/31 14:36:10 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,14 +60,14 @@ int	parse_same_int(char *s)
 	return (0);
 }
 
-int	ft_same_int2(char *s1, char *s2, int *i, int *j)
+int	ft_same_int2(char **av, int *i, int *j)
 {
-	while (s1[*j])
+	while (av[*j])
 	{
-		while (s2[*i])
+		while (av[*i])
 		{
-			if ((ft_strcmp(&s2[*i], &s1[*j]) == 0 && *i != *j) \
-				|| verif_same_zero(&s2[*i], &s1[*j]))
+			if ((ft_strcmp(av[*i], av[*j]) == 0 \
+				|| verif_same_zero(av[*i], av[*j])) && *i != *j)
 				return (1);
 			*i += 1;
 		}

@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 11:46:36 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/08/30 11:52:59 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/08/31 14:33:22 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define PUSH_SWAP_H
 # include "includes/libft/libft.h"
 
+#include <stdio.h>
 typedef struct s_count
 {
 	int	len_a;
@@ -80,7 +81,7 @@ int		ft_error(void);
 */
 void	parser_bis(int h, int *i, char **s, t_swap *swap);
 int		parse_same_int(char *s);
-int		ft_same_int2(char *s1, char *s2, int *i, int *j);
+int		ft_same_int2(char **av, int *i, int *j);
 
 /*
 ** Verif

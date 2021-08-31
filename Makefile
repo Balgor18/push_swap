@@ -30,22 +30,25 @@ SRC =	color.c\
 
 OBJS = $(SRC:.c=.o)
 
+all : $(NAME)
+
 $(NAME): libft $(OBJS)
-	$(CC) $(CFLAGS) -o $(NAME) $(addprefix obj/, ${OBJS}) -Lincludes/libft -lft
+	$(CC) $(CFLAGS) -o $(NAME) ${OBJS} -Lincludes/libft -lft
 #	ARG=`ruby -e "puts (1..49).to_a.shuffle.join(' ')"`; ./push_swap $ARG
+
 
 libft :
 	make -s -C includes/libft/
 
 %.o: src/%.c
-	$(CC) $(CFLAGS) -I. -o obj/$@ -c $?
+	$(CC) $(CFLAGS) -I. -o $@ -c $?
 
 norme :
 	norminette -R CheckForbiddenSourceHeader $(SRC)
 	norminette -R CheckDefine push_swap.h
 
 clean:
-	$(RM) obj/*
+	$(RM) *.o
 	@make -s -C includes/libft/ clean
 
 fclean: clean
