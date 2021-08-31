@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 11:46:36 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/08/31 14:33:22 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/08/31 14:52:09 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 # define PUSH_SWAP_H
 # include "includes/libft/libft.h"
 
-#include <stdio.h>
 typedef struct s_count
 {
 	int	len_a;

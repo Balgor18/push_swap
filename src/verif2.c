@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/12 16:58:36 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/08/30 11:35:28 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/08/31 14:48:46 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,10 @@ int	verif_digit(char *s, int len, t_swap *swap)
 
 int	verif_same_zero(char *s1, char *s2)
 {
+	if (*s1 == '-' || *s1 == '+')
+		s1++;
+	if (*s2 == '-' || *s2 == '+')
+		s2++;
 	while (*s1 == '0')
 		s1++;
 	while (*s2 == '0')
