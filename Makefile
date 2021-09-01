@@ -32,7 +32,7 @@ OBJS = $(SRC:.c=.o)
 
 $(NAME): $(OBJS)
 	make -s -C includes/libft/
-	$(CC) $(CFLAGS) -o $(NAME) -Lincludes/libft -lft $(OBJS)
+	$(CC) $(CFLAGS) -o $(NAME) $(OBJS) -Lincludes/libft -lft
 #	ARG=`ruby -e "puts (1..49).to_a.shuffle.join(' ')"`; ./push_swap $ARG
 
 all : $(NAME)
