@@ -6,7 +6,7 @@
 /*   By: fcatinau <fcatinau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 17:19:39 by fcatinau          #+#    #+#             */
-/*   Updated: 2021/08/10 09:30:56 by fcatinau         ###   ########.fr       */
+/*   Updated: 2021/09/14 19:07:47 by fcatinau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@ int	*copy_list(int *t, int len)
 
 	i = -1;
 	tmp = malloc(sizeof(int *) * len);
+	if (!tmp)
+		exit (1);
 	while (++i < len)
 		tmp[i] = t[i];
 	return (tmp);
